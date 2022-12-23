@@ -1,15 +1,3 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html>
-<html>
-
-<head>
-<link rel="stylesheet" type="text/css" href="index.css">
-</head>
-<body>
-<div id="side-menu-item">
-<%!String user1="admin"; %>
-<script>
 let contents =[
     {name:"Book Room",image:"booking-page-icon.png",link: "Login_Booking/Booking.html"},
     {name:"Application List",image:"application-list-icon.png",link: "Application/ApplicationList.html"},
@@ -22,19 +10,16 @@ let contents =[
     {name:"Remove User",image:"removeuser-page-icon.png",link: "Profile/remove_user.html"},
     {name:"Edit User",image:"edituser-page-icon.png",link: "Profile/edit_user.html"},
 ]
-var user="<%=user1%>";
+
 var container = document.getElementById("side-menu-item");
 for (i=0; i < contents.length; i++){
 	if(user=="admin"&&(i==0||i==3))continue;
     if(user=="lecturer"&&(i==1||i==2||i==4||i==6||i==7||i==8))continue;
     if(user=="space manager"&&(i==0||i==3||i==6||i==7||i==8))continue;
-    
-    const new_card = '<a href=\"../'+contents[i].link+'"> <div class=\"side-menu-option\"> <img src=\"../img/' + contents[i].image + '" width=20px height=20px><h4>' + contents[i].name + '</h4></div></a>';
+    const new_card = `<a href="../${contents[i].link}">
+    <div class=\"side-menu-option\">
+    <img src="../img/${contents[i].image}" width=20px height=20px>
+    <h4>${contents[i].name}</h4>
+    </div></a>`;
     container.innerHTML += new_card;
 }
-
-</script>
-</div>
-
-</body>
-</html>

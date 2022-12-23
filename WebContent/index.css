@@ -1,40 +1,72 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
+/*drop down menu for profile*/
+.dropdownProfile {
+  position: relative;
+  display: inline-block;
+}
+.dropdownProfile-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  width:200px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  margin-right: 50px;
+}
+.dropdownProfile-content a {
+  color: black;
+  padding: 12px 10px;
+  text-decoration: none;
+  display: block;
 
-body{
-    background-image: url("../img/HomeBlue.jpg");
-    background-position: center; 
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
+}
+.dropdownProfile-content a:hover {background-color: #ddd;}
+.dropdownProfile:hover .dropdownProfile-content {display: block;  }
+
+/*arrangement of the top menu at home page*/
+.topmenu{
+	width: 100%;
+	display: flex;
+    padding:5px 10px;
+     justify-content: space-between;
+}
+.toplogo{
+	 justify-content: flex-start;
+	 width: 5px;
+	 height: 5px;
+}
+.toplink{
+    justify-content: flex-end;
+     overflow: hidden;
+       background-color: transparent;
 }
 .topnav {
   overflow: hidden;
-  text-align: center;
   display: flex;
   justify-content: center;
   background-color: transparent;
 }
 
-.topnav a {
+.topnav a, .toplink a{
   float: left;
   color: #f2f2f2;
   text-align: center;
   padding: 5px 16px;
   text-decoration: none;
-  font-size: 10px;
+  font-size: 15px;
   margin-top: 20px;
   border-radius: 5px;
 }
 
-.topnav a:hover {
+.topnav a:hover, .toplink a:hover{
   background-color: #ddd;
   color: black;
 }
 
+/*the slide show in home page*/
 #slideshow {
     overflow: hidden;
     height: 510px;
@@ -71,46 +103,37 @@ body{
         margin-left: calc(-728px * 3);
     }
 }
+
+/*the body of the content*/
+body{
+    background-image: url("img/health-1.jpg");
+    background-position: center; 
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
 a:link,a:visited{
     color:black;
 }
+/*the menu of the header */
 .header{
     color: black;
     display: flex;
-} 
-.dropdownProfile {
-  position: relative;
-  display: inline-block;
 }
-.dropdownProfile-content {
-  display: none;
-  position: absolute;
-  background-color: #f1f1f1;
-  width:200px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-  margin-right: 50px;
-}
-.dropdownProfile-content a {
-  color: black;
-  padding: 12px 10px;
-  text-decoration: none;
-  display: block;
 
-}
-.dropdownProfile-content a:hover {background-color: #ddd;}
-.dropdownProfile:hover .dropdownProfile-content {display: block;  }
-.menu{
-    background-color: black;
+
+.menu {
+    background-color: transparent;
     width: 100%;
-    position: fixed;
+    position: absolute;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding:5px 10px;
 }
 
-.SpaceBookingLogo{
+.HealthCareLogo{
     display:flex;
     justify-content: flex-start;
 }
@@ -130,16 +153,14 @@ a:link,a:visited{
 }
 
 .content-item {
-    border: 1px solid black;
     background-color: transparent;
     top:69px;
     bottom:0;
     flex: 1;
 }
-
+/*the side menu design */
 .side-menu {
-    background-image: linear-gradient(to bottom,  rgba(9,9,121,1) 0%,rgb(10, 98, 186,1) 70%, rgba(0,212,255,1) 100%);
-    position:fixed;
+    position:absolute;
     flex: initial;
     width: 175px;
     top:69px;
@@ -149,7 +170,6 @@ a:link,a:visited{
 }
 
 .side-menu-option {
-    border: 1px solid #fff; 
     background-color: rgba(255, 255, 255, 0.214);
     height: 50px; 
     display: flex;
@@ -163,15 +183,13 @@ a:link,a:visited{
 }
 
 .page{
-    border: 1px solid black;
     display:flex;
     flex-direction: column;
     margin-left:175px;
     margin-top:69px;
 }
-
+/* the main content design */
 .main-content-item{
-    border: 1px solid #fff; 
     background-color: rgba(255, 255, 255, 0.562);
     margin:10px 5px;
     border-radius:5px;
@@ -186,7 +204,7 @@ a:link,a:visited{
 .main-content{
     height:650px;
 }
-
+/* the footer design */
 .footer-container{
     background-color: transparent;
     display: flex;

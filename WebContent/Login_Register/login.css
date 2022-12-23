@@ -1,0 +1,123 @@
+body{
+    margin:0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(120deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+    height: 100vh;
+    overflow: hidden;
+}
+
+#center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    margin:auto;
+    background-color: white;
+    border-radius: 10px;
+}
+
+#center img{
+    height: 70px;
+    width: 70px;
+    margin-top: 10px;
+}
+
+.icon{
+    text-align: center;
+}
+
+.header{
+    display: block;
+    text-align: center;
+    width: 100%;
+    font-size: 40px;
+    border-bottom: 1px solid silver;
+    padding-bottom: 20px;
+}
+
+#center form{
+    padding: 0 40px 0 40px;
+    box-sizing: border-box;
+}
+
+.txtinput{
+    position: relative;
+    margin: 30px 0;
+}
+
+.txtinput input{
+    width: 100%;
+    padding: 0 5px;
+    border: none;
+    outline: none;
+    height: 40px;
+    font-size: 17px;
+}
+
+.txtinput label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translate(0,-50%);
+    color: silver;
+    pointer-events: none;
+    font-size: 17px;
+}
+
+.txtinput span::before{
+    content: '';
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: silver;
+}
+
+.txtinput input:focus ~ label,
+.txtinput input:valid ~ label{
+    top: -5px;
+    color: rgba(9,9,121,1);
+    transition: .5s;
+}
+
+.txtinput input:focus ~ span::before,
+.txtinput input:valid ~ span::before{
+    width: 100%;
+    background: rgba(9,9,121,1);
+    transition: .5s;
+}
+
+.forgotpass{
+    color: silver;
+    cursor: pointer;
+    margin: -5px 0 20px 5px;
+    font-size: 13px;
+    width: 80%;
+}
+
+.forgotpass:hover{
+    text-decoration: underline;
+    color: rgb(136, 135, 135);
+}
+
+input[type="submit"]{
+    width: 100%;
+    height: 40px;
+    font-size: 15px;
+    font-family: Cambria;
+    background-color: rgb(153, 176, 250);
+    border: none;
+    border-radius: 25px;
+}
+
+input[type="submit"]:hover{
+    border:2px solid black;
+}
+
+.submit{
+    padding-bottom: 30px;
+}
+
+

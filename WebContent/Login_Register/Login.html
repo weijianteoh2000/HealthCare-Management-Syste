@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Space Booking Management System</title>
+        <link rel="stylesheet" type="text/css" href="login.css">
+        <script src="Login.js"></script>
+        <style>
+        .header{
+    display: block;
+    text-align: center;
+    width: 100%;
+    font-size: 40px;
+    border-bottom: 1px solid silver;
+    padding-bottom: 20px;}
+    </style>
+    </head>
+    <body>
+         <div id="center">
+            <div class="icon">
+             <img width="10%" height="10%" src="../img/login.jpg" />
+            </div>
+            <div class="header">
+                <label >Login</label>
+            </div>
+
+             <form name="loginForm" method="POST" action="../Login">
+                 <div class="txtinput">
+                    <input type="text" name="username" id="username" size="30" required><br>
+                    <span></span>
+                    <label>Username</label>
+                 </div>
+                 <div class="txtinput">
+                    <input type="password" name="password" id="password" size="30" required>
+                    <span></span>
+                    <label>Password</label>
+                 </div>
+                 <div class="forgotpass" id="forgotpass">
+                     <a href="ForgetPass.html">Forgot your password?</a>
+                 </div>
+                     <input type="submit" value="Login">
+                    </div>
+             </form>
+         </div>
+    </body>
+</html>

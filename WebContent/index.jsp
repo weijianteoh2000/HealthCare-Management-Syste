@@ -1,40 +1,42 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+<%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
-
-<head>
 <link rel="stylesheet" type="text/css" href="index.css">
-</head>
-<body>
-<div id="side-menu-item">
-<%!String user1="admin"; %>
-<script>
-let contents =[
-    {name:"Book Room",image:"booking-page-icon.png",link: "Login_Booking/Booking.html"},
-    {name:"Application List",image:"application-list-icon.png",link: "Application/ApplicationList.html"},
-    {name:"My Report",image:"report-page-icon.png",link: "Report/LectLabs.html"},
-    {name:"All Application",image:"report-page-icon.png",link: "Report/AllLabs.html"},
-    {name:"Admin Profile",image:"profile-page-icon.png",link: "Profile/admin_profile.html"},
-    {name:"SpaceMng Profile",image:"profile-page-icon.png",link: "Profile/spacemng_profile.html"},
-    {name:"Lect Profile",image:"profile-page-icon.png",link: "Profile/user_profile.html"},
-    {name:"Add User ",image:"adduser-page-icon.png",link: "Profile/add_user.html"},
-    {name:"Remove User",image:"removeuser-page-icon.png",link: "Profile/remove_user.html"},
-    {name:"Edit User",image:"edituser-page-icon.png",link: "Profile/edit_user.html"},
-]
-var user="<%=user1%>";
-var container = document.getElementById("side-menu-item");
-for (i=0; i < contents.length; i++){
-	if(user=="admin"&&(i==0||i==3))continue;
-    if(user=="lecturer"&&(i==1||i==2||i==4||i==6||i==7||i==8))continue;
-    if(user=="space manager"&&(i==0||i==3||i==6||i==7||i==8))continue;
-    
-    const new_card = '<a href=\"../'+contents[i].link+'"> <div class=\"side-menu-option\"> <img src=\"../img/' + contents[i].image + '" width=20px height=20px><h4>' + contents[i].name + '</h4></div></a>';
-    container.innerHTML += new_card;
-}
-
-</script>
+<head></head>
+<body> 
+<div class="topmenu">
+<div class="toplogo"><img width="100px" height="100px" src="img/logo-black-bigger.png" ></div>
+<div class="topnav">
+  <a href="#home">Home</a>
+  <a href="#news">News</a>
+  <a href="#contact">Contact</a> 
+  <a href="#about">About</a>
 </div>
-
+<div class="toplink">
+  <a href="Login.html">Login</a>
+  <a href="#news">Register</a>
+</div>
+</div>
+                    <div class="main-content-item main-content">
+                        <!--Put your Page Content here-->
+                      <div id="slideshow">
+        <div class="slide-wrapper"> 
+<br /><br />
+            <div class="slide">
+                <img src="img/article1.png" />
+            </div>
+            <div class="slide">
+              <img src="img/article2.png" />
+            </div>
+            <div class="slide">
+                <img src="img/article3.png" />
+            </div>
+                <div class="slide">
+                <img src="img/article4.jpg" />
+            </div>
+        </div>
+                    </div></div>
+<%@ include file="footer.html" %>
 </body>
 </html>

@@ -14,7 +14,7 @@ if(userName.equals("admin")&&pw.equals("a1234")){
 	 user = "admin";
 }else if(userName.equals("doctor")&&pw.equals("d1234")){
 	user = "doctor";
-}else if(userName.equals("pharma")&&pw.equals("p1234")){
+}else if(userName.equals("pharmacist")&&pw.equals("p1234")){
 	user = "pharmacist";
 }else if(userName.equals("customer")&&pw.equals("c1234")){
 	user =  "customer";
@@ -26,7 +26,7 @@ if(userName.equals("admin")&&pw.equals("a1234")){
                 <div id="side-menu-item">
                 <script>
                 let contents =[
-                    {name:"Order",image:"img/booking-page-icon.png",link: "Login_Booking/Booking.html"},
+                    {name:"Order",image:"img/booking-page-icon.png",link:"OrderManagement/Order.jsp"},
                     {name:"Products",image:"img/application-list-icon.png",link: "Application/NewApplication.html"},
                     {name:"Stock",image:"img/approval-list-icon.png",link: "Application/ApprovalApplication.html"},
                     {name:"Booking",image:"img/report-page-icon.png",link: "Report/LectLabs.html"},
@@ -47,7 +47,7 @@ if(userName.equals("admin")&&pw.equals("a1234")){
              	    if(user=="doctor"&&(i==0||i==1||i==2||i==3||i==5||i==9||i==10||i==11))continue; 
              	    if(user=="customer"&&(i==2||i==4||i==5||i==6||i==7||i==8||i==9||i==10||i==11))continue;  
                     
-                    const new_card = '<a href=\"../'+contents[i].link+'"> <div class=\"side-menu-option\"> <img src=\"' + contents[i].image + '" width=20px height=20px><h4>' + contents[i].name + '</h4></div></a>';
+                    const new_card = '<a href=\"'+contents[i].link+'"> <div class=\"side-menu-option\"> <img src=\"../' + contents[i].image + '" width=20px height=20px><h4>' + contents[i].name + '</h4></div></a>';
                     container.innerHTML += new_card;
                 }
                 </script>

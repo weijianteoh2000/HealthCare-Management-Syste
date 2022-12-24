@@ -7,9 +7,9 @@
 <title>Insert title here</title>
 </head>
 <body>
-<%@ include file="header.html" %>
+<%@ include file="../header.html" %>
 <div class="content">
-<%@ include file="sideMenu.jsp" %>
+<%@ include file="../sideMenu.jsp" %>
  <div class="content-item page">
                 <div class="main-content-container">
                     <div class="main-content-item main-title">
@@ -19,7 +19,7 @@
                 </div>
             </div>
             </div>
-<%@ include file="footer.html" %>
+<%@ include file="../footer.html" %>
 
 </body>
 </html>

@@ -26,9 +26,9 @@ if(userName.equals("admin")&&pw.equals("a1234")){
                 <div id="side-menu-item">
                 <script>
                 let contents =[
-                    {name:"Order",image:"img/booking-page-icon.png",link: "	OrderManagement/index.jsp  "},
+                    {name:"Order",image:"img/booking-page-icon.png",link: "Login_Booking/Booking.html"},
                     {name:"Products",image:"img/application-list-icon.png",link: "Application/NewApplication.html"},
-                    {name:"Stock",image:"img/approval-list-icon.png",link: "StockManagement/index.jsp"},
+                    {name:"Stock",image:"img/approval-list-icon.png",link: "index.jsp"},
                     {name:"Booking",image:"img/report-page-icon.png",link: "Report/LectLabs.html"},
                     {name:"Prescription",image:"img/report-page-icon.png",link: "Report/AllLabs.html"},
                     {name:"Report",image:"img/profile-page-icon.png",link: "Profile/myprofile.html"},

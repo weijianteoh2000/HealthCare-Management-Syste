@@ -2,7 +2,7 @@
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
-<link rel="stylesheet" type="text/css" href="index.css">
+<link rel="stylesheet" type="text/css" href="shareFiles/index.css">
 <head></head>
 <body> 
 <div class="topmenu">
@@ -37,6 +37,7 @@
             </div>
         </div>
                     </div></div>
-<%@ include file="../footer.html" %>
+
+<%@ include file="../shareFiles/footer.html" %>
 </body>
 </html>

@@ -3,15 +3,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<meta charset="UTF-8">
+<%@ include file="../shareFiles/titleName.html" %>
 <link rel="stylesheet" type="text/css" href="stock.css">
-<link rel="stylesheet" type="text/css" href="../index.css">
+<link rel="stylesheet" type="text/css" href="../shareFiles/index.css"> 
+<script src='https://kit.fontawesome.com/a076d05399.js'></script>
 </head>
 <body>
-<%@ include file="header.html" %>
+<%@ include file="../shareFiles/header.html" %>
 <div class="content">
-<%-- <%@ include file="sideMenu.jsp" %>  --%>
+<%@ include file="../shareFiles/sideMenu.jsp" %>
  <div class="content-item page">
                 <div class="main-content-container">
                     <div class="main-content-item main-title">
@@ -24,13 +25,18 @@
                             <div id="myTable">
                                <script src="Details.js"></script>
                             </div>
-                            <button class="button">Add new</button>
+                            <div class="container">
+                            <button class="button" onClick="location.href = 'AddNewStock.jsp';">Add new</button></div>
+                           <!--  <script>
+                            function deleteRow(btn){
+                            	document.getElementsByTagName("tr")[i].remove();
+                           };
+                            </script> -->
                         </div>
-                    
                     </div>
                 </div>
             </div>
             </div>
-<%@ include file="footer.html" %>
+<%@ include file="../shareFiles/footer.html" %>
 </body>
 </html>

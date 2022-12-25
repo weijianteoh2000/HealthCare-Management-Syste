@@ -1,6 +1,8 @@
 package com.controller;
 
 import java.io.IOException;
+import java.io.PrintWriter;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -21,7 +23,23 @@ public class Login extends HttpServlet {
 		HttpSession session = request.getSession();
 		session.setAttribute("username", request.getParameter("username"));
 		session.setAttribute("password", request.getParameter("password"));
-		response.sendRedirect("dashboard.jsp");
+		
+		String username = request.getParameter("username");
+		String password = request.getParameter("password");
+		
+		if(username.equals("admin") && password.equals("a1234")) {
+			response.sendRedirect("../HealthCare-Management-System/shareFiles/ReportingDashboard.jsp");
+		}else if(username.equals("customer") && password.equals("c1234")) {
+			response.sendRedirect("../HealthCare-Management-System/shareFiles/HomePage.jsp");
+		}else if(username.equals("doctor") && password.equals("d1234")) {
+			response.sendRedirect("../HealthCare-Management-System/shareFiles/HomePage.jsp");
+		}else if(username.equals("pharmacist") && password.equals("p1234")) {
+			response.sendRedirect("../HealthCare-Management-System/shareFiles/HomePage.jsp");
+		}else {
+			PrintWriter out = response.getWriter();
+			out.print("Username or password are wrong");
+		}
+		
 	}
 
 }

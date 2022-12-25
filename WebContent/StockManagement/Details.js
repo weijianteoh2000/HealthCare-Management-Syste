@@ -7,13 +7,13 @@ let row_1 = document.createElement('tr');
 let heading_1 = document.createElement('th');
 heading_1.innerHTML = "No.";
 let heading_2 = document.createElement('th');
-heading_2.innerHTML = "stock_id";
+heading_2.innerHTML = "ID";
 let heading_3 = document.createElement('th');
-heading_3.innerHTML = "name";
+heading_3.innerHTML = "Name";
 let heading_4 = document.createElement('th');
-heading_4.innerHTML = "quantity";
+heading_4.innerHTML = "Quantity";
 let heading_5 = document.createElement('th');
-heading_5.innerHTML = "action";
+heading_5.innerHTML = "Action";
 
 row_1.appendChild(heading_1);
 row_1.appendChild(heading_2);
@@ -44,13 +44,22 @@ for (let i = 0; i < myArray.length; i++){
     row.appendChild(data4);
     data5= document.createElement('td');
     row_button_link = document.createElement('a');
-    row_button_link.setAttribute("href","#");
+    row_button_link.setAttribute("href","UpdateStock.jsp");
     row_button = document.createElement('button');
-    row_button.setAttribute("class","Button");
-    row_button_link.innerHTML="Details";
+    row_button.setAttribute("class","modifyButton");
+    row_button_link.setAttribute("class","fas fa-edit");
     row_button.appendChild(row_button_link)
     data5.appendChild(row_button);
     row.appendChild(data5);
+    data6= document.createElement('td');
+    row_button_link = document.createElement('a');
+    row_button_link.setAttribute("onClick","deleteRow(this)");
+    row_button = document.createElement('button');
+    row_button.setAttribute("class","modifyButton");
+    row_button_link.setAttribute("class","fas fa-trash-alt");
+    row_button.appendChild(row_button_link);
+    data6.appendChild(row_button);
+    row.appendChild(data6);
     table.appendChild(row);
 }
 

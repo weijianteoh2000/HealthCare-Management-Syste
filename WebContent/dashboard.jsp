@@ -8,9 +8,10 @@
 <title>Health Care Management</title>
 </head>
 <body>
-<%@ include file="../header.html" %>
+
+<%@ include file="/shareFiles/header.html" %>
 <div class="content">
-<%@ include file="../sideMenu.jsp" %>
+<%@ include file="/shareFiles/sideMenu.jsp" %>
  <div class="content-item page">
                 <div class="main-content-container">
                     <div class="main-content-item main-title">
@@ -32,6 +33,7 @@
                 </div>
             </div>
             </div>
-<%@ include file="../footer.html" %>
+
+<%@ include file="/shareFiles/footer.html" %>
 </body>
 </html>

@@ -6,14 +6,16 @@
 <meta charset="ISO-8859-1">
 <title>User Profile</title>
 <style>
-#profilePic{
+#profilePic {
 	border: 1 solid rgba(0, 0, 0, 0);
 	border-radius: 100px;
 }
+
 .profileContainer {
 	display: flex;
 	flex-direction: row;
 }
+
 .profile {
 	background-color: white;
 	margin: 20px;
@@ -24,11 +26,12 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	height:500px;
+	height: 500px;
 }
-#profileDetail{
-	display:flex;
-	flex-direction:column;
+
+#profileDetail {
+	display: flex;
+	flex-direction: column;
 }
 
 table {
@@ -42,8 +45,8 @@ td {
 	border-radius: 10px;
 }
 
-table,td,th{
-	padding:10px;
+table, td, th {
+	padding: 10px;
 }
 
 #edit {
@@ -70,40 +73,38 @@ table,td,th{
 							<img id="profilePic" src="../img/user.png" alt="profile picture"
 								width="250px" height="250px">
 						</div>
+						
 						<div class="profile" id="profileDetail">
 							<table>
 								<tr>
-									<th></th>
 									<th>Name</th>
 									<td>Admin</td>
 								</tr>
 								<tr>
-									<th></th>
 									<th>Gender</th>
 									<td>Male</td>
 								</tr>
 								<tr>
-									<th></th>
 									<th>Age</th>
 									<td>25</td>
 								</tr>
 								<tr>
-									<th></th>
 									<th>Phone Number</th>
 									<td>010-1234567</td>
 								</tr>
 								<tr>
-									<th></th>
 									<th>IC Number</th>
 									<td>000111-01-0011</td>
 								</tr>
 							</table>
 							<br> <br> <br>
 							<div id="edit">
-								<a href="profileEdit.jsp"><button>Edit Profile</button></a>
+								<a href="profileEdit.jsp"><button>Edit</button></a> 
+								<a href="profile.jsp"><button>Cancel</button></a>
 							</div>
-
+							
 						</div>
+
 					</div>
 				</div>
 			</div>

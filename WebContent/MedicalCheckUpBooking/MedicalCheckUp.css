@@ -1,0 +1,26 @@
+.date {
+	text-align: left;
+}
+
+.tableList {
+	background-color: white;
+	margin: 10px 5px;
+	border-radius: 5px;
+	padding: 10px;
+	box-shadow: 0 7px 25px rgba(0, 0, 0, 0.3);
+}
+table, th, td {
+  padding:20px;
+}
+.centerBtn{
+	display: flex;
+  	justify-content: space-around;
+  	  
+}
+.reject{
+	color:red;
+}
+.accept{
+	color:green;
+}
+

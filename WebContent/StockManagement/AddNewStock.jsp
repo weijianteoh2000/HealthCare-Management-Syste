@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<%@ include file="../shareFiles/titleName.html" %>
+<title>HealthCare | Details</title>
 <meta charset="ISO-8859-1">
 <link rel="stylesheet" type="text/css" href="stock.css">
 <link rel="stylesheet" type="text/css" href="../shareFiles/index.css"> 
@@ -21,7 +21,7 @@
                     <div class="main-content-item main-content">
                         <!--Put your Page Content here-->
                       <div class="inputContainer">
- <form action="#">
+ <form action="Details.jsp">
     <label for="stockname">Name</label>
     <input type="text" id="stockname" name="stockname" placeholder="Stock name.." required>
 
@@ -38,8 +38,13 @@
     <input type="date" id="adate" name="arrivalDate"  required>
         <label for="edate">Expiry Date</label>
     <input type="date" id="edate" name="expiryDate" required>
-    <input class="inputButton"type="submit" value="Save">
+    <input class="inputButton" type="submit" onClick="successAdd()" value="Save">
   </form>
+                        <script>
+    function successAdd() {
+        alert("New stock was successfully added !!");
+    }
+</script>  
             </div>
             </div>
             </div></div></div>

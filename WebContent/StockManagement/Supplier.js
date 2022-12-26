@@ -44,7 +44,7 @@ for (let i = 0; i < myArray.length; i++){
     row.appendChild(data4);
     data5= document.createElement('td');
     row_button_link = document.createElement('a');
-    row_button_link.setAttribute("href","UpdateStock.jsp");
+    row_button_link.setAttribute("href","UpdateSupplier.jsp");
     row_button = document.createElement('button');
     row_button.setAttribute("class","modifyButton");
     row_button_link.setAttribute("class","fas fa-edit");

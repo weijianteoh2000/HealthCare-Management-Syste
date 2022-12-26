@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<%@ include file="../shareFiles/titleName.html" %>
+<title>HealthCare | Details</title>
 <link rel="stylesheet" type="text/css" href="stock.css">
 <link rel="stylesheet" type="text/css" href="../shareFiles/index.css"> 
 <script src='https://kit.fontawesome.com/a076d05399.js'></script>

@@ -6,7 +6,7 @@
 <head></head>
 <body> 
 <div class="topmenu">
-<div class="toplogo"><img width="100px" height="100px" src="img/logo-black-bigger.png" ></div>
+<div class="toplogo"><img style='margin-left: 20px;' width="70px" height="70px" src="img/logo-black-bigger-removebg-preview.png" ></div>
 <div class="topnav">
   <a href="#home">Home</a>
   <a href="#news">News</a>
@@ -38,6 +38,6 @@
         </div>
                     </div></div>
 
-<%@ include file="../shareFiles/footer.html" %>
+<%@ include file="shareFiles/footer.html" %>
 </body>
 </html>

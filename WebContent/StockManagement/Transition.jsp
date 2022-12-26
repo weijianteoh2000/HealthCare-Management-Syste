@@ -5,7 +5,7 @@
 
 <head>
 <meta charset="UTF-8">
-<%@ include file="../shareFiles/titleName.html" %>
+<title>HealthCare | Transition</title>
 <link rel="stylesheet" type="text/css" href="stock.css">
 <link rel="stylesheet" type="text/css" href="../shareFiles/index.css"> 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -18,7 +18,7 @@
                 <div class="main-content-container">
                     <div class="main-content-item main-title">
                         <!--Put your Page Title here-->
-                        <h1>Transition</h1>
+                        <h1>STOCK TRANSITION</h1>
                     </div>
                     <div class="main-content-item main-content">
                         <!--Put your Page Content here-->
@@ -47,15 +47,18 @@
    <td>Delivered<br>16:45 22 September 2022</td>
    </tr>
   </table>
-  </div>   <div class="container"> <button id="btn" class="button" onClick="location.href = 'TrackedShipment.jsp';">View Tracking</button>
+  <div class="container"> <button id="btn" class="button" onClick="location.href = 'TrackedShipment.jsp';">View Tracking</button>
+  </div>   
   </div>
   </div>
-   <script>
+   
+  </div>
+    <script>
 			  let searchItem = button => {
 			    let element = document.getElementById("viewItem");
-			    element.removeAttribute("hidden");}
-			</script>     
-  </div>
+			    if(element.getAttribute("hidden")){
+			    element.removeAttribute("hidden");}}
+			</script>   
             </div></div></div>
          
 <%@ include file="../shareFiles/footer.html" %>

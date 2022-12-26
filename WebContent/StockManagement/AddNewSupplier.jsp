@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<%@ include file="../shareFiles/titleName.html" %>
+<title>HealthCare | Supplier</title>
 <meta charset="ISO-8859-1">
 <link rel="stylesheet" type="text/css" href="stock.css">
 <link rel="stylesheet" type="text/css" href="../shareFiles/index.css"> 
@@ -21,7 +21,7 @@
                     <div class="main-content-item main-content">
                         <!--Put your Page Content here-->
                       <div class="inputContainer">
- <form action="#">
+ <form action="Supplier.jsp">
     <label for="companyName">Company Name</label>
     <input type="text" id="companyName" name="companyName" placeholder="Company name.." required>
 
@@ -34,14 +34,19 @@
       <label for="email">Email</label>
     <input type="text" id="email" name="email" placeholder="HoePharma@gmail.com" required>
     
-     <label for="phoneNo">Email</label>
+     <label for="phoneNo">Phone Number</label>
     <input type="tel" id="phoneNo" name="phoneNo" placeholder="017-21732632" required>
     
         <label for="address">Address</label>
     <input type="text" id="address" name="address" placeholder="Company address ..." required>
 
-    <input class="inputButton"type="submit" value="Save">
+    <input class="inputButton"type="submit" onclick="successAdd()" value="Save">
   </form>
+                          <script>
+    function successAdd() {
+        alert("New supplier was successfully added !!");
+    }
+</script>  
             </div>
             </div>
             </div></div></div>

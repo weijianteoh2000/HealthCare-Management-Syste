@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<%@ include file="../shareFiles/titleName.html" %>
+<title>HealthCare | Stock</title>
 <link rel="stylesheet" type="text/css" href="stock.css">
 <link rel="stylesheet" type="text/css" href="../shareFiles/index.css">
 </head>
@@ -16,7 +16,7 @@
                 <div class="main-content-container">
                     <div class="main-content-item main-title">
                         <!--Put your Page Title here-->
-                        <h1>Welcome to Health Care Management System</h1>
+                        <h1>STOCK MANAGEMENT</h1>
                     </div>
                     <div class="main-content-item main-content">
                         <!--Put your Page Content here-->

@@ -91,13 +91,14 @@ body {
 	background-color: #8bcbe1; 
 	border: none; 
 	padding: 10px; 
+	 cursor: pointer;
 	box-shadow: 0 3px #999; 
 	border-radius: 5px
 }
-.modifyButton:hover,.button:hover {background-color: #009879}
+.modifyButton:hover,.button:hover {background-color: #5fc2f2}
 
-.button:active {
-  background-color: #3e8e41;
+.modifyButton:active, .button:active {
+  background-color: #5fc2f2;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }

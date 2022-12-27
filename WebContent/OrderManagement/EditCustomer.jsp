@@ -6,45 +6,7 @@
 <meta charset="ISO-8859-1">
 <link rel="stylesheet" type="text/css" href="../shareFiles/index.css">
 <link rel="stylesheet" type="text/css" href="order.css">
-<title>Health Care Management | Edit Customer</title>
-<style>
-.customer_info_table {
-	width: 550px;
-	margin-left: auto;
-	margin-right: auto;
-	padding-bottom: 40px;
-}
-
-#customer_info_table #customer_info_table_header {
-	width: 80px;
-}
-
-#customer_info_table table, th, td {
-	padding: 8px;
-	border-style: none;
-}
-
-#customer_info_table_header, #customer_info_table_data {
-	text-align: left;
-}
-
-#edit_input, textarea, select {
-	width: 400px;
-	padding: 8px 12px;
-	margin: 8px 0;
-	display: inline-block;
-	border: 1.5px solid #89AFFF;
-	border-radius: 4px;
-	box-sizing: border-box;
-	font-size: 15px;
-}
-
-#main_header_customer_info {
-	margin: 20px;
-	margin-left: 40px;
-	text-align: center;
-}
-</style>
+<title>HealthCare | Edit Customer</title>
 </head>
 <body>
 	<%@ include file="../shareFiles/header.html"%>

@@ -28,7 +28,7 @@ public class Login extends HttpServlet {
 		String password = request.getParameter("password");
 		
 		if(username.equals("admin") && password.equals("a1234")) {
-			response.sendRedirect("../HealthCare-Management-System/shareFiles/ReportingDashboard.jsp");
+			response.sendRedirect("../HealthCare-Management-System/shareFiles/HomePage.jsp");
 		}else if(username.equals("customer") && password.equals("c1234")) {
 			response.sendRedirect("../HealthCare-Management-System/shareFiles/HomePage.jsp");
 		}else if(username.equals("doctor") && password.equals("d1234")) {

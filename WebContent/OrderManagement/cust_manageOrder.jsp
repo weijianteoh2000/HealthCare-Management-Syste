@@ -6,7 +6,7 @@
 <meta charset="ISO-8859-1">
 <link rel="stylesheet" type="text/css" href="../shareFiles/index.css">
 <link rel="stylesheet" type="text/css" href="order.css">
-<title>Health Care Management | Manage Order</title>
+<title>HealthCare | Manage Order</title>
 </head>
 <body>
 	<%@ include file="../shareFiles/header.html"%>

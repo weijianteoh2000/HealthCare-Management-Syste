@@ -4,8 +4,11 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>HealthCare|Health Medical Check Up List</title>
+<title>HealthCare | Health Medical Check Up List</title>
 <link rel="stylesheet" type="text/css" href="MedicalCheckUp.css">
+<link rel="stylesheet" type="text/css" href="../StockManagement/stock.css">
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
 	<%@ include file="../shareFiles/header.html"%>
@@ -15,15 +18,16 @@
 			<div class="main-content-container">
 				<div class="main-content-item main-title">
 					<!--Put your Page Title here-->
-					<h1>Health Medical Check Up Form</h1>
+					<h1>HEALTH MEDICAL</h1>
 				</div>
 
 				<div class="main-content-item main-content">
 					<!--Put your Page Content here-->
-					Please input the patient name to input the health medical check up
-					result for the patient
-					<form action="HealthMedicalCheckUpList_Lisa.jsp" method="">
-						<input type="text" name="patient_name"> <input type="submit" name="submit" value="submit">
+					<form class="searchContainer" method="" action="HealthMedicalCheckUpList_Lisa.jsp">
+						<input type="text" placeholder="Search Patient..." name="search">
+						<button type="submit" onclick="searchItem()">
+							<i class="fa fa-search"></i>
+						</button>
 					</form>
 
 				</div>

@@ -4,19 +4,13 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>HealthCare|Review Patient Health Info Detail</title>
+<title>HealthCare | Review Patient Health Info Details</title>
 <link rel="stylesheet" type="text/css" href="MedicalCheckUp.css">
-<style>
-table{
-	border: 1px solid gray;
-	width: 100%;
-
-}
-table, th, td{
-	padding: 20px;
-}
-</style>
-<link rel="stylesheet" type="text/css" href="MedicalCheckUp.css">
+<link rel="stylesheet" type="text/css" href="../StockManagement/stock.css">
+<link rel="stylesheet" type="text/css" href="../shareFiles/index.css">
+<link rel="stylesheet" type="text/css" href="../OrderManagement/order.css">
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
 	<%@ include file="../shareFiles/header.html"%>
@@ -26,27 +20,27 @@ table, th, td{
 			<div class="main-content-container">
 				<div class="main-content-item main-title">
 					<!--Put your Page Title here-->
-					<h1>Review Patient Health Info</h1>
+					<h1>REVIEW PATIENT</h1>
 				</div>
 
 				<div class="main-content-item main-content">
 					<!--Put your Page Content here-->
-					Please input the patient name to review the health medical check up
-					result for the patient
-					<form action="" method="">
-						<input type="text" name="patient_name" value="Lisa"> <input
-							type="submit" name="submit" value="submit">
+					<form class="searchContainer" method="" action="">
+						<input type="text" placeholder="Search Patient..." name="search">
+						<button type="submit" onclick="searchItem()">
+							<i class="fa fa-search"></i>
+						</button>
 					</form>
-					<div class="tableList">
-					<table>
-						<tr>
-							<th>Lisa</th>
-							<td>000111-01-0101</td>
-							<th><button>Details</button></th>
-						</tr>
-					</table>
+					<div class="Patient_tableList">
+						<table id="Patient_tableList">
+							<tr>
+								<td>Lisa</td>
+								<td>000111-01-0101</td>
+								<td><button class="modifyButton">Details</button></td>
+							</tr>
+						</table>
 					</div>
-					
+
 
 				</div>
 			</div>
@@ -55,5 +49,9 @@ table, th, td{
 
 		</div>
 	</div>
+	<script type="module"
+		src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+	<script nomodule
+		src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 </html>

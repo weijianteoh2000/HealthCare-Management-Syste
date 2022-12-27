@@ -40,7 +40,9 @@
         <label for="address">Address</label>
     <input type="text" id="address" name="address" placeholder="Company address ..." required>
 
-    <input class="inputButton"type="submit" onclick="successAdd()" value="Save">
+<div class="submit_button_box">
+						<input class="inputButton"type="submit" onclick="successAdd()" value="Save">
+					</div>
   </form>
                           <script>
     function successAdd() {

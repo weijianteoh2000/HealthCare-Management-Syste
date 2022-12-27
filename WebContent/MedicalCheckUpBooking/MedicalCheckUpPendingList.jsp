@@ -4,18 +4,11 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>HealthCare|Pending Booking List</title>
+<title>HealthCare | Pending Booking List</title>
 <link rel="stylesheet" type="text/css" href="MedicalCheckUp.css">
-<style>
-table, th, td {
-  border: 1px solid black;
-  border-collapse: collapse;
-}
-table{
-	width:100%;
-}
-</style>
-<link rel="stylesheet" type="text/css" href="MedicalCheckUp.css">
+<link rel="stylesheet" type="text/css" href="../shareFiles/index.css">
+<link rel="stylesheet" type="text/css"
+	href="../OrderManagement/order.css">
 </head>
 <body>
 <%@ include file="../shareFiles/header.html"%>
@@ -25,31 +18,37 @@ table{
 			<div class="main-content-container">
 				<div class="main-content-item main-title">
 					<!--Put your Page Title here-->
-					<h1>Pending medical check up booking</h1>
+					<h1>PENDING BOOKING</h1>
 				</div>
 
 				<div class="main-content-item main-content">
 					<!--Put your Page Content here-->
-					This page will shows the booking status of each of your medical check up application <br>
-					<div class="tableList">
-						<table>
+					<h1 id="main_header">Booking Status List</h1>
+					<div class="pendingList_table">
+						<table id="pendingList_table">
+						<tr>
+						<th>No.</th>
+						<th>Date</th>
+						<th>Status</th>
+						<th></th>
+						</tr>
 							<tr>
-								<th>1. </th>
-								<th class="date">19/11/2022 Morning</th>
-								<th>Pending</th>
-								<th><button>Details</button></th>
+								<td>1. </td>
+								<td class="date">19/11/2022 Morning</td>
+								<td>Pending</td>
+								<td><button class="modifyButton">Details</button></td>
 							</tr>
 							<tr>
-								<th>2. </th>
-								<th class="date">18/11/2022 Morning</th>
-								<th>Pending</th>
-								<th><a href="MedicalCheckUpPendingDetail.jsp"><button>Details</button></a></th>
+								<td>2. </td>
+								<td class="date">18/11/2022 Morning</td>
+								<td>Pending</td>
+								<td><a href="MedicalCheckUpPendingDetail.jsp"><button class="modifyButton">Details</button></a></td>
 							</tr>
 							<tr>
-								<th>3. </th>
-								<th class="date">17/11/2022 Morning</th>
-								<th>Pending</th>
-								<th><button>Details</button></th>
+								<td>3. </td>
+								<td class="date">17/11/2022 Morning</td>
+								<td>Pending</td>
+								<td><button class="modifyButton">Details</button></td>
 							</tr>
 						</table>
 					</div>

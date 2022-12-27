@@ -6,63 +6,7 @@
 <meta charset="ISO-8859-1">
 <link rel="stylesheet" type="text/css" href="../shareFiles/index.css">
 <link rel="stylesheet" type="text/css" href="order.css">
-<title>Health Care Management | Manage Pending Order</title>
-<style>
-.order_info_table {
-	width: 1000px;
-	padding-left: 100px;
-	margin-bottom:20px;
-}
-
-#order_info_table table, th, td {
-	padding: 8px;
-	border-style: none;
-}
-
-#order_info_table_header,
-	#order_info_table_data {
-	width:150px;
-	text-align: left;
-}
-
-#order_info_table_data_column2 {
-text-align: left;
-width: 400px;
-}
-
-.edit_order_pending_table {
-	position: relative;
-	background-color: white;
-	padding: 10px 15px 17px;
-	margin: 0px 0px 20px 40px;
-	border-radius: 10px;
-	box-shadow: 0 7px 25px rgba(0, 0, 0, 0.2);
-}
-
-#edit_order_pending_table tr {
-	text-align: center;
-	padding: 8px;
-	border-bottom: 1px solid #C0C2C8;
-}
-
-#edit_order_pending_table #row1 {
-	border-bottom: 2px solid black;
-	border-collapse: collapse;
-	padding: 0px 0px 10px;
-}
-
-#edit_order_pending_table #row1 #edit_order_pending_table_rejectBtn {
-	border-top: 1px solid black;
-	border-collapse: collapse;
-}
-
-.edit_order_pending_table_editBtn, .edit_order_pending_table_rejectBtn {
-	border: none;
-	background-color: inherit;
-	cursor: pointer;
-	font-size: 18px;
-}
-</style>
+<title>HealthCare | Manage Pending Order</title>
 </head>
 <body>
 	<%@ include file="../shareFiles/header.html"%>
@@ -117,13 +61,13 @@ width: 400px;
 								</tr>
 								<tr>
 									<td>1.</td>
-									<td>Panodol Actifast 10s Compack</td>
+									<td id="edit_order_pending_table_item">Panodol Actifast 10s Compack</td>
 									<td id="edit_order_pending_table_quantity">1</td>
 									<td id="edit_order_pending_table_unitPrice">RM 13.50</td>
-									<td><a href="EditOrderPending.jsp"><button
+									<!-- <td><a href="EditOrderPending.jsp"><button
 												class="edit_order_pending_table_editBtn">
 												<ion-icon name="create-outline"></ion-icon>
-											</button></a></td>
+											</button></a></td> -->
 									<td id="edit_order_pending_table_rejectBtn"><button
 											class="edit_order_pending_table_rejectBtn"
 											onClick="rejectOrder()">
@@ -132,14 +76,14 @@ width: 400px;
 								</tr>
 								<tr>
 									<td>2.</td>
-									<td>NewGene-Saliva/Nasal 2-in-1 Covid-19 Home Self Antigen
+									<td id="edit_order_pending_table_item">NewGene-Saliva/Nasal 2-in-1 Covid-19 Home Self Antigen
 										Test Kit(RTK)</td>
 									<td id="edit_order_pending_table_quantity">5</td>
 									<td id="edit_order_pending_table_unitPrice">RM 10.70</td>
-									<td><a href="EditOrderPending.jsp"><button
+									<!-- <td><a href="EditOrderPending.jsp"><button
 												class="edit_order_pending_table_editBtn">
 												<ion-icon name="create-outline"></ion-icon>
-											</button></a></td>
+											</button></a></td> -->
 									<td><button class="edit_order_pending_table_rejectBtn"
 											onClick="rejectOrder()">
 											<ion-icon name="trash-bin-outline"></ion-icon>
@@ -147,13 +91,13 @@ width: 400px;
 								</tr>
 								<tr>
 									<td>3.</td>
-									<td>WOODS' Peppermint Cough Syrup for Adult 100ml</td>
+									<td id="edit_order_pending_table_item">WOODS' Peppermint Cough Syrup for Adult 100ml</td>
 									<td id="edit_order_pending_table_quantity">1</td>
 									<td id="edit_order_pending_table_unitPrice">RM 9.50</td>
-									<td><a href="EditOrderPending.jsp"><button
+									<!-- <td><a href="EditOrderPending.jsp"><button
 												class="edit_order_pending_table_editBtn">
 												<ion-icon name="create-outline"></ion-icon>
-											</button></a></td>
+											</button></a></td> -->
 									<td><button class="edit_order_pending_table_rejectBtn"
 											onClick="rejectOrder()">
 											<ion-icon name="trash-bin-outline"></ion-icon>
@@ -161,13 +105,13 @@ width: 400px;
 								</tr>
 								<tr>
 									<td>4.</td>
-									<td>Listerine Sakura & Peach Zest 500ml</td>
+									<td id="edit_order_pending_table_item">Listerine Sakura & Peach Zest 500ml</td>
 									<td id="edit_order_pending_table_quantity">1</td>
 									<td id="edit_order_pending_table_unitPrice">RM 11.70</td>
-									<td><a href="EditOrderPending.jsp"><button
+									<!-- <td><a href="EditOrderPending.jsp"><button
 												class="edit_order_pending_table_editBtn">
 												<ion-icon name="create-outline"></ion-icon>
-											</button></a></td>
+											</button></a></td> -->
 									<td><button class="edit_order_pending_table_rejectBtn"
 											onClick="rejectOrder()">
 											<ion-icon name="trash-bin-outline"></ion-icon>
@@ -178,7 +122,7 @@ width: 400px;
 					</div>
 					<div class="submit_button_box">
 						<button class="editOrderPending_submit_button"
-							onClick="completeOrder()">Confirm Order</button>
+							onClick="completeOrder()">Complete Order</button>
 					</div>
 				</div>
 			</div>

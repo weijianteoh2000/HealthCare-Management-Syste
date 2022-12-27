@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>HealthCare|Patient Profile Search</title>
+<title>HealthCare | Patient Profile Search</title>
 <link rel="stylesheet" type="text/css" href="MedicalCheckUp.css">
 <style>
 table{

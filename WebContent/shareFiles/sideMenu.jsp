@@ -30,7 +30,7 @@ if(userName.equals("admin")&&pw.equals("a1234")){
                     {name:"Stock",image:"img/approval-list-icon.png",link: "StockManagement/stock.jsp"},
                     {name:"Booking",image:"img/report-page-icon.png",link: "MedicalCheckUpBooking/MedicalCheckUpApplicationList.jsp"},
                     {name:"Prescription",image:"img/report-page-icon.png",link: "Report/AllLabs.html"},
-                    {name:"Report",image:"img/profile-page-icon.png",link: "Profile/myprofile.html"},
+                    {name:"Report",image:"img/profile-page-icon.png",link: "shareFiles/ReportingDashboard.jsp"},
                    {name:"Time Table ",image:"img/adduser-page-icon.png",link: "Profile/add_user.html"},
                    {name:"Patient Health Info",image:"img/removeuser-page-icon.png",link: "MedicalCheckUpBooking/ReviewPatientHealthInfo.jsp"},
                    {name:"Health Check up",image:"img/edituser-page-icon.png",link: "MedicalCheckUpBooking/HealthMedicalCheckUpList.jsp"},

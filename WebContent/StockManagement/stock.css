@@ -72,37 +72,42 @@ body {
     border-bottom: 2px solid #009879;
 }
 
-/* add,update and delete button */
-.button {
-  padding: 15px 25px;
-  font-size: 24px;
-  cursor: pointer;
-  text-align: center;
-  text-decoration: none;
-  outline: none;
-  color: #fff;
-  background-color: #8bcbe1;
-  border: none;
-  border-radius: 15px;
-  box-shadow: 0 9px #999;
+.content-table {
+	position: relative;
+	width: calc(100% - 500px);
+	min-height: 100wh;
+	background: var(- -white);
+	transition: 0.5s;
+	margin-top: 20px;
+margin-left: auto;
+margin-right: auto;
 }
 
-.modifyButton{
-	background-color: #8bcbe1; 
-	border: none; 
-	padding: 10px; 
-	 cursor: pointer;
-	box-shadow: 0 3px #999; 
-	border-radius: 5px
-}
-.modifyButton:hover,.button:hover {background-color: #5fc2f2}
-
-.modifyButton:active, .button:active {
-  background-color: #5fc2f2;
-  box-shadow: 0 5px #666;
-  transform: translateY(4px);
+#myTable{
+position: relative;
+	background-color: white;
+	padding: 15px 15px 17px;
+	margin: 0px 20px 20px;
+	border-radius: 10px;
+	box-shadow: 0 7px 25px rgba(0, 0, 0, 0.2);
 }
 
+#myTable table {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+#myTable td {
+	text-align: center;
+	padding: 8px;
+	border-bottom: 1px solid #ddd;
+}
+
+#myTable th {
+	border-bottom: 1px solid black;
+	border-collapse: collapse;
+	padding: 0px 0px 10px;
+}
 
 .container{
 	  display: flex;
@@ -112,17 +117,23 @@ body {
 input{
   width: 100%;
   padding: 12px 20px;
-  margin: 8px 0;
+  margin: 5px 0;
   display: inline-block;
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
 }
+
 .inputContainer{
-	width: 50%;
+	margin-top: 20px;
+	width: 40%;
 	 display: block;
   margin-left: auto;
   margin-right: auto;
+}
+
+.inputContainer input{
+	margin-bottom: 15px;
 }
 
 /* search bar in transition */
@@ -146,6 +157,7 @@ input{
 	margin: auto;
 	width: 50%;
 }
+
 /* Style the search field */
 .searchContainer input{
   border-radius: 0;
@@ -160,7 +172,7 @@ input{
 .searchContainer button{
 float: right;
   width: 20%;
-  margin-top: 8px;
+  margin-top: 5px;
   padding: 10px;
   background: #2196F3;
   color: white;

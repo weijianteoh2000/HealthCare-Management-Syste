@@ -4,8 +4,9 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>HealthCare|Health Medical Check Up Form</title>
+<title>HealthCare | Health Medical Check Up Form</title>
 <link rel="stylesheet" type="text/css" href="MedicalCheckUp.css">
+<link rel="stylesheet" type="text/css" href="../shareFiles/index.css">
 </head>
 <body>
 <%@ include file="../shareFiles/header.html"%>
@@ -15,12 +16,13 @@
 			<div class="main-content-container">
 				<div class="main-content-item main-title">
 					<!--Put your Page Title here-->
-					<h1>Health Medical Check Up Form</h1>
+					<h1>CHECK UP FORM</h1>
 				</div>
 
 				<div class="main-content-item main-content">
 					<!--Put your Page Content here-->
-					PATIENT
+					<div class="checkUp_form">
+					<h1 id="main_header_patient" style="text-align: center; margin-top: 10px;">Patient Information</h1>
 					<br><br>
 					Name : Lisa <br>
 					Age: 25 <br>
@@ -53,11 +55,13 @@
 					
 					<br>
 					Patient Sickness:<br>
-					<Textarea name="patient_sickness" placeholder="please state down the patient sickness at here" rows="4" cols="50" required></Textarea>
+					<Textarea id="sickness" name="patient_sickness" placeholder="Please state down the patient sickness at here..." rows="4" cols="50" required></Textarea>
 					<input type="hidden" name="patientID" value="">
-					<input type="submit" name="submit" value="submit">
 					</form>
-
+					<div class="submit_button_box">
+						<a href=""><button class="checkUpForm_submit_button">Submit</button></a>
+					</div>
+					</div>
 				</div>
 			</div>
 			<%@ include file="../shareFiles/footer.html"%>

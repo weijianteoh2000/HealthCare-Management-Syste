@@ -3,7 +3,9 @@
 <!DOCTYPE html>
 <html>
 <link rel="stylesheet" type="text/css" href="shareFiles/index.css">
-<head></head>
+<head>
+<title>HealthCare Management | Welcome</title>
+</head>
 <body> 
 <div class="topmenu">
 <div class="toplogo"><img style='margin-left: 20px;' width="70px" height="70px" src="img/logo-black-bigger-removebg-preview.png" ></div>

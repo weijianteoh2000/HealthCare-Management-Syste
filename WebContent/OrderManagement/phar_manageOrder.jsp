@@ -6,7 +6,7 @@
 <meta charset="ISO-8859-1">
 <link rel="stylesheet" type="text/css" href="../shareFiles/index.css">
 <link rel="stylesheet" type="text/css" href="order.css">
-<title>Health Care Management | Manage Order</title>
+<title>HealthCare | Manage Order</title>
 </head>
 <body>
 	<%@ include file="../shareFiles/header.html"%>
@@ -33,7 +33,7 @@
 								</tr>
 								<tr id="row1">
 									<td>1.</td>
-									<td>Panodol Actifast 10s Compack</td>
+									<td id="phar_manage_order_table_item">Panodol Actifast 10s Compack</td>
 									<td id="phar_manage_order_table_quantity">1</td>
 									<td id="phar_manage_order_table_unitPrice">RM 13:50</td>
 									<td id="phar_manage_order_table_status"><button
@@ -50,7 +50,7 @@
 								</tr>
 								<tr>
 									<td>2.</td>
-									<td>NewGene-Saliva/Nasal 2-in-1 Covid-19 Home Self Antigen
+									<td id="phar_manage_order_table_item">NewGene-Saliva/Nasal 2-in-1 Covid-19 Home Self Antigen
 										Test Kit(RTK)</td>
 									<td id="phar_manage_order_table_quantity">5</td>
 									<td id="phar_manage_order_table_unitPrice">RM 10:70</td>
@@ -67,7 +67,7 @@
 								</tr>
 								<tr>
 									<td>3.</td>
-									<td>WOODS' Peppermint Cough Syrup for Adult 100ml</td>
+									<td id="phar_manage_order_table_item">WOODS' Peppermint Cough Syrup for Adult 100ml</td>
 									<td id="phar_manage_order_table_quantity">1</td>
 									<td id="phar_manage_order_table_unitPrice">RM 9:50</td>
 									<td id="phar_manage_order_table_status"><button
@@ -83,7 +83,7 @@
 								</tr>
 								<tr>
 									<td>4.</td>
-									<td>Listerine Sakura & Peach Zest 500ml</td>
+									<td id="phar_manage_order_table_item">Listerine Sakura & Peach Zest 500ml</td>
 									<td id="phar_manage_order_table_quantity">1</td>
 									<td id="phar_manage_order_table_unitPrice">RM 11:70</td>
 									<td id="phar_manage_order_table_status"><button

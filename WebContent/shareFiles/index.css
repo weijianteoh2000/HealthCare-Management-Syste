@@ -107,39 +107,15 @@ keyframes slide { 20% {
 
 40%
 {
-margin-left
-:
- 
-calc
-(-728px
- 
-*
- 
-1);
+margin-left:calc(-728px *1);
 }
 60%
 {
-margin-left
-:
- 
-calc
-(-728px
- 
-*
- 
-2);
+margin-left:calc(-728px*2);
 }
 80%
 {
-margin-left
-:
- 
-calc
-(-728px
- 
-*
- 
-3);
+margin-left:calc(-728px*3);
 }
 }
 

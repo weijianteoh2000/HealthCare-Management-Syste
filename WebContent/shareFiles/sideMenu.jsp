@@ -29,8 +29,7 @@ if(userName.equals("admin")&&pw.equals("a1234")){
                     {name:"Products",image:"img/application-list-icon.png",link: "OrderManagement/Product.jsp"},
                     {name:"Stock",image:"img/approval-list-icon.png",link: "StockManagement/stock.jsp"},
                     {name:"Booking",image:"img/report-page-icon.png",link: "MedicalCheckUpBooking/MedicalCheckUpApplicationList.jsp"},
-                    {name:"Prescription",image:"img/report-page-icon.png",link: "Report/AllLabs.html"},
-                    {name:"Report",image:"img/profile-page-icon.png",link: "Profile/myprofile.html"},
+                    {name:"Prescription",image:"img/report-page-icon.png",link: "PrescriptionManagement/prescription.jsp"},
                    {name:"Time Table ",image:"img/adduser-page-icon.png",link: "Profile/add_user.html"},
                    {name:"Patient Health Info",image:"img/removeuser-page-icon.png",link: "MedicalCheckUpBooking/ReviewPatientHealthInfo.jsp"},
                    {name:"Health Check up",image:"img/edituser-page-icon.png",link: "MedicalCheckUpBooking/HealthMedicalCheckUpList.jsp"},
@@ -42,19 +41,19 @@ if(userName.equals("admin")&&pw.equals("a1234")){
                     var container = document.getElementById("side-menu-item");
                     for (i=0; i < contents.length; i++){
 				if (user == "admin"
-							&& (i == 0 || i == 1 || i == 3 || i == 6 || i == 7 || i == 8 || i == 12))
+							&& (i == 0 || i == 1 || i == 3 || i == 5 || i == 6 || i == 7 || i == 11))
 						continue;
 					if (user == "pharmacist"
-							&& (i == 0 || i == 1 || i == 3 || i == 5 || i == 6 || i==8
-									|| i == 7 || i == 9 || i == 10 || i == 12))
+							&& (i == 0 || i == 1 || i == 3  || i == 5 || i==7
+									|| i == 6 || i == 8 || i == 9 || i == 11))
 						continue;
 					if (user == "doctor"
-							&& (i == 0 || i == 1 || i == 2 || i == 3 || i == 5
-									|| i == 9 || i == 10 || i == 11 || i == 12))
+							&& (i == 0 || i == 1 || i == 2 || i == 3
+									|| i == 8 || i == 9 || i == 10 || i == 11))
 						continue;
 					if (user == "customer"
-							&& (i == 2 || i == 4 || i == 5 || i == 6 || i == 7
-									|| i == 8 || i == 9 || i == 10 || i == 11))
+							&& (i == 2 || i == 4 || i == 5 || i == 6
+									|| i == 7 || i == 8 || i == 9 || i == 10))
 						continue;
 
 					const new_card = '<a href=../'+contents[i].link+'> <div class=\"side-menu-option\"> <img src=\"../' + contents[i].image + '" width=20px height=20px><h4>'

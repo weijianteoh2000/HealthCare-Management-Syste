@@ -33,6 +33,7 @@ body{
     display: block;
     text-align: center;
     width: 100%;
+    padding-top: 20px;
     font-size: 40px;
     border-bottom: 1px solid silver;
     padding-bottom: 20px;

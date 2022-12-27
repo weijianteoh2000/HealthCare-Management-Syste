@@ -25,19 +25,39 @@
                         
     <form class="searchContainer" >
 <input type="text" placeholder="Search.." name="search">
-  <button type="submit" onclick="searchItem()"><i class="fa fa-search"></i></button>
+  <button type="submit"> <!-- onclick="searchItem()" --><i class="fa fa-search"></i></button>
     </form>
   
-  <div id="viewItem" hidden>
-  <%@ include file="transitionContent.jsp" %> 
+  <div id="viewItem">
+  <div class="transitionContent">
+  <table 	style="width: 50%;
+	 display: block;
+  margin-left: auto;
+  margin-right: auto;">
+   <tr >
+   <td><i class="fa fa-check-square-o" style="padding: 36px; font-size:60px;"></i></td>
+   <td>Ordered<br>15:30 19 September 2022</td>
+   </tr>
+  <tr >
+   <td><i class="fa fa-check-square-o" style="padding: 36px; font-size:60px;"></i></td>
+   <td>Shipped<br>15:45 19 September 2022</td>
+   </tr>
+    <tr >
+   <td><i id="delivered" class="fa fa-check-square-o" style="padding: 36px; font-size:60px;"></i></td>
+   <td>Delivered<br>16:45 22 September 2022</td>
+   </tr>
+  </table>
+  <div class="container"> <button id="btn" class="button" onClick="location.href = 'TrackedShipment.jsp';">View Tracking</button>
+  </div>   
   </div>
-   
   </div>
-    <script>
+ <!--       <script>
 			  let searchItem = button => {
 			    let element = document.getElementById("viewItem");
 			    element.removeAttribute("hidden");}
-			</script>   
+			</script>    -->
+  </div>
+
             </div></div></div>
          
 <%@ include file="../shareFiles/footer.html" %>

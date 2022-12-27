@@ -15,7 +15,7 @@
 </div>
 <div class="toplink">
   <a href="Login_Register/Login.html">Login</a>
-  <a href="#news">Register</a>
+  <a href="Login_Register/Register.html">Register</a>
 </div>
 </div>
                     <div class="main-content-item main-content">

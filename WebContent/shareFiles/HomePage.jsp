@@ -5,7 +5,7 @@
 <head>
 <meta charset="ISO-8859-1">
 <link rel="stylesheet" type="text/css" href="../shareFiles/index.css">
-<title>Health Care Management</title>
+<title>Health Care Management | HomePage</title>
 </head>
 <body>
 	<%@ include file="header.html"%>

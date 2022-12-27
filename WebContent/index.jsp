@@ -38,6 +38,15 @@
         </div>
                     </div></div>
 
-<%@ include file="shareFiles/footer.html" %>
+<div class="footer-container">
+                    <div class='footer-bar'>
+                        <img width="100px" height="100px" src="img/logo-black.png">
+                        <div class="footer-text">
+                            <h4>copyright all rights reserved</h4>
+                            <h4>If you have any quiries, please contact:</h4>
+                            <h4>weijianteoh2000@graduate.utm.my</h4>
+                        </div>
+                    </div>
+                </div>
 </body>
 </html>

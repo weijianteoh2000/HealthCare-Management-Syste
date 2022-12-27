@@ -18,22 +18,26 @@
   <a href="Login_Register/Register.html">Register</a>
 </div>
 </div>
-                    <div class="main-content-item main-content">
+             
                         <!--Put your Page Content here-->
+                        <div class="landingPage">
+                           
+                        <h1>HEALTH CARE MANAGEMENT SYSTEM</h1>
+               
                       <div id="slideshow">
         <div class="slide-wrapper"> 
 <br /><br />
             <div class="slide">
-                <img src="img/article1.png" width="706px" height="398px"/>
+                <a href="https://www.healthymepa.com/2018/07/23/important-take-medications-time/"><img src="img/medicineOnTime.jpg" width="706px" height="398px"/></a>
             </div>
             <div class="slide">
-              <img src="img/article2.png" width="706px" height="398px"/>
+              <a href="https://www.starhealth.in/blog/health-and-its-importance"><img src="img/Health-Importance.jpg" width="706px" height="398px"/></a>
             </div>
             <div class="slide">
-                <img src="img/article3.png" width="706px" height="398px"/>
+                <a href="https://www.atriummednyc.com/2021/04/14/the-importance-of-sleep/"><img src="img/SleepDeprivation.jpg" width="706px" height="398px"/></a>
             </div>
                 <div class="slide">
-                <img src="img/article4.jpg" width="706px" height="398px"/>
+                <a href="https://www.medylife.com/blog/health/5-reasons-regular-health-check-ups-important/"><img src="img/RegularCheckUp.jpg" width="706px" height="398px"/></a>
             </div>
         </div>
                     </div></div>

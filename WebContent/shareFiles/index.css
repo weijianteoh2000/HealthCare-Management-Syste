@@ -7,6 +7,16 @@
 	padding: 0;
 	font-family: 'Ubuntu', snas-serif;
 }
+.landingPage{
+	text-align: center;
+	padding: 10px;
+	margin-top: 50px;
+	margin-left: 10px;
+	margin-right: 10px;
+	border-radius: 5px;
+	justify-content: center;
+	background-color:rgba(255, 255, 255, 0.562);
+}
 /*drop down menu for profile*/
 .dropdownProfile {
 	position: relative;
@@ -40,7 +50,7 @@
 
 /*arrangement of the top menu at home page*/
 .topmenu {
-	width: 100%;
+	width: 98%;
 	display: flex;
 	padding: 5px 10px;
 	justify-content: space-between;
@@ -62,6 +72,7 @@
 	overflow: hidden;
 	display: flex;
 	justify-content: center;
+	padding-left: 50px;
 	background-color: transparent;
 }
 
@@ -97,26 +108,25 @@
 
 .slide-wrapper {
 	width: calc(728px * 4);
-	animation: slide 10s ease infinite;
+	animation: slide 20s ease infinite;
 }
 
-@
-keyframes slide { 20% {
-	margin-left: 0px;
-}
+@keyframes slide {
+    20% {
+        margin-left: 0px;
+    }
 
-40%
-{
-margin-left:calc(-728px *1);
-}
-60%
-{
-margin-left:calc(-728px*2);
-}
-80%
-{
-margin-left:calc(-728px*3);
-}
+    40% {
+        margin-left: calc(-728px * 1);
+    }
+
+    60% {
+        margin-left: calc(-728px * 2);
+    }
+
+    80% {
+        margin-left: calc(-728px * 3);
+    }
 }
 
 /*the body of the content*/

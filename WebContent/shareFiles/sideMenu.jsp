@@ -31,7 +31,7 @@ if(userName.equals("admin")&&pw.equals("a1234")){
                     {name:"Booking",image:"img/report-page-icon.png",link: "MedicalCheckUpBooking/MedicalCheckUpApplicationList.jsp"},
                     {name:"Prescription",image:"img/report-page-icon.png",link: "Report/AllLabs.html"},
                     {name:"Report",image:"img/profile-page-icon.png",link: "Profile/myprofile.html"},
-                   {name:"Time Table ",image:"img/adduser-page-icon.png",link: "Profile/add_user.html"},
+                   {name:"Time Table ",image:"img/adduser-page-icon.png",link: "MedicalCheckUpBooking/timetable.jsp"},
                    {name:"Patient Health Info",image:"img/removeuser-page-icon.png",link: "MedicalCheckUpBooking/ReviewPatientHealthInfo.jsp"},
                    {name:"Health Check up",image:"img/edituser-page-icon.png",link: "MedicalCheckUpBooking/HealthMedicalCheckUpList.jsp"},
                    {name:"Patient",image:"img/edituser-page-icon.png",link: "OrderManagement/Customer.jsp"},

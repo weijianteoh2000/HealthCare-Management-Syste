@@ -31,7 +31,14 @@
 					Request Date: 18/11/2022<br>
 					Request Time: Morning<br>
 					<form action="" method="">
-					Assign appointment time:<input type="time" name="time"><br><br><br>
+					Assign appointment time:<input type="time" name="time"><br>
+					Assign doctor:
+					<select name="assigned_doctor">
+					<option value="Alice">Alice</option>
+					<option value="Millie">Milli</option>
+					<option value="Brandon">Brandon</option>
+					</select>
+					<br><br><br>
 					<div class="centerBtn">
 					<input type="submit" value="Reject">
 					<input type="submit" value="Accept">

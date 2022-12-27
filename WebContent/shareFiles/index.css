@@ -1,11 +1,9 @@
-@import
-	url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap')
-	;
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');  
 
-* {
+*{
 	margin: 0;
 	padding: 0;
-	font-family: 'Ubuntu', snas-serif;
+ font-family: 'Ubuntu', snas-serif; 
 }
 .landingPage{
 	text-align: center;
@@ -126,8 +124,7 @@
 
     80% {
         margin-left: calc(-728px * 3);
-    }
-}
+    }}
 
 /*the body of the content*/
 body {
@@ -336,6 +333,131 @@ a:link:hover {
 	grid-template-columns: 1fr;
 	grid-gap: 30px;
 	border-radius: 20px;
+}
+
+/*Submit Button*/
+/* Submit button every page*/
+.submit_button_box {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/* add,update and delete button */
+.button, .order_submit_button, .cart_submit_button,
+	.confirmOrder_submit_button, .customer_info_submit_button,
+	.editOrderPending_submit_button, .edit_order_submit_button,
+	.addNewBookingAPplication_submit_button,
+	.submitNewApplication_submit_button,
+	.cancelNewApplication_submit_button, .checkUpForm_submit_button{
+	padding: 8px 20px;
+	font-size: 16px;
+	cursor: pointer;
+	text-align: center;
+	text-decoration: none;
+	outline: none;
+	color: #fff;
+	background-color: #8bcbe1;
+	border: none;
+	border-radius: 10px;
+	box-shadow: 0 5px #999;
+}
+
+.cart_submit_button {
+	margin-bottom: 15px;
+}
+
+/* trash button, edit button, cancel button*/
+.modifyButton, .order_trash_button, .customer_details_table_editBtn,
+	.customer_details_table_trashBtn, .cust_manage_order_table_editBtn,
+	.cust_manage_order_table_cancelOrderBtn, .edit_order_pending_table_rejectBtn, .phar_manage_order_table_rejectBtn, .phar_manage_order_table_editBtn {
+	background-color: #8bcbe1;
+	border: none;
+	padding: 5px 10px;
+	cursor: pointer;
+	box-shadow: 0 3px #999;
+	border-radius: 5px
+}
+
+.modifyButton:hover, .button:hover, .order_submit_button:hover,
+	.cart_submit_button:hover, .confirmOrder_submit_button:hover,
+	.customer_info_submit_button:hover, .editOrderPending_submit_button:hover,
+	.edit_order_submit_button:hover,
+	.addNewBookingAPplication_submit_button:hover, .order_trash_button:hover,
+	.customer_details_table_editBtn:hover, .customer_details_table_trashBtn:hover,
+	.cust_manage_order_table_editBtn:hover,
+	.cust_manage_order_table_cancelOrderBtn:hover,
+	.submitNewApplication_submit_button:hover,
+	.cancelNewApplication_submit_button:hover, .checkUpForm_submit_button:hover {
+	background-color: #5fc2f2
+}
+
+.modifyButton:active, .button:active, .order_submit_button:active,
+	.cart_submit_button:active, .confirmOrder_submit_button:active,
+	.customer_info_submit_button:active, .editOrderPending_submit_button:active,
+	.edit_order_submit_button:active,
+	.addNewBookingAPplication_submit_button:active, .order_trash_button:active,
+	.customer_details_table_editBtn:active,
+	.customer_details_table_trashBtn:active,
+	.cust_manage_order_table_editBtn:active,
+	.cust_manage_order_table_cancelOrderBtn:active,
+	.submitNewApplication_submit_button:active,
+	.cancelNewApplication_submit_button:active{
+	background-color: #5fc2f2;
+	box-shadow: 0 5px #666;
+	transform: translateY(4px);
+}
+
+/*Table Design*/
+.order_table_box .order_table {
+	position: relative;
+	background-color: white;
+	padding: 15px 15px 17px;
+	margin: 0px 20px 20px;
+	border-radius: 20px;
+	box-shadow: 0 7px 25px rgba(0, 0, 0, 0.2);
+}
+
+.tableList {
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	background-color: white;
+	padding: 15px 15px 17px;
+	margin-bottom: 20px;
+	margin-top: 20px;
+	border-radius: 20px;
+	box-shadow: 0 7px 25px rgba(0, 0, 0, 0.2);
+	width: 70%;
+}
+
+.tableList table {
+	border-collapse: collapse;
+	border: none;
+	width: 100%;
+}
+
+#tableList table {
+	border-collapse: collapse;
+	border: none;
+	width: 100%;
+}
+
+#tableList td {
+	border: none;
+	text-align: center;
+	padding: 8px;
+	border-bottom: 1px solid #ddd;
+}
+
+#tableList th {
+	border-bottom: 1px solid black;
+	border-collapse: collapse;
+	padding: 5px;
+}
+
+#tableList .date {
+	width: 300px;
 }
 
 /* the footer design */

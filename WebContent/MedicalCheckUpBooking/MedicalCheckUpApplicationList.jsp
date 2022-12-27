@@ -4,19 +4,9 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>HealthCare|Booking Waiting List</title>
+<title>HealthCare | Booking Waiting List</title>
 <link rel="stylesheet" type="text/css" href="MedicalCheckUp.css">
-<style>
-table, th, td {
-	border: 1px solid black;
-	border-collapse: collapse;
-}
-
-table {
-	width: 100%;
-}
-</style>
-<link rel="stylesheet" type="text/css" href="MedicalCheckUp.css">
+<link rel="stylesheet" type="text/css" href="../OrderManagement/order.css">
 </head>
 <body>
 	<%@ include file="../shareFiles/header.html"%>
@@ -26,37 +16,43 @@ table {
 			<div class="main-content-container">
 				<div class="main-content-item main-title">
 					<!--Put your Page Title here-->
-					<h1>Booking</h1>
+					<h1>BOOKING</h1>
 				</div>
 
 				<div class="main-content-item main-content">
 					<!--Put your Page Content here-->
-					This page will shows the booking status of each of your medical
-					check up application <br>
+					<h1 id="main_header">Application List</h1>
 					<div class="tableList">
-						<table>
+						<table id="tableList">
+						<tr>
+						<th>No.</th>
+						<th>Date</th>
+						<th>Status</th>
+						<th></th>
+						</tr>
 							<tr>
-								<th>1.</th>
-								<th class="date">19/11/2022 Morning</th>
-								<th>Pending</th>
-								<th><button>Details</button></th>
+								<td>1.</td>
+								<td class="date">19/11/2022 Morning</td>
+								<td class="pending">Pending</td>
+								<td><button class="modifyButton">Details</button></td>
 							</tr>
 							<tr>
-								<th>2.</th>
-								<th class="date">18/11/2022 Morning 11.00am</th>
-								<th><label class="accept">Approve</label></th>
-								<th><button>Details</button></th>
+								<td>2.</td>
+								<td class="date">18/11/2022 Morning 11.00am</td>
+								<td><label class="accept">Approve</label></td>
+								<td><button class="modifyButton">Details</button></td>
 							</tr>
 							<tr>
-								<th>3.</th>
-								<th class="date">17/11/2022 Morning</th>
-								<th><label class="reject">Reject</label></th>
-								<th><button>Details</button></th>
+								<td>3.</td>
+								<td class="date">17/11/2022 Morning</td>
+								<td><label class="reject">Reject</label></td>
+								<td><button class="modifyButton">Details</button></td>
 							</tr>
 						</table>
-						<a href="MedicalCheckUpApplicationAdding.jsp"><button>Add New Booking Application</button></a>
 					</div>
-
+					<div class="submit_button_box">
+						<a href="MedicalCheckUpApplicationAdding.jsp"><button class="addNewBookingAPplication_submit_button">Add New Application</button></a>
+					</div>
 				</div>
 			</div>
 			<%@ include file="../shareFiles/footer.html"%>

@@ -6,15 +6,6 @@
 	margin-left: 40px;
 }
 
-.order_table_box .order_table {
-	position: relative;
-	background-color: white;
-	padding: 15px 15px 17px;
-	margin: 0px 20px 20px;
-	border-radius: 20px;
-	box-shadow: 0 7px 25px rgba(0, 0, 0, 0.2);
-}
-
 .order_table #order_table {
 	width: 100%;
 }
@@ -38,7 +29,7 @@ th {
 	border-bottom: 1px solid black;
 	border-collapse: collapse;
 	padding: 0px 0px 10px;
-}
+} 
 
 #order_table table {
 	border-collapse: collapse;
@@ -76,46 +67,6 @@ th {
 
 #order_quantity {
 	padding: 8px;
-}
-
-/* Submit button every page*/
-.submit_button_box {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
-.order_submit_button, .cart_submit_button, .confirmOrder_submit_button,
-	.customer_info_submit_button, .editOrderPending_submit_button,
-	.edit_order_submit_button {
-	border: none;
-	color: black;
-	padding: 15px 32px;
-	text-align: center;
-	font-size: 16px;
-	margin: 4px 2px;
-	cursor: pointer;
-	background-color: #5FC2F2;
-	border-radius: 15px;
-}
-
-.order_submit_button:hover, .cart_submit_button:hover,
-	.confirmOrder_submit_button:hover, .customer_info_submit_button:hover,
-	.editOrderPending_submit_button:hover, .edit_order_submit_button:hover
-	{
-	border: 2px solid #374955;
-	color: white;
-	background-color: #008CBA;
-}
-
-/* trash button, edit button, cancel button*/
-.order_trash_button, .customer_details_table_editBtn,
-	.customer_details_table_trashBtn, .cust_manage_order_table_editBtn,
-	.cust_manage_order_table_cancelOrderBtn {
-	border: none;
-	background-color: inherit;
-	cursor: pointer;
-	font-size: 18px;
 }
 
 /*Confirm Order by Customer*/
@@ -308,7 +259,6 @@ th {
 }
 
 #phar_manage_order_table td {
-	text-align: center;
 	padding: 8px;
 	border-bottom: 1px solid #ddd;
 }
@@ -319,6 +269,10 @@ th {
 	padding: 0px 0px 10px;
 }
 
+#phar_manage_order_table_item{
+text-align: left;
+}
+
 /*Edit Order by Customer*/
 .edit_order_table {
 	width: 600px;
@@ -327,7 +281,7 @@ th {
 	padding-bottom: 40px;
 }
 
-#edit_order_table #edit_order_table_header {
+#edit_order_table #edit_order_table_header{
 	width: 150px;
 }
 
@@ -506,7 +460,122 @@ position: relative;
 	box-shadow: 0 7px 25px rgba(0, 0, 0, 0.2);
 }
 
+#customer_details_table table {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+#customer_details_table td {
+	text-align: center;
+	padding: 8px;
+	border-bottom: 1px solid #ddd;
+}
+
+#customer_details_table th {
+	border-bottom: 1px solid black;
+	border-collapse: collapse;
+	padding: 0px 0px 10px;
+}
+
 #customer_details_table #row1 #customer_details_table_trashBtn{
 border-top: 1px solid black;
 	border-collapse: collapse;
+}
+
+/*Edit Customer by Admin*/
+.customer_info_table {
+	width: 550px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-bottom: 40px;
+}
+
+#customer_info_table #customer_info_table_header {
+	width: 80px;
+}
+
+#customer_info_table table, th, td {
+	padding: 8px;
+	border-style: none;
+}
+
+#customer_info_table_header, #customer_info_table_data {
+	text-align: left;
+}
+
+#edit_input, textarea, select {
+	width: 400px;
+	padding: 8px 12px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1.5px solid #89AFFF;
+	border-radius: 4px;
+	box-sizing: border-box;
+	font-size: 15px;
+}
+
+#main_header_customer_info {
+	margin: 20px;
+	margin-left: 40px;
+	text-align: center;
+}
+
+/* Manage Order by Pharmacist */
+.order_info_table {
+	width: 1000px;
+	padding-left: 100px;
+	margin-bottom:20px;
+}
+
+#order_info_table table, th, td {
+	padding: 8px;
+	border-style: none;
+}
+
+#order_info_table_header,
+	#order_info_table_data {
+	width:150px;
+	text-align: left;
+}
+
+#order_info_table_data_column2 {
+text-align: left;
+width: 400px;
+}
+
+.edit_order_pending_table {
+	position: relative;
+	background-color: white;
+	padding: 10px 15px 17px;
+	margin: 0px 0px 20px 40px;
+	border-radius: 10px;
+	box-shadow: 0 7px 25px rgba(0, 0, 0, 0.2);
+}
+
+#edit_order_pending_table tr {
+	text-align: center;
+	padding: 8px;
+	border-bottom: 1px solid #C0C2C8;
+}
+
+#edit_order_pending_table #row1 {
+	border-bottom: 2px solid black;
+	border-collapse: collapse;
+	padding: 0px 0px 10px;
+}
+
+#edit_order_pending_table #row1 #edit_order_pending_table_rejectBtn {
+	border-top: 1px solid black;
+	border-collapse: collapse;
+}
+
+.edit_order_pending_table_editBtn, .edit_order_pending_table_rejectBtn {
+	border: none;
+	background-color: inherit;
+	cursor: pointer;
+	font-size: 18px;
+}
+
+#edit_order_pending_table_item{
+text-align: left;
 }

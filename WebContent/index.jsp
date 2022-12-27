@@ -24,16 +24,16 @@
         <div class="slide-wrapper"> 
 <br /><br />
             <div class="slide">
-                <img src="img/article1.png" />
+                <img src="img/article1.png" width="706px" height="398px"/>
             </div>
             <div class="slide">
-              <img src="img/article2.png" />
+              <img src="img/article2.png" width="706px" height="398px"/>
             </div>
             <div class="slide">
-                <img src="img/article3.png" />
+                <img src="img/article3.png" width="706px" height="398px"/>
             </div>
                 <div class="slide">
-                <img src="img/article4.jpg" />
+                <img src="img/article4.jpg" width="706px" height="398px"/>
             </div>
         </div>
                     </div></div>

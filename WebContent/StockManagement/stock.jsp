@@ -10,36 +10,29 @@
 </head>
 <body>
 <%@ include file="../shareFiles/header.html" %>
-<div class="content">
+<div class="row g-0">
 <%@ include file="../shareFiles/sideMenu.jsp" %> 
- <div class="content-item page">
-                <div class="main-content-container">
-                    <div class="main-content-item main-title">
-                        <!--Put your Page Title here-->
+ <div class="col-lg px-5 pt-4 bg-light wow fadeIn rounded"
+			data-wow-delay="0.1s">
                         <h1>STOCK MANAGEMENT</h1>
-                    </div>
-                    <div class="main-content-item main-content">
-                        <!--Put your Page Content here-->
-                      <div class="container">
+                      <div class="container mb-5">
   <div class="column">
-    <div class="card">
-      <h3>DETAILS  <img width=100 height=100 src="../img/stock.png"></img></h3><br></br>
-      <a href="Details.jsp"><p>More Info -> </p></a>
+    <div class="card rounded-3">
+      <h4 class="mt-4 mb-0">DETAILS  <img width=100 height=100 src="../img/stock.png"></img></h4><br></br>
+      <a href="Details.jsp"><p class="mb-0">More Info -> </p></a>
     </div>
   </div>
   <div class="column">
-    <div class="card"> <h3>SUPPLIER  <img width=100 height=100 src="../img/supplier.png"></img></h3><br></br>
-    <a href="Supplier.jsp"> <p>More Info -> </p></a></div>
+    <div class="card rounded-3"> <h4 class="mt-4 mb-0">SUPPLIER  <img width=100 height=100 src="../img/supplier.png"></img></h4><br></br>
+    <a href="Supplier.jsp"> <p class="mb-0">More Info -> </p></a></div>
   </div>
   <div class="column">
-    <div class="card"> <h3>TRANSITION  <img width=100 height=100 src="../img/transition.png"></img></h3><br></br>
-     <div class="moreInfo"> <a href="Transition.jsp"><p>More Info -> </p></a></div></div>
+    <div class="card rounded-3"> <h4 class="mt-4 mb-0">TRANSITION  <img width=100 height=100 src="../img/transition.png"></img></h4><br></br>
+     <div class="moreInfo"> <a href="Transition.jsp"><p class="mb-0">More Info -> </p></a></div></div>
   </div>
 </div>
                     </div>
                 </div>
-            </div>
-            </div>
 <%@ include file="../shareFiles/footer.html" %>
 </body>
 </html>

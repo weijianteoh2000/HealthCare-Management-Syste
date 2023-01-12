@@ -10,20 +10,15 @@
 </head>
 <body>
 	<%@ include file="../shareFiles/header.html"%>
-	<div class="content">
+	<div class="row g-0">
 		<%@ include file="../shareFiles/sideMenu.jsp"%>
-		<div class="content-item page">
-			<div class="main-content-container">
-				<div class="main-content-item main-title">
-					<!--Put your Page Title here-->
-					<h1>MANAGE CUSTOMER ORDER</h1>
-				</div>
-				<div class="main-content-item main-content">
-					<div class="main">
-						<h1 id="main_header">Manage Order</h1>
-						<div class="phar_manage_order_table">
-							<table id="phar_manage_order_table">
-								<tr>
+		<div class="col-lg px-5 pt-4 bg-light wow fadeIn rounded"
+			data-wow-delay="0.1s">
+						<h1>Manage Customer Order</h1>
+						<div class="bg-white rounded-3 p-3 py-2 mb-3 shadow mb-5">
+							<table class="table table-striped table-hover">
+							<thead>
+								<tr class="text-dark text-center">
 									<th>No.</th>
 									<th>Item</th>
 									<th>Quantity</th>
@@ -31,6 +26,8 @@
 									<th>Status</th>
 									<th></th>
 								</tr>
+								</thead>
+								<tbody class="align-middle text-secondary">
 								<tr id="row1">
 									<td>1.</td>
 									<td id="phar_manage_order_table_item">Panodol Actifast 10s Compack</td>
@@ -39,11 +36,11 @@
 									<td id="phar_manage_order_table_status"><button
 											class="phar_manage_order_table_statusBtn_Delivered">Delivered</button></td>
 									<td><a href="EditOrderPending.jsp"><button
-												class="phar_manage_order_table_editBtn">
+												class="btn btn-outline-dark rounded pb-0 p-1 border border-2 border-dark">
 												<ion-icon name="create-outline"></ion-icon>
 											</button></a></td>
 									<td id="phar_manage_order_table_rejectBtn"><button
-											class="phar_manage_order_table_rejectBtn"
+											class="btn btn-outline-dark rounded pb-0 p-1 border border-2 border-dark"
 											onClick="rejectOrder()">
 											<ion-icon name="trash-bin-outline"></ion-icon>
 										</button> </ion-icon></td>
@@ -57,10 +54,10 @@
 									<td id="phar_manage_order_table_status"><button
 											class="phar_manage_order_table_statusBtn_Shipping">Shipping</button></td>
 									<td><a href="EditOrderPending.jsp"><button
-												class="phar_manage_order_table_editBtn">
+												class="btn btn-outline-dark rounded pb-0 p-1 border border-2 border-dark">
 												<ion-icon name="create-outline"></ion-icon>
 											</button></a></td>
-									<td><button class="phar_manage_order_table_rejectBtn"
+									<td><button class="btn btn-outline-dark rounded pb-0 p-1 border border-2 border-dark"
 											onClick="rejectOrder()">
 											<ion-icon name="trash-bin-outline"></ion-icon>
 										</button> </ion-icon></td>
@@ -73,10 +70,10 @@
 									<td id="phar_manage_order_table_status"><button
 											class="phar_manage_order_table_statusBtn_Preparing">Preparing</button></td>
 									<td><a href="EditOrderPending.jsp"><button
-												class="phar_manage_order_table_editBtn">
+												class="btn btn-outline-dark rounded pb-0 p-1 border border-2 border-dark">
 												<ion-icon name="create-outline"></ion-icon>
 											</button></a></td>
-									<td><button class="phar_manage_order_table_rejectBtn"
+									<td><button class="btn btn-outline-dark rounded pb-0 p-1 border border-2 border-dark"
 											onClick="rejectOrder()">
 											<ion-icon name="trash-bin-outline"></ion-icon>
 										</button></td>
@@ -89,14 +86,15 @@
 									<td id="phar_manage_order_table_status"><button
 											class="phar_manage_order_table_statusBtn_Preparing">Preparing</button></td>
 									<td><a href="EditOrderPending.jsp"><button
-												class="phar_manage_order_table_editBtn">
+												class="btn btn-outline-dark rounded pb-0 p-1 border border-2 border-dark">
 												<ion-icon name="create-outline"></ion-icon>
 											</button></a></td>
-									<td><button class="phar_manage_order_table_rejectBtn"
+									<td><button class="btn btn-outline-dark rounded pb-0 p-1 border border-2 border-dark"
 											onClick="rejectOrder()">
 											<ion-icon name="trash-bin-outline"></ion-icon>
 										</button></td>
 								</tr>
+								</tbody>
 							</table>
 						</div>
 					</div>

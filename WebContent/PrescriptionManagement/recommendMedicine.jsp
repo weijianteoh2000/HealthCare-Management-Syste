@@ -6,21 +6,15 @@
 <title>HealthCare | Details</title>
 <meta charset="ISO-8859-1">
 <link rel="stylesheet" type="text/css" href="prescription.css">
-<link rel="stylesheet" type="text/css" href="../shareFiles/index.css"> 
 </head>
 <body>
 <%@ include file="../shareFiles/header.html" %>
-<div class="content">
+<div class="row g-0">
 <%@ include file="../shareFiles/sideMenu.jsp" %>  
- <div class="content-item page">
-                <div class="main-content-container">
-                    <div class="main-content-item main-title">
-                        <!--Put your Page Title here-->
-                        <h1>RECOMMEND MEDICINE</h1>
-                    </div>
-                    <div class="main-content-item main-content">
-                        <!--Put your Page Content here-->
-                      <div class="inputContainer">
+ <div class="col-lg px-5 pt-4 bg-light wow fadeIn rounded"
+			data-wow-delay="0.1s">
+               <h1>RECOMMEND MEDICINE</h1>
+                   <div class="inputContainer">
  <form action="prescription.jsp">
     <label for="stockname">Name</label>
     <input type="text" id="stockname" name="stockname" required value="Lim Ah Beng">
@@ -42,7 +36,7 @@
          
     
     <input class="inputButton" type="submit"   value="Update">
-    <input class="inputButton" type="submit"  value="Generate">
+    <input class="inputButton mb-5" type="submit"  value="Generate">
   </form>
                           <script>
     function successUpdate() {

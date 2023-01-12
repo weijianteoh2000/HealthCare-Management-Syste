@@ -10,16 +10,11 @@
 </head>
 <body>
 <%@ include file="../shareFiles/header.html" %>
-<div class="content">
+<div class="row g-0">
 <%@ include file="../shareFiles/sideMenu.jsp" %>  
- <div class="content-item page">
-                <div class="main-content-container">
-                    <div class="main-content-item main-title">
-                        <!--Put your Page Title here-->
+ <div class="col-lg px-5 pt-4 bg-light wow fadeIn rounded"
+			data-wow-delay="0.1s">
                         <h1>UPDATE STOCK</h1>
-                    </div>
-                    <div class="main-content-item main-content">
-                        <!--Put your Page Content here-->
                       <div class="inputContainer">
  <form action="Details.jsp">
     <label for="stockname">Name</label>
@@ -38,7 +33,7 @@
     <input type="date" id="adate" name="arrivalDate" required>
         <label for="edate">Expiry Date</label>
     <input type="date" id="edate" name="expiryDate" required>
-    <input class="inputButton"type="submit" onClick="successUpdate()" value="Update">
+    <input class="inputButton btn-primary mb-5"type="submit" onClick="successUpdate()" value="Update">
   </form>
                           <script>
     function successUpdate() {
@@ -47,7 +42,7 @@
 </script>  
             </div>
             </div>
-            </div></div></div>
+            </div>
 <%@ include file="../shareFiles/footer.html" %>
 </body>
 </html>

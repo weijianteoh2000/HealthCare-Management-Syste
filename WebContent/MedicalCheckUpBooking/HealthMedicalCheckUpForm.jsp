@@ -10,18 +10,12 @@
 </head>
 <body>
 <%@ include file="../shareFiles/header.html"%>
-	<div class="content">
+	<div class="row g-0">
 		<%@ include file="../shareFiles/sideMenu.jsp"%>
-		<div class="content-item page">
-			<div class="main-content-container">
-				<div class="main-content-item main-title">
-					<!--Put your Page Title here-->
-					<h1>CHECK UP FORM</h1>
-				</div>
-
-				<div class="main-content-item main-content">
-					<!--Put your Page Content here-->
-					<div class="checkUp_form">
+		<div class="col-lg px-5 pt-4 bg-light wow fadeIn rounded"
+			data-wow-delay="0.1s">
+			<h1>CHECK UP FORM</h1>
+			<div class="checkUp_form">
 					<h1 id="main_header_patient" style="text-align: center; margin-top: 10px;">Patient Information</h1>
 					<br><br>
 					Name : Lisa <br>
@@ -58,8 +52,8 @@
 					<Textarea id="sickness" name="patient_sickness" placeholder="Please state down the patient sickness at here..." rows="4" cols="50" required></Textarea>
 					<input type="hidden" name="patientID" value="">
 					
-					<div class="submit_button_box">
-						<a href=""><button class="checkUpForm_submit_button">Submit</button></a>
+					<div class="justify-content-center d-flex">
+						<a href=""><button class="btn btn-primary m-3 mb-5 shadow-lg">Submit</button></a>
 					</div></form>
 					</div>
 				</div>

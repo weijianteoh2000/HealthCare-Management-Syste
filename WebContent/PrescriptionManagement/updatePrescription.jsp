@@ -6,21 +6,15 @@
 <title>HealthCare | Details</title>
 <meta charset="ISO-8859-1">
 <link rel="stylesheet" type="text/css" href="prescription.css">
-<link rel="stylesheet" type="text/css" href="../shareFiles/index.css"> 
 </head>
 <body>
 <%@ include file="../shareFiles/header.html" %>
-<div class="content">
+<div class="row g-0">
 <%@ include file="../shareFiles/sideMenu.jsp" %>  
- <div class="content-item page">
-                <div class="main-content-container">
-                    <div class="main-content-item main-title">
-                        <!--Put your Page Title here-->
-                        <h1>UPDATE PRESCRIPTION</h1>
-                    </div>
-                    <div class="main-content-item main-content">
-                        <!--Put your Page Content here-->
-                      <div class="inputContainer">
+ <div class="col-lg px-5 pt-4 bg-light wow fadeIn rounded"
+			data-wow-delay="0.1s">
+                <h1>UPDATE PRESCRIPTION</h1>
+                   <div class="inputContainer">
  <form action="allHistory.jsp">
     <label for="stockname">Name</label>
     <input type="text" id="stockname" name="stockname" required value="Lim Ah Beng">
@@ -39,7 +33,7 @@
         <label for="edate">Next Visit</label>
     <input type="date" id="edate" name="expiryDate" value="2022-03-02" required>
     
-    <input class="inputButton" type="submit" onClick="successUpdate()" value="Update">
+    <input class="inputButton btn-primary mb-5" type="submit" onClick="successUpdate()" value="Update">
   </form>
                           <script>
     function successUpdate() {

@@ -6,29 +6,23 @@
 <meta charset="UTF-8">
 <title>HealthCare | Details</title>
 <link rel="stylesheet" type="text/css" href="stock.css">
-<link rel="stylesheet" type="text/css" href="../shareFiles/index.css">
 <script src='https://kit.fontawesome.com/a076d05399.js'></script>
 <style>
 </style>
 </head>
 <body>
 	<%@ include file="../shareFiles/header.html"%>
-	<div class="content">
+	<div class="row g-0">
 		<%@ include file="../shareFiles/sideMenu.jsp"%>
-		<div class="content-item page">
-			<div class="main-content-container">
-				<div class="main-content-item main-title">
-					<!--Put your Page Title here-->
+		<div class="col-lg px-5 pt-4 bg-light wow fadeIn rounded"
+			data-wow-delay="0.1s">
 					<h1>STOCK DETAILS</h1>
-				</div>
-				<div class="main-content-item main-content">
-					<!--Put your Page Content here-->
 					<div class="content-table">
-						<div id="myTable">
+						<div class="table table-striped table-hover" id="myTable">
 							<script src="Details.js"></script>
 						</div>
-						<div class="container">
-							<button class="button"
+						<div class="justify-content-center d-flex">
+							<button class="btn btn-primary m-3 mb-5 shadow-lg"
 								onClick="location.href = 'AddNewStock.jsp';">Add new</button>
 						</div>
 						<!--  <script>
@@ -39,8 +33,6 @@
 					</div>
 				</div>
 			</div>
-		</div>
-	</div>
 	<%@ include file="../shareFiles/footer.html"%>
 </body>
 </html>

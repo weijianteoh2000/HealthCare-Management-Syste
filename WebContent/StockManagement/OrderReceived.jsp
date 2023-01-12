@@ -11,9 +11,10 @@
 </head>
 <body>
 <%@ include file="../shareFiles/header.html" %>
-<div class="content">
+<div class="row g-0">
 <%@ include file="../shareFiles/sideMenu.jsp" %>
- <div class="content-item page">
+ <div class="col-lg px-5 pt-4 bg-light wow fadeIn rounded"
+			data-wow-delay="0.1s">
                 <div class="main-content-container">
                     <div class="main-content-item main-title">
                         <!--Put your Page Title here-->
@@ -32,7 +33,7 @@
 Panadol Malaysia</p></div>
   </div>   
   <br></br>
-  <div class="container"> <button id="btn" class="button">Print Invoice</button>
+  <div class="justify-content-center d-flex"> <button id="btn" class="btn btn-primary m-3 mb-5 shadow-lg">Print Invoice</button>
   
   </div>
   </div>

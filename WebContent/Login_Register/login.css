@@ -9,14 +9,8 @@ body{
     background-size: cover;
 }
 
-#center{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
+.center{
     margin:auto;
-    background-color: white;
-    border-radius: 10px;
 }
 
 #center img{
@@ -33,7 +27,6 @@ body{
     display: block;
     text-align: center;
     width: 100%;
-    padding-top: 20px;
     font-size: 40px;
     border-bottom: 1px solid silver;
     padding-bottom: 20px;

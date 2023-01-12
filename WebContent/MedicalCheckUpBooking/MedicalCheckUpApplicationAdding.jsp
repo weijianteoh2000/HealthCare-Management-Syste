@@ -5,28 +5,20 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>HealthCare | Add Booking</title>
-<link rel="stylesheet" type="text/css" href="../shareFiles/index.css">
 <link rel="stylesheet" type="text/css" href="MedicalCheckUp.css">
 <link rel="stylesheet" type="text/css"
 	href="../OrderManagement/order.css">
 </head>
 <body>
 	<%@ include file="../shareFiles/header.html"%>
-	<div class="content">
+	<div class="row g-0">
 		<%@ include file="../shareFiles/sideMenu.jsp"%>
-		<div class="content-item page">
-			<div class="main-content-container">
-				<div class="main-content-item main-title">
-					<!--Put your Page Title here-->
-					<h1>BOOKING</h1>
-				</div>
-
-				<div class="main-content-item main-content">
-					<!--Put your Page Content here-->
+		<div class="col-lg px-5 pt-4 bg-light wow fadeIn rounded" data-wow-delay="0.1s">
 					<h1 id="main_header_makeNewBooking">Make New Booking</h1>
-					<div class="newApplication_table">
+					<div class="d-flex justify-content-center">
+					<div class="bg-white rounded-3 p-3 py-2 mb-3 shadow w-auto d-flex justify-content-around">
 						<form action="MedicalCheckUpApplicationList.jsp" method="post">
-							<table id="newApplication_table">
+							<table class="table table-borderless">
 								<tr>
 									<th>Date 1:</th>
 									<td><input type="date" name="date1"></td>
@@ -61,21 +53,17 @@
 							</table>
 						</form>
 					</div>
-					<div style="display: flex; justify-content: center;">
+					</div>
+					<div class="d-flex justify-content-center">
 						<div class="centerBtn">
 							<a href="MedicalCheckUpApplicationList.jsp"><button
-									class="cancelNewApplication_submit_button">Cancel</button></a> <a
+									class="btn btn-primary m-3 mb-5 shadow-lg ">Cancel</button></a> <a
 								href="MedicalCheckUpApplicationList.jsp"><button
-									class="submitNewApplication_submit_button">Submit</button></a>
+									class="btn btn-primary m-3 mb-5 shadow-lg ">Submit</button></a>
 						</div>
 					</div>
-				</div>
+			</div>
 			</div>
 			<%@ include file="../shareFiles/footer.html"%>
-		</div>
-
-
-	</div>
-	</div>
 </body>
 </html>

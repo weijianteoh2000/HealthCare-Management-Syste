@@ -7,22 +7,15 @@
 <meta charset="UTF-8">
 <title>HealthCare | Transition</title>
 <link rel="stylesheet" type="text/css" href="stock.css">
-<link rel="stylesheet" type="text/css" href="../shareFiles/index.css"> 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
 <%@ include file="../shareFiles/header.html" %>
-<div class="content">
+<div class="row g-0">
 <%@ include file="../shareFiles/sideMenu.jsp" %>
- <div class="content-item page">
-                <div class="main-content-container">
-                    <div class="main-content-item main-title">
-                        <!--Put your Page Title here-->
-                        <h1>STOCK TRANSITION</h1>
-                    </div>
-                    <div class="main-content-item main-content">
-                        <!--Put your Page Content here-->
-                        
+ <div class="col-lg px-5 pt-4 bg-light wow fadeIn rounded"
+			data-wow-delay="0.1s">
+               <h1>STOCK TRANSITION</h1>
     <form class="searchContainer" >
 <input type="text" placeholder="Search.." name="search">
   <button type="submit"> <!-- onclick="searchItem()" --><i class="fa fa-search"></i></button>
@@ -30,10 +23,7 @@
   
   <div id="viewItem">
   <div class="transitionContent">
-  <table 	style="width: 50%;
-	 display: block;
-  margin-left: auto;
-  margin-right: auto;">
+  <table class="w-50">
    <tr >
    <td><i class="fa fa-check-square-o" style="padding: 36px; font-size:60px;"></i></td>
    <td>Ordered<br>15:30 19 September 2022</td>
@@ -47,7 +37,7 @@
    <td>Delivered<br>16:45 22 September 2022</td>
    </tr>
   </table>
-  <div class="container"> <button id="btn" class="button" onClick="location.href = 'TrackedShipment.jsp';">View Tracking</button>
+  <div class="justify-content-center d-flex"> <button id="btn" class="btn btn-primary m-3 mb-5 shadow-lg" onClick="location.href = 'TrackedShipment.jsp';">View Tracking</button>
   </div>   
   </div>
   </div>

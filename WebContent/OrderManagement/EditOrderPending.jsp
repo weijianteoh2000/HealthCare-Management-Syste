@@ -10,55 +10,50 @@
 </head>
 <body>
 	<%@ include file="../shareFiles/header.html"%>
-	<div class="content">
+	<div class="row g-0">
 		<%@ include file="../shareFiles/sideMenu.jsp"%>
-		<div class="content-item page">
-			<div class="main-content-container">
-				<div class="main-content-item main-title">
-					<!--Put your Page Title here-->
-					<h1>MANAGE CUSTOMER ORDER</h1>
-				</div>
-				<div class="main-content-item main-content">
-					<div class="main">
-						<h1 id="main_header">Check Order</h1>
-						<div class="order_info_table">
-						<table id="order_info_table">
+		<div class="col-lg px-5 pt-4 bg-light wow fadeIn rounded"
+			data-wow-delay="0.1s">
+						<h1>Check Customer Order</h1>
+						<table  class="table table-borderless w-75 ms-5">
 								<tr>
-									<th id="order_info_table_header">Order ID</th>
-									<th>:</th>
+									<th class="text-dark">Order ID</th>
+									<th class="text-dark">:</th>
 									<td id="order_info_table_data_column2">PO001</td>
-									<th id="order_info_table_header">Customer ID</th>
-									<th>:</th>
+									<th class="text-dark" id="order_info_table_header">Customer ID</th>
+									<th class="text-dark">:</th>
 									<td id="order_info_table_data">CUS001</td>
 								</tr>
 								<tr>
-									<th id="order_info_table_header">Address</th>
-									<th>:</th>
+									<th class="text-dark">Address</th>
+									<th class="text-dark">:</th>
 									<td id="order_info_table_data_column2">123-B Sec.10 Kampung Bunga, Jalan Bunga 45635 Dengkil Selangor.</td>
-									<th id="order_info_table_header">Customer Name</th>
-									<th>:</th>
+									<th class="text-dark" id="order_info_table_header">Customer Name</th>
+									<th class="text-dark">:</th>
 									<td id="order_info_table_data">LIM AH BENG</td>
 								</tr>
 								<tr>
-									<th id="order_info_table_header">Order Date/Time</th>
-									<th>:</th>
+									<th class="text-dark">Order Date/Time</th>
+									<th class="text-dark">:</th>
 									<td id="order_info_table_data_column2">10/11/2022	19:37</td>
-									<th id="order_info_table_header">Contact No.</th>
-									<th>:</th>
+									<th class="text-dark" id="order_info_table_header">Contact No.</th>
+									<th class="text-dark">:</th>
 									<td id="order_info_table_data">012-3452366</td>
 								</tr>
 								<tr>
 							</table>
-						</div>
-						<div class="edit_order_pending_table">
-							<table id="edit_order_pending_table">
-								<tr id="row1">
+						<div class="bg-white rounded-3 p-3 py-2 mb-3 shadow">
+							<table class="table table-striped table-hover">
+							<thead>
+								<tr class="text-dark text-center" id="row1">
 									<th>No.</th>
 									<th>Item</th>
 									<th>Quantity</th>
 									<th>Unit Price</th>
 									<th></th>
 								</tr>
+								</thead>
+								<tbody class="align-middle text-secondary">
 								<tr>
 									<td>1.</td>
 									<td id="edit_order_pending_table_item">Panodol Actifast 10s Compack</td>
@@ -69,7 +64,7 @@
 												<ion-icon name="create-outline"></ion-icon>
 											</button></a></td> -->
 									<td id="edit_order_pending_table_rejectBtn"><button
-											class="edit_order_pending_table_rejectBtn"
+											class="btn btn-outline-dark rounded pb-0 p-1 border border-2 border-dark"
 											onClick="rejectOrder()">
 											<ion-icon name="trash-bin-outline"></ion-icon>
 										</button> </ion-icon></td>
@@ -84,7 +79,7 @@
 												class="edit_order_pending_table_editBtn">
 												<ion-icon name="create-outline"></ion-icon>
 											</button></a></td> -->
-									<td><button class="edit_order_pending_table_rejectBtn"
+									<td><button class="btn btn-outline-dark rounded pb-0 p-1 border border-2 border-dark"
 											onClick="rejectOrder()">
 											<ion-icon name="trash-bin-outline"></ion-icon>
 										</button> </ion-icon></td>
@@ -98,7 +93,7 @@
 												class="edit_order_pending_table_editBtn">
 												<ion-icon name="create-outline"></ion-icon>
 											</button></a></td> -->
-									<td><button class="edit_order_pending_table_rejectBtn"
+									<td><button class="btn btn-outline-dark rounded pb-0 p-1 border border-2 border-dark"
 											onClick="rejectOrder()">
 											<ion-icon name="trash-bin-outline"></ion-icon>
 										</button></td>
@@ -112,22 +107,20 @@
 												class="edit_order_pending_table_editBtn">
 												<ion-icon name="create-outline"></ion-icon>
 											</button></a></td> -->
-									<td><button class="edit_order_pending_table_rejectBtn"
+									<td><button class="btn btn-outline-dark rounded pb-0 p-1 border border-2 border-dark"
 											onClick="rejectOrder()">
 											<ion-icon name="trash-bin-outline"></ion-icon>
 										</button></td>
 								</tr>
+								</tbody>
 							</table>
 						</div>
-					</div>
-					<div class="submit_button_box">
-						<button class="editOrderPending_submit_button"
+						<div class="justify-content-center d-flex">
+						<button class="btn btn-primary m-3 mb-5 shadow-lg"
 							onClick="completeOrder()">Complete Order</button>
 					</div>
+					</div>
 				</div>
-			</div>
-		</div>
-	</div>
 	<%@ include file="../shareFiles/footer.html"%>
 	<script type="module"
 		src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>

@@ -9,18 +9,12 @@
 </head>
 <body>
 	<%@ include file="../shareFiles/header.html"%>
-	<div class="content">
+	<div class="row g-0">
 		<%@ include file="../shareFiles/sideMenu.jsp"%>
-		<div class="content-item page">
-			<div class="main-content-container">
-				<div class="main-content-item main-title">
-					<!--Put your Page Title here-->
-					<h1>PENDING BOOKING</h1>
-				</div>
-
-				<div class="main-content-item main-content">
-					<!--Put your Page Content here-->
-					<div class="checkUp_form">
+		<div class="col-lg px-5 pt-4 bg-light wow fadeIn rounded"
+			data-wow-delay="0.1s">
+			<h1>PENDING BOOKING</h1>
+			<div class="checkUp_form">
 						<h1 id="main_header_patient"
 							style="text-align: center; margin-top: 10px;">Patient
 							Information</h1>
@@ -44,14 +38,14 @@
 					</div>
 					<div style="display: flex; justify-content: center;">
 						<div class="centerBtn">
-							<a href=""><button class="submitNewApplication_submit_button">Reject</button></a>
-							<a href=""><button class="cancelNewApplication_submit_button">Accept</button></a>
+							<a href=""><button class="btn btn-primary m-3 mb-5 shadow-lg">Reject</button></a>
+							<a href=""><button class="btn btn-primary m-3 mb-5 shadow-lg">Accept</button></a>
 						</div>
 
 					</div>
 				</div>
-				<%@ include file="../shareFiles/footer.html"%>
 			</div>
 		</div></div>
+		<%@ include file="../shareFiles/footer.html"%>
 </body>
 </html>

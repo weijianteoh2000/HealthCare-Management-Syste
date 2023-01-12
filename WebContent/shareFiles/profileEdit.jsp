@@ -57,18 +57,12 @@ table, td, th {
 </head>
 <body>
 	<%@ include file="header.html"%>
-	<div class="content">
+	<div class="row g-0">
 		<%@ include file="sideMenu.jsp"%>
-		<div class="content-item page">
-			<div class="main-content-container">
-				<div class="main-content-item main-title">
-					<!--Put your Page Title here-->
-					<h1>Patient</h1>
-				</div>
-
-				<div class="main-content-item main-content">
-					<!--Put your Page Content here-->
-					<div class="profileContainer">
+		<div class="col-lg px-5 pt-4 bg-light wow fadeIn rounded"
+			data-wow-delay="0.1s">
+			<h1>Patient</h1>
+			<div class="profileContainer">
 						<div class="profile">
 							<img id="profilePic" src="../img/user.png" alt="profile picture"
 								width="250px" height="250px">
@@ -98,9 +92,9 @@ table, td, th {
 								</tr>
 							</table>
 							<br> <br> <br>
-							<div id="edit">
-								<a href="profileEdit.jsp"><button>Edit</button></a> 
-								<a href="profile.jsp"><button>Cancel</button></a>
+							<div class="justify-content-center d-flex">
+								<a href="profileEdit.jsp"><button class="btn btn-primary m-3 mb-5 shadow-lg">Edit</button></a> 
+								<a href="profile.jsp"><button class="btn btn-primary m-3 mb-5 shadow-lg">Cancel</button></a>
 							</div>
 							
 						</div>

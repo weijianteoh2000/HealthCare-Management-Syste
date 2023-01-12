@@ -4,7 +4,6 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<link rel="stylesheet" type="text/css" href="../shareFiles/index.css">
 <link rel="stylesheet" type="text/css" href="prescription.css">
 <title>Health Care Management | Manage Pending Order</title>
 <style>
@@ -66,46 +65,41 @@ width: 400px;
 </head>
 <body>
 	<%@ include file="../shareFiles/header.html"%>
-	<div class="content">
+	<div class="row g-0">
 		<%@ include file="../shareFiles/sideMenu.jsp"%>
-		<div class="content-item page">
-			<div class="main-content-container">
-				<div class="main-content-item main-title">
-					<!--Put your Page Title here-->
-					<h1>PRESCRIPTION HISTORY</h1>
-				</div>
-				<div class="main-content-item main-content">
-					<div class="main">
-						<h1 id="main_header">PATIENT HISTORY</h1>
-						<div class="order_info_table">
-						<table id="order_info_table">
+		<div class="col-lg px-5 pt-4 bg-light wow fadeIn rounded"
+			data-wow-delay="0.1s">
+			<h1>PATIENT HISTORY</h1>
+						<table class="table table-borderless w-75 ms-5">
 								<tr>
-									<th id="order_info_table_header">Patient ID</th>
-									<th>:</th>
+									<th class="text-dark" id="order_info_table_header">Patient ID</th>
+									<th class="text-dark">:</th>
 									<td id="order_info_table_data_column2">PO001</td>
-									<th id="order_info_table_header">Patient Name</th>
-									<th>:</th>
+									<th class="text-dark" id="order_info_table_header">Patient Name</th>
+									<th class="text-dark">:</th>
 									<td id="order_info_table_data">Lim Ah Beng</td>
 								</tr>
 								<tr>
-									<th id="order_info_table_header">Doctor</th>
-									<th>:</th>
+									<th class="text-dark" id="order_info_table_header">Doctor</th>
+									<th class="text-dark">:</th>
 									<td id="order_info_table_data_column2">Dr Ahmad</td>
-									<th id="order_info_table_header">Category</th>
-									<th>:</th>
+									<th class="text-dark" id="order_info_table_header">Category</th>
+									<th class="text-dark">:</th>
 									<td id="order_info_table_data">Specialty</td>
 								</tr>
 								<tr>
 							</table>
-						</div>
-						<div class="edit_order_pending_table">
-							<table id="edit_order_pending_table">
-								<tr id="row1">
+						<div class="bg-white rounded-3 p-3 py-2 mb-3 shadow w-75 mx-auto">
+							<table class="table">
+							<thead>
+								<tr class="text-dark text-center" id="row1">
 									<th>No.</th>
 									<th>Details</th>
 									<th>Medicine</th>
 									<th>Date</th>
  								</tr>
+ 								</thead>
+ 								<tbody class="align-middle text-secondary">
 								<tr>
 									<td>1.</td>
 									<td>Fever / Coughing</td>
@@ -120,11 +114,12 @@ width: 400px;
 									<td>10/10/2021</td>
 									 
 								</tr>
+								</tbody>
 							</table>
 						</div>
+						<div class="justify-content-center d-flex">
+                            <button class="btn btn-primary m-3 mb-5 shadow-lg" onClick="location.href = 'allHistory.jsp';">Update</button>
 					</div>
- 					<div class="container">
-                            <button class="button" onClick="location.href = 'allHistory.jsp';">Update</button>
 					</div>
 				</div>
 			</div>

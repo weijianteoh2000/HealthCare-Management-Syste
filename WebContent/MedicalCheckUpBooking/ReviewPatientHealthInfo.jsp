@@ -12,18 +12,12 @@
 </head>
 <body>
 	<%@ include file="../shareFiles/header.html"%>
-	<div class="content">
+	<div class="row g-0">
 		<%@ include file="../shareFiles/sideMenu.jsp"%>
-		<div class="content-item page">
-			<div class="main-content-container">
-				<div class="main-content-item main-title">
-					<!--Put your Page Title here-->
-					<h1>REVIEW PATIENT</h1>
-				</div>
-
-				<div class="main-content-item main-content">
-					<!--Put your Page Content here-->
-					<form class="searchContainer"
+		<div class="col-lg px-5 pt-4 bg-light wow fadeIn rounded"
+			data-wow-delay="0.1s">
+			<h1>REVIEW PATIENT</h1>
+			<form class="searchContainer"
 						action="ReviewPatientHealthInfoList.jsp">
 						<input type="text" placeholder="Search Patient..." name="search">
 						<button type="submit" onclick="searchItem()">

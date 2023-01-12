@@ -11,23 +11,15 @@
 </head>
 <body>
 <%@ include file="../shareFiles/header.html" %>
-<div class="content">
+<div class="row g-0">
 <%@ include file="../shareFiles/sideMenu.jsp" %> 
- <div class="content-item page">
-                <div class="main-content-container">
-                    <div class="main-content-item main-title">
-                        <!--Put your Page Title here-->
-                        <h1>Tracked Shipment</h1>
-                    </div>
-                    <div class="main-content-item main-content">
-                        <!--Put your Page Content here-->
-                      <div class="searchContainer">
+ <div class="col-lg px-5 pt-4 bg-light wow fadeIn rounded"
+			data-wow-delay="0.1s">
+                <h1>Tracked Shipment</h1>
+                   <div class="searchContainer">
   </div>
-  <div class="transitionContent">
-  <table 	style="width: 50%;
-	 display: block;
-  margin-left: auto;
-  margin-right: auto;">
+  <div class="transitionContent d-flex justify-content-center">
+  <table class="w-50">
    <tr >
    <td>19Sep<br>1120</td>
    <td><i class="fa fa-chevron-circle-up" style="padding: 20px; font-size:20px;"></i></td>
@@ -46,7 +38,7 @@
   </table>
   </div>   
   <br></br>
-  <div class="container"> <button id="btn" class="button" onClick="location.href = 'OrderReceived.jsp';">Order Receive</button>
+  <div class="justify-content-center d-flex"> <button id="btn" class="btn btn-primary m-3 mb-5 shadow-lg" onClick="location.href = 'OrderReceived.jsp';">Order Receive</button>
   
   </div>
   </div>

@@ -10,20 +10,15 @@
 </head>
 <body>
 	<%@ include file="../shareFiles/header.html"%>
-	<div class="content">
+	<div class="row g-0">
 		<%@ include file="../shareFiles/sideMenu.jsp"%>
-		<div class="content-item page">
-			<div class="main-content-container">
-				<div class="main-content-item main-title">
-					<!--Put your Page Title here-->
-					<h1>CUSTOMER LIST</h1>
-				</div>
-				<div class="main-content-item main-content">
-					<div class="main">
-					<h1 id="main_header">Customer Details</h1>
-						<div class="customer_details_table">
-							<table id="customer_details_table">
-								<tr>
+		<div class="col-lg px-5 pt-4 bg-light wow fadeIn rounded"
+			data-wow-delay="0.1s">
+					<h1>Customer List</h1>
+						<div class="bg-white rounded-3 p-3 py-2 mb-3 shadow mb-5">
+							<table class="table table-striped table-hover">
+							<thead>
+								<tr class="text-dark text-center">
 									<th>No.</th>
 									<th>Name</th>
 									<th>Registered Date</th>
@@ -31,58 +26,61 @@
 									<th>Number of Order</th>
 									<th></th>
 								</tr>
+								</thead>
+								<tbody class="align-middle text-secondary">
 								<tr id="row1">
-									<td>1.</td>
+									<td class="text-dark">1.</td>
 									<td>Ali Saifuddin Bin Mohd Yassir</td>
 									<td id="customer_details_table_rgtDate">01/02/2021</td>
 									<td id="customer_details_table_lastOrderDate">10/11/2022</td>
 									<td id="customer_details_table_numOrder">19</td>
-									<td><a href="EditCustomer.jsp"><button class="customer_details_table_editBtn">
+									<td><a href="EditCustomer.jsp"><button class="btn btn-outline-dark rounded pb-0 p-1 border border-2 border-dark">
 											<ion-icon name="create-outline"></ion-icon>
 										</button></a></td>
-									<td id="customer_details_table_trashBtn"><button class="customer_details_table_trashBtn" onClick="dltCustomer()">
+									<td id="customer_details_table_trashBtn"><button class="btn btn-outline-dark rounded pb-0 p-1 border border-2 border-dark" onClick="dltCustomer()">
 											<ion-icon name="trash-outline"></ion-icon>
 										</button></ion-icon></td>
 								</tr>
 								<tr>
-									<td>2.</td>
+									<td class="text-dark">2.</td>
 									<td>Lim Ah Beng</td>
 									<td id="customer_details_table_rgtDate">23/04/2021</td>
 									<td id="customer_details_table_lastOrderDate">13/11/2022</td>
 									<td id="customer_details_table_numOrder">5</td>
-									<td><a href="EditCustomer.jsp"><button class="customer_details_table_editBtn">
+									<td><a href="EditCustomer.jsp"><button class="btn btn-outline-dark rounded pb-0 p-1 border border-2 border-dark">
 											<ion-icon name="create-outline"></ion-icon>
 										</button></a></td>
-									<td><button class="customer_details_table_trashBtn" onClick="dltCustomer()">
+									<td><button class="btn btn-outline-dark rounded pb-0 p-1 border border-2 border-dark" onClick="dltCustomer()">
 											<ion-icon name="trash-outline"></ion-icon>
 										</button></ion-icon></td>
 								</tr>
 								<tr>
-									<td>3.</td>
+									<td class="text-dark">3.</td>
 									<td>Siti Nur Aisyah Binti Salahudin</td>
 									<td id="customer_details_table_rgtDate">23/04/2022</td>
 									<td id="customer_details_table_lastOrderDate">14/11/2022</td>
 									<td id="customer_details_table_numOrder">10</td>
-									<td><a href="EditCustomer.jsp"><button class="customer_details_table_editBtn">
+									<td><a href="EditCustomer.jsp"><button class="btn btn-outline-dark rounded pb-0 p-1 border border-2 border-dark">
 											<ion-icon name="create-outline"></ion-icon>
 										</button></a></td>
-									<td><button class="customer_details_table_trashBtn" onClick="dltCustomer()">
+									<td><button class="btn btn-outline-dark rounded pb-0 p-1 border border-2 border-dark" onClick="dltCustomer()">
 											<ion-icon name="trash-outline"></ion-icon>
 										</button></td>
 								</tr>
 								<tr>
-									<td>4.</td>
+									<td class="text-dark">4.</td>
 									<td>Ramesh Sashi A/L Sashi Kumar</td>
 									<td id="customer_details_table_rgtDate">10/10/2022</td>
 									<td id="customer_details_table_lastOrderDate">01/11/2022</td>
 									<td id="customer_details_table_numOrder">1</td>
-									<td><a href="EditCustomer.jsp"><button class="customer_details_table_editBtn">
+									<td><a href="EditCustomer.jsp"><button class="btn btn-outline-dark rounded pb-0 p-1 border border-2 border-dark">
 											<ion-icon name="create-outline"></ion-icon>
 										</button></a></td>
-									<td><button class="customer_details_table_trashBtn" onClick="dltCustomer()">
+									<td><button class="btn btn-outline-dark rounded pb-0 p-1 border border-2 border-dark" onClick="dltCustomer()">
 											<ion-icon name="trash-outline"></ion-icon>
 										</button></td>
 								</tr>
+								</tbody>
 							</table>
 						</div>
 					</div>

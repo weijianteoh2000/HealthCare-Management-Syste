@@ -10,18 +10,12 @@
 </head>
 <body>
 	<%@ include file="../shareFiles/header.html"%>
-	<div class="content">
+	<div class="row g-0">
 		<%@ include file="../shareFiles/sideMenu.jsp"%>
-		<div class="content-item page">
-			<div class="main-content-container">
-				<div class="main-content-item main-title">
-					<!--Put your Page Title here-->
-					<h1>MANAGE CUSTOMER</h1>
-				</div>
-				<div class="main-content-item main-content">
-					<!--Put your Page Content here-->
-					<h1 id="main_header_customer_info">Edit Customer Details</h1>
-					<div class="customer_info_table">
+		<div class="col-lg px-5 pt-4 bg-light wow fadeIn rounded"
+			data-wow-delay="0.1s">
+					<h1>Edit Customer Details</h1>
+					<div class="w-50 mx-auto">
 						<table id="customer_info_table">
 							<tr>
 								<th id="customer_info_table_header">Name</th>
@@ -51,8 +45,8 @@
 							</tr>
 						</table>
 					</div>
-					<div class="submit_button_box">
-						<button class="customer_info_submit_button" onClick="saveChanges()">Save Changes</button>
+					<div class="justify-content-center d-flex">
+						<button class="btn btn-primary m-3 mb-5 shadow-lg" onClick="saveChanges()">Save Changes</button>
 					</div>
 				</div>
 			</div>

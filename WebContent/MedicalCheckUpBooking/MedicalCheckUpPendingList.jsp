@@ -12,44 +12,41 @@
 </head>
 <body>
 <%@ include file="../shareFiles/header.html"%>
-	<div class="content">
+	<div class="row g-0">
 		<%@ include file="../shareFiles/sideMenu.jsp"%>
-		<div class="content-item page">
-			<div class="main-content-container">
-				<div class="main-content-item main-title">
-					<!--Put your Page Title here-->
-					<h1>PENDING BOOKING</h1>
-				</div>
-
-				<div class="main-content-item main-content">
-					<!--Put your Page Content here-->
-					<h1 id="main_header">Booking Status List</h1>
-					<div class="pendingList_table">
-						<table id="pendingList_table">
+		<div class="col-lg px-5 pt-4 bg-light wow fadeIn rounded"
+			data-wow-delay="0.1s">
+			<h1>Booking Status List</h1>
+					<div class="bg-white rounded-3 p-3 py-2 mb-3 shadow w-75 mx-auto">
+						<table class="table table-striped table-hover">
+						<thead class="text-dark text-center">
 						<tr>
 						<th>No.</th>
 						<th>Date</th>
 						<th>Status</th>
 						<th></th>
 						</tr>
+						</thead>
+						<tbody>
 							<tr>
 								<td>1. </td>
 								<td class="date">19/11/2022 Morning</td>
 								<td>Pending</td>
-								<td><button class="modifyButton">Details</button></td>
+								<td><button class="btn btn-outline-dark rounded pb-0 p-1 border border-2 border-dark">Details</button></td>
 							</tr>
 							<tr>
 								<td>2. </td>
 								<td class="date">18/11/2022 Morning</td>
 								<td>Pending</td>
-								<td><a href="MedicalCheckUpPendingDetail.jsp"><button class="modifyButton">Details</button></a></td>
+								<td><a href="MedicalCheckUpPendingDetail.jsp"><button class="btn btn-outline-dark rounded pb-0 p-1 border border-2 border-dark">Details</button></a></td>
 							</tr>
 							<tr>
 								<td>3. </td>
 								<td class="date">17/11/2022 Morning</td>
 								<td>Pending</td>
-								<td><button class="modifyButton">Details</button></td>
+								<td><button class="btn btn-outline-dark rounded pb-0 p-1 border border-2 border-dark">Details</button></td>
 							</tr>
+							</tbody>
 						</table>
 					</div>
 					

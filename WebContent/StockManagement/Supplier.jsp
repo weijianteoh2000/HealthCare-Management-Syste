@@ -11,22 +11,19 @@
 </head>
 <body>
 <%@ include file="../shareFiles/header.html" %>
-<div class="content">
+<div class="row g-0">
 <%@ include file="../shareFiles/sideMenu.jsp" %> 
- <div class="content-item page">
-                <div class="main-content-container">
-                    <div class="main-content-item main-title">
-                        <!--Put your Page Title here-->
+ <div class="col-lg px-5 pt-4 bg-light wow fadeIn rounded"
+			data-wow-delay="0.1s">
                         <h1>SUPPLIER DETAILS</h1>
-                    </div>
                     <div class="main-content-item main-content">
                         <!--Put your Page Content here-->
                    <div class="content-table">
                             <div id="myTable">
                                <script src="Supplier.js"></script>
                             </div>
-                            <div class="container">
-                            <button class="button" onClick="location.href = 'AddNewSupplier.jsp';">Add new</button></div>
+                            <div class="justify-content-center d-flex">
+                            <button class="btn btn-primary m-3 mb-5 shadow-lg" onClick="location.href = 'AddNewSupplier.jsp';">Add new</button></div>
                         </div>
                     </div>
                 </div>

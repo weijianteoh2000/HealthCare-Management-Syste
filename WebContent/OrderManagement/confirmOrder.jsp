@@ -4,65 +4,58 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<link rel="stylesheet" type="text/css" href="../shareFiles/index.css">
 <link rel="stylesheet" type="text/css" href="order.css">
 <title>HealthCare | Confirm Order</title>
 </head>
 <body>
 	<%@ include file="../shareFiles/header.html"%>
-	<div class="content">
+	<div class="row g-0">
 		<%@ include file="../shareFiles/sideMenu.jsp"%>
-		<div class="content-item page">
-			<div class="main-content-container">
-				<div class="main-content-item main-title">
-					<!--Put your Page Title here-->
-					<h1>CONFIRM ORDER</h1>
-				</div>
-				<div class="main-content-item main-content">
-					<h1 id="main_header">Check Your Details</h1>
-					<div class="confirmOrder_customer_info_table">
-						<table id="confirmOrder_customer_info_table">
+				<div class="col-lg px-5 pt-4 bg-light wow fadeIn rounded" data-wow-delay="0.1s">
+					<h1>Check Your Details</h1><br>
+						<table class="table table-borderless">
 							<tr>
-								<th id="confirmOrder_customer_info_table_header">Name</th>
-								<th>:</th>
-								<td id="confirmOrder_customer_info_table_data">Lim Ah Beng</td>
+								<th class="text-dark ps-5">Name</th>
+								<th class="text-dark">:</th>
+								<td class="text-start">Lim Ah Beng</td>
 							</tr>
 							<tr>
-								<th id="confirmOrder_customer_info_table_header">Address</th>
-								<th>:</th>
-								<td id="confirmOrder_customer_info_table_data">123-B Sec.10
+								<th class="text-dark ps-5">Address</th>
+								<th class="text-dark">:</th>
+								<td class="text-start">123-B Sec.10
 									Kampung Bunga, Jalan Bunga 45635 Dengkil Selangor.</td>
 							</tr>
 							<tr>
-								<th id="confirmOrder_customer_info_table_header">Phone No.</th>
-								<th>:</th>
-								<td id="confirmOrder_customer_info_table_data">012-3452366</td>
+								<th class="text-dark ps-5">Phone No.</th>
+								<th class="text-dark">:</th>
+								<td class="text-start">012-3452366</td>
 							</tr>
 							<tr>
-								<th id="confirmOrder_customer_info_table_header">Email</th>
-								<th>:</th>
-								<td id="confirmOrder_customer_info_table_data">ahbeng332@gmail.com</td>
+								<th class="text-dark ps-5">Email</th>
+								<th class="text-dark">:</th>
+								<td class="text-start">ahbeng332@gmail.com</td>
 							</tr>
 						</table>
-					</div>
 
 					<div class="confirmOrder_orderList_table">
 						<table id="confirmOrder_orderList_table">
-							<caption id="caption">-- RECEIPT --</caption>
-							<tr id="row1">
+							<h3 class="text-center">-- RECEIPT --<h3>
+							<thead>
+							<tr class="text-dark" id="row1">
 								<th>No.</th>
 								<th>Item</th>
 								<th>Quantity</th>
 								<th>Unit Price</th>
 								<th></th>
 							</tr>
+							</thead>
+							<tbody class="align-middle text-secondary">
 							<tr>
 								<td>1.</td>
 								<td id="confirmOrder_orderList_item">Panodol Actifast 10s
 									Compack</td>
 								<td id="confirmOrder_orderList_quantity">1</td>
 								<td id="confirmOrder_orderList_price">RM 13.50</td>
-							</tr>
 							</tr>
 							<tr>
 								<td>2.</td>
@@ -71,14 +64,12 @@
 								<td id="confirmOrder_orderList_quantity">5</td>
 								<td id="confirmOrder_orderList_price">RM 10.70</td>
 							</tr>
-							</tr>
 							<tr>
 								<td>3.</td>
 								<td id="confirmOrder_orderList_item">WOODS' Peppermint
 									Cough Syrup for Adult 100ml</td>
 								<td id="confirmOrder_orderList_quantity">1</td>
 								<td id="confirmOrder_orderList_price">RM 9.50</td>
-							</tr>
 							</tr>
 							<tr>
 								<td>4.</td>
@@ -90,22 +81,14 @@
 							<tr id="total_price_table">
 								<th></th>
 								<th></th>
-								<th>Total</th>
-								<td>RM 88.20</td>
+								<th class="text-dark">Total</th>
+								<td class="text-dark">RM 88.20</td>
 							</tr>
+							</tbody>
 						</table>
 					</div>
-					<!-- <div class="total_price_table">
-						<table id="total_price_table">
-							<tr>
-								<th>Total</th>
-								<th>:</th>
-								<td>RM 88.20</td>
-							</tr>
-						</table>
-					</div> -->
-					<div class="submit_button_box">
-						<button class="confirmOrder_submit_button" onClick="cfOrder()">Confirm Order</button>
+					<div class="justify-content-center d-flex">
+						<button class="btn btn-primary m-3 mb-5 shadow-lg " onClick="cfOrder()">Confirm Order</button>
 					</div>
 				</div>
 			</div>

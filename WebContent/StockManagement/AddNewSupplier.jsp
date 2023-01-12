@@ -10,14 +10,11 @@
 </head>
 <body>
 <%@ include file="../shareFiles/header.html" %>
-<div class="content">
+<div class="row g-0">
 <%@ include file="../shareFiles/sideMenu.jsp" %>   
- <div class="content-item page">
-                <div class="main-content-container">
-                    <div class="main-content-item main-title">
-                        <!--Put your Page Title here-->
+ <div class="col-lg px-5 pt-4 bg-light wow fadeIn rounded"
+			data-wow-delay="0.1s">
                         <h1>ADD NEW SUPPLIER</h1>
-                    </div>
                     <div class="main-content-item main-content">
                         <!--Put your Page Content here-->
                       <div class="inputContainer">
@@ -41,7 +38,7 @@
     <input type="text" id="address" name="address" placeholder="Company address ..." required>
 
 <div class="submit_button_box">
-						<input class="inputButton"type="submit" onclick="successAdd()" value="Save">
+						<input class="inputButton btn-primary"type="submit" onclick="successAdd()" value="Save">
 					</div>
   </form>
                           <script>

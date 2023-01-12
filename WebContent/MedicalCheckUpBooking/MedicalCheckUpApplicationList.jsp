@@ -10,55 +10,47 @@
 </head>
 <body>
 	<%@ include file="../shareFiles/header.html"%>
-	<div class="content">
+	<div class="row g-0">
 		<%@ include file="../shareFiles/sideMenu.jsp"%>
-		<div class="content-item page">
-			<div class="main-content-container">
-				<div class="main-content-item main-title">
-					<!--Put your Page Title here-->
-					<h1>BOOKING</h1>
-				</div>
-
-				<div class="main-content-item main-content">
-					<!--Put your Page Content here-->
-					<h1 id="main_header">Application List</h1>
-					<div class="tableList">
-						<table id="tableList">
-						<tr>
+				<div class="col-lg px-5 pt-4 bg-light wow fadeIn rounded" data-wow-delay="0.1s">
+					<h1>Application List</h1>
+					<div class="bg-white rounded-3 p-3 py-2 mb-3 shadow">
+						<table class="table table-striped table-hover">
+						<thead>
+						<tr class="text-dark">
 						<th>No.</th>
 						<th>Date</th>
 						<th>Status</th>
 						<th></th>
 						</tr>
+						</thead>
+						<tbody class="align-middle text-secondary">
 							<tr>
 								<td>1.</td>
 								<td class="date">19/11/2022 Morning</td>
 								<td class="pending">Pending</td>
-								<td><button class="modifyButton">Details</button></td>
+								<td><button class="btn btn-outline-dark rounded p-1 border border-2 border-dark">Details</button></td>
 							</tr>
 							<tr>
 								<td>2.</td>
 								<td class="date">18/11/2022 Morning 11.00am</td>
 								<td><label class="accept">Approve</label></td>
-								<td><button class="modifyButton">Details</button></td>
+								<td><button class="btn btn-outline-dark rounded p-1 border border-2 border-dark">Details</button></td>
 							</tr>
 							<tr>
 								<td>3.</td>
 								<td class="date">17/11/2022 Morning</td>
 								<td><label class="reject">Reject</label></td>
-								<td><button class="modifyButton">Details</button></td>
+								<td><button class="btn btn-outline-dark rounded p-1 border border-2 border-dark">Details</button></td>
 							</tr>
+							</tbody>
 						</table>
 					</div>
-					<div class="submit_button_box">
-						<a href="MedicalCheckUpApplicationAdding.jsp"><button class="addNewBookingAPplication_submit_button">Add New Application</button></a>
+					<div class="justify-content-center d-flex">
+						<a href="MedicalCheckUpApplicationAdding.jsp"><button class="btn btn-primary m-3 mb-5 shadow-lg ">Add New Application</button></a>
 					</div>
 				</div>
 			</div>
-			<%@ include file="../shareFiles/footer.html"%>
-
-
-		</div>
-	</div>
+	<%@ include file="../shareFiles/footer.html"%>
 </body>
 </html>

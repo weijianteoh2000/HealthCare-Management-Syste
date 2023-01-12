@@ -21,22 +21,24 @@ if(userName.equals("admin")&&pw.equals("a1234")){
 	throw new Exception();
 } %>
 <body>
-	<div class="content-item side-menu">
-		<div id="side-menu-item">
+<div class="col-lg-2 bg-white wow fadeIn" data-wow-delay="0.1s">
+	<div class="mb-5">
+		<div id="side-menu-item" class="d-flex flex-column justify-content-start mt-2 wow fadeIn" data-wow-delay="0.1s">
 			<script>
                 let contents =[
-                    {name:"Order",image:"img/booking-page-icon.png",link:"OrderManagement/Order.jsp"},
-                    {name:"Products",image:"img/application-list-icon.png",link: "OrderManagement/Product.jsp"},
-                    {name:"Stock",image:"img/approval-list-icon.png",link: "StockManagement/stock.jsp"},
-                    {name:"Booking",image:"img/report-page-icon.png",link: "MedicalCheckUpBooking/MedicalCheckUpApplicationList.jsp"},
-                    {name:"Prescription",image:"img/report-page-icon.png",link: "PrescriptionManagement/prescription.jsp"},
-                   {name:"Time Table ",image:"img/adduser-page-icon.png",link: "MedicalCheckUpBooking/timetable.jsp"},
-                   {name:"Patient Health Info",image:"img/removeuser-page-icon.png",link: "MedicalCheckUpBooking/ReviewPatientHealthInfo.jsp"},
-                   {name:"Health Check up",image:"img/edituser-page-icon.png",link: "MedicalCheckUpBooking/HealthMedicalCheckUpList.jsp"},
-                   {name:"Patient",image:"img/edituser-page-icon.png",link: "OrderManagement/Customer.jsp"},
-                   {name:"Pending Booking",image:"img/edituser-page-icon.png",link: "MedicalCheckUpBooking/MedicalCheckUpPendingList.jsp"},
-                    {name:"Order Pending",image:"img/edituser-page-icon.png",link: "OrderManagement/phar_manageOrder.jsp"},
-                    {name:"Check Order",image:"img/booking-page-icon.png",link:"OrderManagement/cust_manageOrder.jsp"},]
+                    {id:"sidebar-order", name:"Order",image:"img/booking-page-icon.png",link:"OrderManagement/Order.jsp"},
+                    {id:"sidebar-products", name:"Products",image:"img/application-list-icon.png",link: "OrderManagement/Product.jsp"},
+                    {id:"sidebar-stock",name:"Stock",image:"img/approval-list-icon.png",link: "StockManagement/stock.jsp"},
+                    {id:"sidebar-booking",name:"Booking",image:"img/report-page-icon.png",link: "MedicalCheckUpBooking/MedicalCheckUpApplicationList.jsp"},
+                    {id:"sidebar-prescription",name:"Prescription",image:"img/report-page-icon.png",link: "PrescriptionManagement/prescription.jsp"},
+                   {id:"sidebar-timetable",name:"Time Table",image:"img/adduser-page-icon.png",link: "MedicalCheckUpBooking/timetable.jsp"},
+                   {id:"sidebar-healthInfo",name:"Patient Health Info",image:"img/removeuser-page-icon.png",link: "MedicalCheckUpBooking/ReviewPatientHealthInfo.jsp"},
+                   {id:"sidebar-checkUp",name:"Health Check up",image:"img/edituser-page-icon.png",link: "MedicalCheckUpBooking/HealthMedicalCheckUpList.jsp"},
+                   {id:"sidebar-patient",name:"Patient",image:"img/edituser-page-icon.png",link: "OrderManagement/Customer.jsp"},
+                   {id:"sidebar-pendingBooking",name:"Pending Booking",image:"img/edituser-page-icon.png",link: "MedicalCheckUpBooking/MedicalCheckUpPendingList.jsp"},
+                    {id:"sidebar-orderPending",name:"Order Pending",image:"img/edituser-page-icon.png",link: "OrderManagement/phar_manageOrder.jsp"},
+                    {id:"sidebar-CheckOrder",name:"Check Order",image:"img/booking-page-icon.png",link:"OrderManagement/cust_manageOrder.jsp"},
+                    {id:"sidebar-report",name:"Report",image:"img/report-page-icon.png",link:"shareFiles/ReportingDashboard.jsp"},]
                     var user="<%=user%>";
                     var container = document.getElementById("side-menu-item");
                     for (i=0; i < contents.length; i++){
@@ -45,23 +47,23 @@ if(userName.equals("admin")&&pw.equals("a1234")){
 						continue;
 					if (user == "pharmacist"
 							&& (i == 0 || i == 1 || i == 3  || i == 5 || i==7
-									|| i == 6 || i == 8 || i == 9 || i == 11))
+									|| i == 6 || i == 8 || i == 9 || i == 11 || i == 12))
 						continue;
 					if (user == "doctor"
 							&& (i == 0 || i == 1 || i == 2 || i == 3
-									|| i == 8 || i == 9 || i == 10 || i == 11))
+									|| i == 8 || i == 9 || i == 10 || i == 11 || i == 12))
 						continue;
 					if (user == "customer"
 							&& (i == 2 || i == 4 || i == 5 || i == 6
-									|| i == 7 || i == 8 || i == 9 || i == 10))
+									|| i == 7 || i == 8 || i == 9 || i == 10 || i == 12))
 						continue;
-
-					const new_card = '<a href=../'+contents[i].link+'> <div class=\"side-menu-option\"> <img src=\"../' + contents[i].image + '" width=20px height=20px><h4>'
-							+ contents[i].name + '</h4></div></a>';
+					const new_card = '<a id="' + contents[i].id + '"href=../'+contents[i].link+' class="h5 px-4 py-2"> <div> <img class="me-3" src=\"../' + contents[i].image + '" width=20px height=20px>'
+							+ contents[i].name + '</div></a>';
 					container.innerHTML += new_card;
 				}
 			</script>
 		</div>
+	</div>
 	</div>
 </body>
 </html>

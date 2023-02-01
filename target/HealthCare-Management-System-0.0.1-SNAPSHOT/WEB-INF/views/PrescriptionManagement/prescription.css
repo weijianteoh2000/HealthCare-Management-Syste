@@ -1,0 +1,171 @@
+@charset "ISO-8859-1";
+/* dashboard three main card */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.column {
+  float: left;
+  width: 25%;
+  padding: 0 10px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+  text-align: center;
+  background-color: #f1f1f1;
+  border-radius: 20px;
+  margin-top: 20px;
+}
+.card p{
+	font-weight: bold;
+	 background-color: #d9d9d9;
+	 width:100%;
+	 padding: 10px;
+	  border-radius: 0px 0px 20px 20px;
+}
+.card h3{
+	 padding: 16px;
+}
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+/* Table used in stock and supplier view */
+#myTable{
+  border-collapse: collapse;
+    margin: 25px 0;
+    display: flex;
+    justify-content: center;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+
+}
+#myTable th,
+#myTable td {
+    padding: 12px 15px;
+}
+#myTable thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+}
+#myTable tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+#myTable tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+#myTable tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+}
+
+/* add,update and delete button */
+.button {
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #8bcbe1;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.modifyButton{
+	background-color: #8bcbe1; 
+	border: none; 
+	padding: 10px; 
+	 cursor: pointer;
+	box-shadow: 0 3px #999; 
+	border-radius: 5px
+}
+.modifyButton:hover,.button:hover {background-color: #5fc2f2}
+
+.modifyButton:active, .button:active {
+  background-color: #5fc2f2;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+
+.container{
+	  display: flex;
+    justify-content: center;
+}
+/* input for add and update */
+input{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.inputContainer{
+	width: 50%;
+	 display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* search bar in transition */
+.transitionContent{
+	width: 60%;
+	 display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.inputButton{
+	width: 100%;
+  background-color: #009879;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.searchContainer{
+	margin: auto;
+	width: 50%;
+}
+/* Style the search field */
+.searchContainer input{
+  border-radius: 0;
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid grey;
+  width: 80%;
+  background: #f1f1f1;
+}
+
+/* Style the submit button */
+.searchContainer button{
+float: right;
+  width: 20%;
+  margin-top: 8px;
+  padding: 10px;
+  background: #2196F3;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none; /* Prevent double borders */
+  cursor: pointer;
+}

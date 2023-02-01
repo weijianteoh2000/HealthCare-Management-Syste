@@ -11,7 +11,7 @@ import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import com.model.Stock;
 
 public class StockDAO {
-JdbcTemplate jdbct = new JdbcTemplate((javax.sql.DataSource) getDataSource());
+	JdbcTemplate jdbct = new JdbcTemplate(MyDatabase.getDataSource());
 //the detail impl for all CRUD methods here
 
 //getAll
@@ -53,18 +53,5 @@ public int delete(int id) {
 	int rowAffected = jdbct.update(sql,args);
 	return rowAffected;
 }
-public DataSource getDataSource() {
-	DataSource ds =null;
-	String dbURL = "jdbc:mysql://localhost:3306/healthera";
-	String username = "root";
-	String password ="";
-	try {
-		Class.forName("com.mysql.cj.jdbc.Driver");
-	}catch(ClassNotFoundException e) {
-		
-		e.printStackTrace();
-	}
-	ds = (DataSource) new DriverManagerDataSource(dbURL,username,password);
-	return ds;
-}
+
 }

@@ -1,0 +1,4 @@
+1. make the transition search function
+2. make the delete in the table function
+3. comment all the css code
+4. 

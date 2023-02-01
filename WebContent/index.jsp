@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="ISO-8859-1"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -20,17 +21,15 @@
 	rel="stylesheet">
 
 <!-- Libraries Stylesheet -->
-<link href="lib/animate/animate.min.css" rel="stylesheet">
-<link href="lib/owlcarousel/assets/owl.carousel.min.css"
-	rel="stylesheet">
-<link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css"
-	rel="stylesheet" />
+<link href="<c:url value="/resources/lib/animate/animate.min.css" />" rel="stylesheet">
+<link href="<c:url value="/resources/lib/owlcarousel/assets/owl.carousel.min.css" />" rel="stylesheet">
+<link href="<c:url value="/resources/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" />" rel="stylesheet">
 
 <!-- Customized Bootstrap Stylesheet -->
-<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="<c:url value="/resources/css/bootstrap.min.css"/>" rel="stylesheet">
 
 <!-- Template Stylesheet -->
-<link href="css/style.css" rel="stylesheet">
+<link href="<c:url value="/resources/css/style.css"/>" rel="stylesheet">
 </head>
 <body>
 	<!-- Spinner Start -->
@@ -86,7 +85,7 @@
 			class="navbar-brand d-flex align-items-center px-4 px-lg-5">
 			<h1 class="m-0 text-primary">
 				<img style='margin-right: 20px;' width="50px" height="50px"
-					src="img/logo-black-bigger-removebg-preview.png">Health Era
+					src="<c:url value="/resources/img/logo-black-bigger-removebg-preview.png"/>">Health Era
 			</h1>
 		</a>
 		<button type="button" class="navbar-toggler me-4"
@@ -111,7 +110,7 @@
 				</div>
 				<a href="contact.html" class="nav-item nav-link">Contact</a>
 			</div>
-			<a href="Login_Register/Login.jsp"
+			<a href="login/loginForm"
 				class="btn btn-primary rounded-0 py-4 px-lg-5 d-none d-lg-block">Login / Register<i
 				class="fa fa-arrow-right ms-3"></i></a>
 		</div>
@@ -149,14 +148,14 @@
 			<div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
 				<div class="owl-carousel header-carousel">
 					<div class="owl-carousel-item position-relative">
-						<img class="img-fluid" src="img/health-check-up-landing.jpg"
+						<img class="img-fluid" src="<c:url value="/resources/img/health-check-up-landing.jpg"/>"
 							alt="">
 						<div class="owl-carousel-text">
 							<h1 class="display-1 text-white mb-0">Medical Check Up</h1>
 						</div>
 					</div>
 					<div class="owl-carousel-item position-relative">
-						<img class="img-fluid" src="img/pharmacy-service-landing.jpg"
+						<img class="img-fluid" src="<c:url value="/resources/img/pharmacy-service-landing.jpg"/>"
 							alt="">
 						<div class="owl-carousel-text">
 							<h1 class="display-1 text-white mb-0">Pharmacy</h1>
@@ -242,16 +241,16 @@
 	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 	<script
 		src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-	<script src="lib/wow/wow.min.js"></script>
-	<script src="lib/easing/easing.min.js"></script>
-	<script src="lib/waypoints/waypoints.min.js"></script>
-	<script src="lib/counterup/counterup.min.js"></script>
-	<script src="lib/owlcarousel/owl.carousel.min.js"></script>
-	<script src="lib/tempusdominus/js/moment.min.js"></script>
-	<script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
-	<script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+	<script src="<c:url value="/resources/lib/wow/wow.min.js"/>"></script>
+	<script src="<c:url value="/resources/lib/easing/easing.min.js"/>"></script>
+	<script src="<c:url value="/resources/lib/waypoints/waypoints.min.js"/>"></script>
+	<script src="<c:url value="/resources/lib/counterup/counterup.min.js"/>"></script>
+	<script src="<c:url value="/resources/lib/owlcarousel/owl.carousel.min.js"/>"></script>
+	<script src="<c:url value="/resources/lib/tempusdominus/js/moment.min.js"/>"></script>
+	<script src="<c:url value="/resources/lib/tempusdominus/js/moment-timezone.min.js"/>"></script>
+	<script src="<c:url value="/resources/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"/>"></script>
 
 	<!-- Template Javascript -->
-	<script src="js/main.js"></script>
+	<script src="<c:url value="/resources/js/main.js"/>"></script>
 </body>
 </html>

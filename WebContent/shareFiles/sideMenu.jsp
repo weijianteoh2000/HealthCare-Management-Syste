@@ -25,18 +25,18 @@ if(userName.equals("admin")&&pw.equals("a1234")){
 		<div id="side-menu-item">
 			<script>
                 let contents =[
-                    {name:"Order",image:"img/booking-page-icon.png",link:"OrderManagement/Order.jsp"},
-                    {name:"Products",image:"img/application-list-icon.png",link: "OrderManagement/Product.jsp"},
-                    {name:"Stock",image:"img/approval-list-icon.png",link: "StockManagement/stock.jsp"},
-                    {name:"Booking",image:"img/report-page-icon.png",link: "MedicalCheckUpBooking/MedicalCheckUpApplicationList.jsp"},
-                    {name:"Prescription",image:"img/report-page-icon.png",link: "PrescriptionManagement/prescription.jsp"},
-                   {name:"Time Table ",image:"img/adduser-page-icon.png",link: "MedicalCheckUpBooking/timetable.jsp"},
-                   {name:"Patient Health Info",image:"img/removeuser-page-icon.png",link: "MedicalCheckUpBooking/ReviewPatientHealthInfo.jsp"},
-                   {name:"Health Check up",image:"img/edituser-page-icon.png",link: "MedicalCheckUpBooking/HealthMedicalCheckUpList.jsp"},
-                   {name:"Patient",image:"img/edituser-page-icon.png",link: "OrderManagement/Customer.jsp"},
-                   {name:"Pending Booking",image:"img/edituser-page-icon.png",link: "MedicalCheckUpBooking/MedicalCheckUpPendingList.jsp"},
-                    {name:"Order Pending",image:"img/edituser-page-icon.png",link: "OrderManagement/phar_manageOrder.jsp"},
-                    {name:"Check Order",image:"img/booking-page-icon.png",link:"OrderManagement/cust_manageOrder.jsp"},]
+                    {name:"Order",image:"img/order.png",link:"OrderManagement/Order.jsp"},
+                    {name:"Products",image:"img/product.png",link: "OrderManagement/Product.jsp"},
+                    {name:"Stock",image:"img/stock.png",link: "StockManagement/stock.jsp"},
+                    {name:"Booking",image:"img/booking-page-icon.png",link: "MedicalCheckUpBooking/MedicalCheckUpApplicationList.jsp"},
+                    {name:"Prescription",image:"img/prescription.png",link: "PrescriptionManagement/prescription.jsp"},
+                    {name:"Time Table ",image:"img/timetable.png",link: "MedicalCheckUpBooking/timetable.jsp"},
+                    {name:"Patient Health Info",image:"img/healthInfo.png",link: "MedicalCheckUpBooking/ReviewPatientHealthInfo.jsp"},
+                    {name:"Health Check up",image:"img/checkup.png",link: "MedicalCheckUpBooking/HealthMedicalCheckUpList.jsp"},
+                    {name:"Patient",image:"img/patient.png",link: "OrderManagement/Customer.jsp"},
+                    {name:"Pending Booking",image:"img/pendingBooking.png",link: "MedicalCheckUpBooking/MedicalCheckUpPendingList.jsp"},
+                    {name:"Order Pending",image:"img/orderPending.png",link: "OrderManagement/phar_manageOrder.jsp"},
+                    {name:"Check Order",image:"img/checkOrder.png",link:"OrderManagement/cust_manageOrder.jsp"},]
                     var user="<%=user%>";
                     var container = document.getElementById("side-menu-item");
                     for (i=0; i < contents.length; i++){

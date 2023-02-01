@@ -42,10 +42,11 @@ table{
 								for (int i = 0; i < 7; i++)
 									for (int j = 0; j < 8; j++)
 										patient[i][j] = "";
-								
 								patient[4][2] = "lisa";
 								String[] days = { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday" };
 
+								
+								
 								for (int i = 0; i < 8; i++) {
 									if (i == 0) {
 										out.println(

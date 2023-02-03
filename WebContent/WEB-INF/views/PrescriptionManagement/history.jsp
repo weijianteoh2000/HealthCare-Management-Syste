@@ -68,6 +68,20 @@ width: 400px;
 	<%@ include file="../shareFiles/header.jsp"%>
 	<div class="row g-0">
 		<%@ include file="../shareFiles/sideMenu.jsp"%>
+                <div class="col-lg px-5 pt-4 bg-light wow fadeIn rounded"
+			data-wow-delay="0.1s">
+			<h1>Filter History By Patient</h1>
+                          <div class="inputContainer">
+                    <form action="filterPatientList" method="post">
+                        <label for="stockname">Patient Name</label>
+                        <select class="form-control" id="pname" name="patientName" required>
+                            <c:forEach items="${sList}" var="rm" varStatus="loop"> 
+                                <option value="${rm}"><c:out value="${rm}"/></option>
+                            </c:forEach>
+                        </select>
+                        <input class="inputButton mb-5" type="submit"  value="Generate">
+                    </form>
+                </div>
 		<div class="col-lg px-5 pt-4 bg-light wow fadeIn rounded"
 			data-wow-delay="0.1s">
 			<h1>PATIENT HISTORY</h1>

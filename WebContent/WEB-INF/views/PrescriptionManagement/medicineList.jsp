@@ -68,32 +68,58 @@ width: 400px;
 	<%@ include file="../shareFiles/header.jsp"%>
 	<div class="row g-0">
 		<%@ include file="../shareFiles/sideMenu.jsp"%>
+                 <c:set var="medicineList" value="${medicineList}"/>
+               <c:if test="${medicineList == null}" >
+                <div class="col-lg px-5 pt-4 bg-light wow fadeIn rounded"
+			data-wow-delay="0.1s">
+			<h1>GENERATE MEDICINE LIST</h1>
+                          <div class="inputContainer">
+                    <form action="generateMedicineList" method="post">
+                        <label for="stockname">Patient Name</label>
+<!--                        <input type="text" id="pname" name="patientName" required placeholder="Lim Ah Beng">-->
+                        <select class="form-control" id="pname" name="patientName" required>
+                            <c:forEach items="${sList}" var="rm" varStatus="loop"> 
+                                <option value="${rm}"><c:out value="${rm}"/></option>
+                            </c:forEach>
+                        </select>
+                        <input class="inputButton mb-5" type="submit"  value="Generate">
+                    </form>
+                </div>
+                        
+                </div>
+               </c:if>
+                
+                <c:set var="medicineList" value="${medicineList}"/>
+               <c:if test="${medicineList != null}" >
+	       
 		<div class="col-lg px-5 pt-4 bg-light wow fadeIn rounded"
 			data-wow-delay="0.1s">
 			<h1>MEDICINE LIST</h1>
+                        
 						<table class="table table-borderless w-75 ms-5">
-								<tr>
+<!--								<tr>
 									<th class="text-dark">ID</th>
 									<th class="text-dark">:</th>
 									<td id="order_info_table_data_column2">M00001</td>
 									<th class="text-dark">Patient ID</th>
 									<th class="text-dark">:</th>
 									<td id="order_info_table_data">PA0001</td>
-								</tr><tr>
-									<th class="text-dark">Doctor</th>
+								</tr>-->
+                                                                <tr>
+<!--									<th class="text-dark">Doctor</th>
 									<th class="text-dark">:</th>
-									<td id="order_info_table_data_column2">Dr Lim</td>
+									<td id="order_info_table_data_column2">Dr Lim</td>-->
 									<th class="text-dark">Customer Name</th>
 									<th class="text-dark">:</th>
-									<td id="order_info_table_data">Lim Ah Beng</td>
+									<td id="order_info_table_data"><c:out value="${pname}"/></td>
 								</tr>
 								<tr>
 									<th class="text-dark">Date / Time</th>
 									<th class="text-dark">:</th>
-									<td id="order_info_table_data_column2">10/11/2022  19:37</td>
-									<th class="text-dark">Contact No</th>
+									<td id="order_info_table_data_column2"><c:out value="${date}"/></td>
+<!--									<th class="text-dark">Contact No</th>
 									<th class="text-dark">:</th>
-									<td id="order_info_table_data">012-3452366</td>
+									<td id="order_info_table_data">012-3452366</td>-->
 								</tr>
 								<tr>
 							</table>
@@ -103,17 +129,19 @@ width: 400px;
 									<th>No.</th>
 									<th>Item</th>
 									<th>Quantity</th>
-									<th>Price</th>
+<!--									<th>Price</th>-->
  								</tr>
  								<tbody>
+                                                                     <c:forEach items="${medicineList}" var="rm" varStatus="loop"> 
 								<tr>
-									<td>1.</td>
-									<td class="text-start">PANADOL ACTIFAST 10S COMPACK</td>
-									<td>1</td>
-									<td>  RM 15.00</td>
+									<td><c:out value="${loop.index +1}"/>.</td>
+									<td class="text-start"><c:out value="${rm.getMedicine()}"/></td>
+									<td><c:out value="${rm.getQuantity()}"/></td>
+								
 									 
 								</tr>
-								<tr>
+                                                                     </c:forEach>
+								<!-- <tr>
 									<td>2.</td>
 									<td class="text-start">NewGene - Saliva/nasal 2-in-1 Covid-19 Home Self Antigen Test Kit (RTK)</td>
 									<td>2</td>
@@ -138,12 +166,12 @@ width: 400px;
 									<th> </th>
 									<th class="text-dark">Total : </th>
 									<th class="text-dark">   RM 999.00</th>
- 								</tr>
+ 								</tr> -->
  								</tbody>
 							</table>
 						</div>
 					</div>
- 					 
+ 					 </c:if>
 				</div>
 			</div>
 		</div>

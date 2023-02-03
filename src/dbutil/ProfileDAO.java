@@ -50,4 +50,10 @@ public int delete(int id) {
 	return rowAffected;
 }
 
+public List<Profile> getAllCustomer(){
+	String sql = "select * from Profile where username='customer'";
+	List<Profile> iList = jdbct.query(sql, new BeanPropertyRowMapper<Profile>(Profile.class));
+	return iList;
+}
+
 }

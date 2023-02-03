@@ -36,6 +36,7 @@ public class LoginController {
 		Profile prof = idao.findByUP(username,password);
 		}
 		catch(Exception e) {
+                    e.printStackTrace();
 			model = new ModelAndView("Login_Register/Login");
 			if(e instanceof EmptyResultDataAccessException) {
 			model.addObject("EmptyResult",e);}

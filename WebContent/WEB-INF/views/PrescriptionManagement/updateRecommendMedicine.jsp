@@ -47,31 +47,30 @@
             <%@ include file="../shareFiles/sideMenu.jsp" %>  
             <div class="col-lg px-5 pt-4 bg-light wow fadeIn rounded"
                  data-wow-delay="0.1s">
-                <h1>RECOMMEND MEDICINE</h1>
+                <h1>UPDATE RECOMMEND MEDICINE</h1>
                 <div class="inputContainer">
-                    <form action="recommend" method="post">
+                    <form action="updateRecommend" method="post">
                         <label for="stockname">Patient Name</label>
-                        <input type="text" id="pname" name="patientName" required placeholder="Lim Ah Beng">
+                        <input type="text" id="pname" name="patientName" value="${sDetails.getPatientName()}" readonly required placeholder="Lim Ah Beng">
 
                         <label for="stockquantity">Illness</label>
-                        <input type="text" id="illness" name="illness"  placeholder="Fever / Coughing" required>
+                        <input type="text" id="illness" name="illness" value="${sDetails.getIllness()}" readonly placeholder="Fever / Coughing" required>
 
                         <label for="origin">Medicine</label>
-                        <input type="text" id="medicine" name="medicine" placeholder="Panadol Malaysia" required>
+                        <input type="text" id="medicine" name="medicine" value="${sDetails.getMedicine()}" placeholder="Panadol Malaysia" required>
 
                         <label for="refNo">Reference No</label>
-                        <input type="text" id="refNo" name="referenceNo" placeholder="M000022" required>
+                        <input type="text" id="refNo" name="referenceNo"  value="${sDetails.getReferenceNo()}" placeholder="M000022" required>
 
                         <label for="refNo">Quantity</label>
-                        <input type="number" id="quantity" name="quantity" placeholder="10" required>
+                        <input type="number" id="quantity" name="quantity" value="${sDetails.getQuantity()}" placeholder="10" required>
 
                         <label for="adate">Date Visited</label>
-                        <input type="date" id="adate" name="dateVisited" placeholder="2022-03-02"  required>
+                        <input type="date" id="adate" name="dateVisited" value="${sDetails.getDateVisited()}" readonly placeholder="2022-03-02"  required>
 
+                        <input type="hidden" name="id" value="${sDetails.getId()}">
+                        <input class="inputButton" type="submit"   value="Update">
 
-                        <input class="inputButton" type="submit"   value="Save">
-                        <input class="inputButton mb-5" type="reset"  value="Reset">
-<!--                        <input class="inputButton mb-5" type="submit"  value="Generate">-->
                     </form>
                 </div>
             </div>

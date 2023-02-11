@@ -10,6 +10,10 @@
 	href="<c:url value="//resources/css/MedicalCheckUp.css"/>">
 </head>
 <body>
+<%
+	
+
+%>
 	<%@ include file="../shareFiles/header.jsp"%>
 	<div class="row g-0">
 		<%@ include file="../shareFiles/sideMenu.jsp"%>
@@ -129,11 +133,11 @@
 									</tr>
 									<tr class="text-dark">
 										<th>Assigned Appointment Time:</th>
-										<td><c:out value="${appl.assignTime}" /></td>
+										<td><c:out value="${assignTime}" /></td>
 									</tr>
 									<tr>
 										<th>Assigned Doctor:</th>
-										<td><c:out value="${appl.assignDoctor}" /></td>
+										<td><c:out value="${doctorName}" /></td>
 									</tr>
 								</tbody>
 

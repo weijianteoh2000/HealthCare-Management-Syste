@@ -43,7 +43,7 @@ public class ApplicationController {
 		int applicationId = Integer.parseInt(request.getParameter("applicationId"));
 		Application appl = Applicationdao.findById(applicationId);
 		Profile prof = Profiledao.findById(appl.getPatientId());
-		List<Profile> doctorList = Profiledao.findByUserType("Doctor");
+		List<Profile> doctorList = Profiledao.findByUTC("Doctor");
 
 		List<Integer> doctorIdList = new ArrayList<Integer>();
 		for (Profile d : doctorList) {

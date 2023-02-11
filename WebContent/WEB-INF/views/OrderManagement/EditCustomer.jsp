@@ -17,38 +17,41 @@
 			data-wow-delay="0.1s">
 					<h1>Edit Customer Details</h1>
 					<div class="w-50 mx-auto">
+					<form action="../customer/update" method="post">
 						<table id="customer_info_table">
 							<tr>
 								<th id="customer_info_table_header">Name</th>
 								<th>:</th>
-								<td id="customer_info_table_data"><input id="edit_input"
-									type="text" value="Lim Ah Beng" /></td>
+								<td id="customer_info_table_data"><input name="name" id="edit_input"
+									type="text" value="${customer.getName()}" /></td>
 							</tr>
 							<tr>
 								<th id="customer_info_table_header">Address</th>
 								<th>:</th>
 								<td id="customer_info_table_data">
-								<textarea rows="4" cols="50" />123-B Sec.10 Kampung Bunga, Jalan Bunga 45635 Dengkil Selangor.</textarea>
+								<textarea name="address" rows="4" cols="50" />${customer.getAddress()}</textarea>
 								</td>
 							</tr>
 							<tr>
 								<th id="customer_info_table_header">Phone No.</th>
 								<th>:</th>
-								<td id="customer_info_table_data"><input id="edit_input"
+								<td id="customer_info_table_data"><input name="phone" id="edit_input"
 									type="tel" id="phone" name="phone"
-									pattern="[0-9]{3}-[0-9]{7-8}" value="012-3452366" /></td>
+									pattern="[0-9]{3}-[0-9]{7-8}" value="${customer.getPhone()}" /></td>
 							</tr>
 							<tr>
 								<th id="customer_info_table_header">Email</th>
 								<th>:</th>
-								<td id="customer_info_table_data"><input id="edit_input"
-									type="text" value="ahbeng332@gmail.com" /></td>
+								<td id="customer_info_table_data"><input name="email" id="edit_input"
+									type="text" value="${customer.getEmail() }" /></td>
 							</tr>
+							<input type="hidden" name="id" value="${customer.getId()}">
 						</table>
 					</div>
 					<div class="justify-content-center d-flex">
 						<button class="btn btn-primary m-3 mb-5 shadow-lg" onClick="saveChanges()">Save Changes</button>
 					</div>
+					</form>
 				</div>
 			</div>
 		</div>

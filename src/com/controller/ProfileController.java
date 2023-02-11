@@ -1,7 +1,11 @@
 package com.controller;
 
 import java.text.SimpleDateFormat;
+
 import java.util.Date;
+
+import java.util.ArrayList;
+
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
@@ -14,6 +18,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
+import dbutil.OrderDAO;
 import dbutil.ProfileDAO;
 import com.model.Profile;
 
@@ -42,14 +47,38 @@ public class ProfileController {
 		return "this is from getAll - Profile"+iList.toString();
 	}
 	
+	@RequestMapping("/getByUTC")
+	@ResponseBody()
+	public ModelAndView getByUTC(){
+		ProfileDAO insdao = new ProfileDAO();
+		List<Profile> pList = insdao.findByUTC("customer");
+		
+		List<Profile> iList = insdao.getAll();
+		List<String> dateList = new ArrayList<String>();
+		List<String> regList = new ArrayList<String>();
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+		for (Profile p : iList) {
+			dateList.add(sdf.format(p.getLastOrderDate()));
+			regList.add(sdf.format(p.getRegisteredDate()));
+		}
+		
+		
+		ModelAndView model = new ModelAndView("OrderManagement/Customer");
+		model.addObject("dList",dateList);
+		model.addObject("rList",regList);
+		model.addObject("pList",pList);
+		return model; //return jsp view
+	}
+	
 	@RequestMapping("/getById")
 	@ResponseBody()
-	public String getById(HttpServletRequest request, Model model) {
+	public ModelAndView getById(HttpServletRequest request) {
 		int id = Integer.parseInt(request.getParameter("id"));
 		ProfileDAO idao= new ProfileDAO();
 		Profile prof= idao.findById(id);
-		model.addAttribute(prof);
-		return "this is from getById - Profile"+ prof.toString();
+		ModelAndView model = new ModelAndView("OrderManagement/Order");
+		model.addObject("cust",prof);
+		return model;
 	}
 	
 	@RequestMapping("/add")
@@ -104,6 +133,7 @@ public class ProfileController {
 		prof.setAddress(request.getParameter("address"));
 		prof.setEmail(request.getParameter("email"));
 		ProfileDAO insdao = new ProfileDAO();
+		
 		int rw = insdao.update(prof);
 		
 		ModelAndView model = new ModelAndView("shareFiles/profile");
@@ -121,34 +151,15 @@ public class ProfileController {
 		return "this is from delete - Profile... row affected :"+rw;
 	}
 	
-	@RequestMapping("/addStuff")
-	//@ResponseBody()
-	public ModelAndView addStuff(HttpServletRequest request){
-		String check = (String)request.getAttribute("addStuffStop");
-		if (check==null) {
-			Profile i = new Profile();
-			Date date = new Date();
-			i.setName(request.getParameter("firstName")+request.getParameter("lastName"));
-			i.setGender(request.getParameter("gender"));
-			i.setAge(Integer.parseInt(request.getParameter("age")));
-			i.setPhone(request.getParameter("phone"));
-			i.setOccupation(request.getParameter("occupation"));
-			i.setIc(request.getParameter("ic"));
-			i.setAddress(request.getParameter("address"));
-			i.setUsername(request.getParameter("username"));
-			i.setEmail(request.getParameter("email"));
-			i.setPassword(request.getParameter("password"));
-			i.setUserType(request.getParameter("userType"));
-			i.setNumOrder(0);
-			i.setLastOrderDate(date);
-			i.setRegisteredDate(date);
-			ProfileDAO insdao = new ProfileDAO();
-			int rw = insdao.add(i);
-			request.setAttribute("addStuffStop", "stop");
-		}
-		
-		ModelAndView model = new ModelAndView("Login_Register/AddStuff");
+
+	@RequestMapping("/editCustomer")
+	protected ModelAndView editCustomer(HttpServletRequest request) {
+		Profile p = new Profile();
+		int id = Integer.parseInt(request.getParameter("id"));
+		ModelAndView model = new ModelAndView("OrderManagement/EditCustomer"); //jsp file name
+		ProfileDAO idao= new ProfileDAO();
+		p = idao.findById(id);
+		model.addObject("customer",p);
 		return model;
 	}
-
 }

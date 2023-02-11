@@ -51,13 +51,21 @@ public class ApplicationController {
 		}
 
 		model.addObject("appl", appl);
+		if(appl.getAssignDoctor() != 0) {
+			int temp = doctorIdList.indexOf(appl.getAssignDoctor());
+			model.addObject("doctorName",doctorList.get(temp).getName());
+		}
 		model.addObject("prof", prof);
 		model.addObject("doctorList", doctorList);
 		model.addObject("doctorIdList", doctorIdList);
 
 		SimpleDateFormat sdfDate = new SimpleDateFormat("yyyy-MM-dd");
 		String date = sdfDate.format(appl.getApplicationDate());
+		SimpleDateFormat sdfTime = new SimpleDateFormat("HH:mm");
+		String time = sdfTime.format(appl.getAssignTime());
+		
 		model.addObject("reqeustDate", date);
+		model.addObject("assignTime", time);
 
 		return model;
 	}

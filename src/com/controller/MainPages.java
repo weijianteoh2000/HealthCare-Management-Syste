@@ -10,7 +10,6 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Collections;
 import java.util.Date;
-import java.util.GregorianCalendar;
 import java.util.List;
 import java.util.Locale;
 import java.util.TimeZone;
@@ -93,11 +92,31 @@ public class MainPages {
 		int id = (int) session.getAttribute("id");
 		
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");  
-	    LocalDate ld = LocalDate.now().plusDays(1);
+	    LocalDate ld = LocalDate.now();
 	    Calendar calendar = Calendar.getInstance();
 	    calendar.setTime(Date.from(ld.atStartOfDay(ZoneId.systemDefault()).toInstant()));
 	    int cdate = ld.getDayOfMonth();
-	    int cday = calendar.DAY_OF_WEEK;
+	    
+	    SimpleDateFormat sdfWeek = new SimpleDateFormat("EEE");
+	    Date weekDate = Date.from(ld.atStartOfDay(ZoneId.systemDefault()).toInstant());
+	    String weekDateStr = sdfWeek.format(weekDate);
+	    int cday = 0;
+	    if(weekDateStr.equals("Sun")){
+	    	cday = 1;
+	    }else if(weekDateStr.equals("Mon")){
+	    	cday = 2;
+	    }else if(weekDateStr.equals("Tue")){
+	    	cday = 3;
+	    }else if(weekDateStr.equals("Wed")){
+	    	cday = 4;
+	    }else if(weekDateStr.equals("Thu")){
+	    	cday = 5;
+	    }else if(weekDateStr.equals("Fri")){
+	    	cday = 6;
+	    }else if(weekDateStr.equals("Sat")){
+	    	cday = 7;
+	    }
+	    
 		int sdate = cdate - cday;
 		int edate = cdate + 7 - cday;
 		DateTimeFormatter dtf = DateTimeFormatter.ISO_DATE;
@@ -117,32 +136,35 @@ public class MainPages {
 		Profile tempProf = new Profile();
 		int counter = 0;
 		int patientID = 0;
-		for(int i= 0;i<7;i++) {
-			LocalDate tempDate1 = tempDate.plusDays(i);
-			tempDay = tempDate1.format(dtf);
-			applDay = sdf.format(aList.get(counter).getApplicationDate());
-			if(applDay.equals(tempDay)) {
-				for(int j=0;j<8;j++) {
-					if(times[j].equals(sdfTime.format(aList.get(counter).getAssignTime()))){
-						patientID = aList.get(counter).getPatientId();
-						tempProf = pdao.findById(patientID);
-						patient[i][j] = tempProf.getName();
-						counter++;
-						if(counter == aList.size()) 
-							break;
-						if (!tempDay.equals(sdf.format(aList.get(counter).getApplicationDate())))
-							break;
-					} else {
-						patient[i][j] = "";
+		if(aList.size() != 0) {
+			for(int i= 0;i<7;i++) {
+				LocalDate tempDate1 = tempDate.plusDays(i);
+				tempDay = tempDate1.format(dtf);
+				applDay = sdf.format(aList.get(counter).getApplicationDate());
+				if(applDay.equals(tempDay)) {
+					for(int j=0;j<8;j++) {
+						if(times[j].equals(sdfTime.format(aList.get(counter).getAssignTime()))){
+							patientID = aList.get(counter).getPatientId();
+							tempProf = pdao.findById(patientID);
+							patient[i][j] = tempProf.getName();
+							counter++;
+							if(counter == aList.size()) 
+								break;
+							if (!tempDay.equals(sdf.format(aList.get(counter).getApplicationDate())))
+								break;
+						} else {
+							patient[i][j] = "";
+						}
 					}
+					
 				}
-				
+				if(counter == aList.size()) 
+					break;
 			}
-			if(counter == aList.size()) 
-				break;
 		}
 		
-		String[] days = { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday" };
+		
+		String[] days = {"Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday" };
 		model.addObject("days",days);
 		model.addObject("times",times);
 		model.addObject("patient",patient);

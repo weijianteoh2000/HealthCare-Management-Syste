@@ -15,11 +15,12 @@ import dbutil.StockDAO;
 public class StockController {
 	
 	@RequestMapping("details")
-	protected ModelAndView details() {
+	protected ModelAndView details(String value) {
 		StockDAO stockdao = new StockDAO();
 		List<Stock> sList = stockdao.getAll();
 		ModelAndView model = new ModelAndView("StockManagement/Details");
 		model.addObject("sList",sList);
+		model.addObject("successAdd",value);
 		return model;
 	}
 
@@ -44,54 +45,80 @@ public class StockController {
 	@RequestMapping("addStock")
 	protected ModelAndView addStock(HttpServletRequest request) throws Exception{
 		StockDAO stockdao = new StockDAO();
+		Stock i = new Stock();
+		ModelAndView model = new ModelAndView("StockManagement/AddNewStock"); 
 		 try { 
-		Stock i = new Stock(); 
-		if(Integer.parseInt(request.getParameter("quantity"))<=0) throw new Exception("negativeValue");
+		int quantity = Integer.parseInt(request.getParameter("quantity"));
+		double price = Double.parseDouble(request.getParameter("price"));
+		i.setImage(request.getParameter("image"));
 		i.setName(request.getParameter("name"));
-		i.setQuantity(request.getParameter("quantity"));
+		i.setDescription(request.getParameter("description"));
+		i.setQuantity(quantity);
 		i.setOrigin(request.getParameter("origin"));
 		i.setRefNo(request.getParameter("refNo"));
+		double unitPrice=  price/quantity;
+		i.setUnitPrice(unitPrice); 
 		i.setArrDate(request.getParameter("arrDate"));
 		i.setExpDate(request.getParameter("expDate"));
+		if(quantity<=0&&price<=0) throw new Exception("negative values");
+		  if(quantity <= 0)throw new MyException("negative quantity");
+		  if(price <= 0)throw new MyException("negative price");
 		int rw = stockdao.add(i);
-		}
-		catch(Exception e) {
-			ModelAndView model = new ModelAndView("StockManagement/AddNewStock");
-			System.err.print(e.toString());
-			if(e instanceof DuplicateKeyException) {
-				model.addObject("duplicateError",e);
-			}else if(e.toString().equals("negativeValue")) {
-				model.addObject("negativeValue",e.toString());
-			}
+		} catch(MyException e) {
+			System.out.print("error message:"+e.str);
+			model.addObject("negativeValue",e.str);
+			model.addObject("sDetails",i);
 			return model;
-		}
-		List<Stock> sList = stockdao.getAll();
-		ModelAndView model = new ModelAndView("StockManagement/Details");
-		model.addObject("sList",sList);
-		model.addObject("successAdd","New stock was successfully added !!");
-		return model;
+	}catch (Exception e) {
+		System.err.print("error message: "+e);
+		if(e instanceof DuplicateKeyException)model.addObject("duplicateError",e);
+		model.addObject("sDetails",i);
+		return model; }
+		return details("New stock was successfully added !!");
 	}
 	//can add throw exception where the ref no should be unique
 	@RequestMapping("updateStock")
 	protected ModelAndView updateStock(HttpServletRequest request) {
+		StockDAO stockdao = new StockDAO();
 		Stock i = new Stock();
-		int id = Integer.parseInt(request.getParameter("id"));
-		i.setName(request.getParameter("name"));
-		i.setQuantity(request.getParameter("quantity"));
-		i.setOrigin(request.getParameter("origin"));
-		i.setRefNo(request.getParameter("refNo"));
-		i.setArrDate(request.getParameter("arrDate"));
-		i.setExpDate(request.getParameter("expDate"));
-		StockDAO insdao = new StockDAO();
-		int rw = insdao.update(i,id);
-		return details();
+		ModelAndView model = new ModelAndView("StockManagement/UpdateStock"); 
+		try { 
+			int id=Integer.parseInt(request.getParameter("updateindex"));
+			int quantity = Integer.parseInt(request.getParameter("quantity"));
+			double price = Double.parseDouble(request.getParameter("price"));
+			i.setImage(request.getParameter("image"));
+			i.setName(request.getParameter("name"));
+			i.setDescription(request.getParameter("description"));
+			i.setQuantity(quantity);
+			i.setOrigin(request.getParameter("origin"));
+			i.setRefNo(request.getParameter("refNo"));
+			double unitPrice=  price/quantity;
+			i.setUnitPrice(unitPrice); 
+			i.setArrDate(request.getParameter("arrDate"));
+			i.setExpDate(request.getParameter("expDate"));
+			if(quantity<=0&&price<=0) throw new Exception("negative values");
+			  if(quantity <= 0)throw new MyException("negative quantity");
+			  if(price <= 0)throw new MyException("negative price");
+		int rw = stockdao.update(i,id);
+		} catch(MyException e) {
+			System.out.print("error message:"+e.str);
+			model.addObject("negativeValue",e.str);
+			model.addObject("sDetails",i);
+			return model;
+	}catch (Exception e) {
+		System.err.print("error message: "+e);
+		if(e instanceof DuplicateKeyException)model.addObject("duplicateError",e);
+		model.addObject("sDetails",i);
+		return model; }
+		return details("Successfully update the stock !!");
 	}
+	
 	@RequestMapping("deleteStock")
 	@ResponseBody()
 	public ModelAndView delete(HttpServletRequest request) {
 		int id = Integer.parseInt(request.getParameter("delindex"));
 		StockDAO insdao = new StockDAO();
 		int rw = insdao.delete(id);
-		return details();
+		return details("The stock is deleted");
 	}	
 }

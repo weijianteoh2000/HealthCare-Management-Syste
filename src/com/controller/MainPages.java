@@ -8,6 +8,11 @@ import org.springframework.web.servlet.ModelAndView;
 @RequestMapping("pages")
 public class MainPages {
 	
+	@RequestMapping("home")
+	protected ModelAndView home() {
+		ModelAndView model = new ModelAndView("shareFiles/HomePage");
+		return model;
+	}
 	@RequestMapping("order")
 	protected ModelAndView order() {
 		ModelAndView model = new ModelAndView("OrderManagement/Order");

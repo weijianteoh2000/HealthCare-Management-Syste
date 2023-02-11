@@ -18,17 +18,17 @@
                       <div class="container mb-5">
   <div class="column">
     <div class="card rounded-3">
-      <h4 class="mt-4 mb-0">DETAILS  <img width=100 height=100 src="<c:url value="//resources/img/stock.png"/>"></img></h4><br></br>
+      <h4 class="mt-4 mb-0">ASSETS <img width=100 height=100 src="<c:url value="//resources/img/stock.png"/>"></img></h4><br></br>
       <a href="../stock/details"><p class="mb-0">More Info -> </p></a>
     </div>
   </div>
   <div class="column">
     <div class="card rounded-3"> <h4 class="mt-4 mb-0">SUPPLIER  <img width=100 height=100 src="<c:url value="//resources/img/supplier.png"/>"></img></h4><br></br>
-    <a href="../supplier/details"> <p class="mb-0">More Info -> </p></a></div>
+    <a href="../Supplier/details"> <p class="mb-0">More Info -> </p></a></div>
   </div>
   <div class="column">
-    <div class="card rounded-3"> <h4 class="mt-4 mb-0">TRANSITION  <img width=100 height=100 src="<c:url value="//resources/img/transition.png"/>"></h4><br></br>
-     <div class="moreInfo"> <a href="../transaction/details"><p class="mb-0">More Info -> </p></a></div></div>
+    <div class="card rounded-3"> <h4 class="mt-4 mb-0">ORDER <img width=100 height=100 src="<c:url value="//resources/img/transition.png"/>"></h4><br></br>
+     <div class="moreInfo"> <a href="../OrderStock/details"><p class="mb-0">More Info -> </p></a></div></div>
   </div>
 </div>
                     </div>

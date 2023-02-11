@@ -1,4 +1,13 @@
-1. change supplier to spring mvc
-2. change transaction to spring mvc
-3. change the name suggest by dr.
-4. 
+Left to be done
+Priority: 
+1. DO AUTO ADD THE stock, update the current goods name, description and quantity only, add other things by urself
+2. add input valdiation for stock
+3. add input valdiation for supplier
+4. add input valdiation for order stock
+DONE 5. merge yeujin file
+6. remove unnessary codes
+
+2nd prior:
+1. can view the order history detail
+2. auto emailing the supplier company
+3. testing on how to redirect to the file after refresh without error

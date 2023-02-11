@@ -50,7 +50,7 @@
 	<nav
 		class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0 wow fadeIn"
 		data-wow-delay="0.1s">
-		<a href="../shareFiles/HomePage.jsp"
+		<a href="../pages/home"
 			class="navbar-brand d-flex align-items-center pe-4 pe-lg-5 ps-3">
 			<h1 class="m-0 text-primary">
 				<img style='margin-right: 20px;' width="50px" height="50px"

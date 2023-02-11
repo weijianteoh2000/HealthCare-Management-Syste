@@ -36,6 +36,7 @@ public class LoginController {
 		ProfileDAO idao = new ProfileDAO();
 		Profile prof = idao.findByUP(username,password);
 		session.setAttribute("id", prof.getId());
+		session.setAttribute("userType", prof.getUserType());
 		}
 		catch(Exception e) {
 			model = new ModelAndView("Login_Register/Login");

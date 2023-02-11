@@ -36,7 +36,6 @@ public class ApplicationController {
 	@RequestMapping("applicationDetail")
 	protected ModelAndView applicationDetail(HttpServletRequest request) {
 		ModelAndView model = new ModelAndView("MedicalCheckUpBooking/MedicalCheckUpApplicationDetail");
-
 		ApplicationDAO Applicationdao = new ApplicationDAO();
 		ProfileDAO Profiledao = new ProfileDAO();
 		HttpSession session = request.getSession(false);
@@ -44,20 +43,27 @@ public class ApplicationController {
 		Application appl = Applicationdao.findById(applicationId);
 		Profile prof = Profiledao.findById(appl.getPatientId());
 		List<Profile> doctorList = Profiledao.findByUTC("Doctor");
-
 		List<Integer> doctorIdList = new ArrayList<Integer>();
 		for (Profile d : doctorList) {
 			doctorIdList.add(d.getId());
 		}
 
 		model.addObject("appl", appl);
+		if(appl.getAssignDoctor() != 0) {
+			int temp = doctorIdList.indexOf(appl.getAssignDoctor());
+			model.addObject("doctorName",doctorList.get(temp).getName());
+		}
 		model.addObject("prof", prof);
 		model.addObject("doctorList", doctorList);
 		model.addObject("doctorIdList", doctorIdList);
 
 		SimpleDateFormat sdfDate = new SimpleDateFormat("yyyy-MM-dd");
 		String date = sdfDate.format(appl.getApplicationDate());
+		SimpleDateFormat sdfTime = new SimpleDateFormat("HH:mm");
+		String time = sdfTime.format(appl.getAssignTime());
+
 		model.addObject("reqeustDate", date);
+		model.addObject("assignTime", time);
 
 		return model;
 	}

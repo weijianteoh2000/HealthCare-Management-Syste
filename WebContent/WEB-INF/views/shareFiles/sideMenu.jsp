@@ -43,14 +43,14 @@ if(user == null){
                     var container = document.getElementById("side-menu-item");
                     for (i=0; i < contents.length; i++){
 				if (user == "admin"
-							&& (i == 0 || i == 1 || i == 3 || i == 5 || i == 6 || i == 7 || i == 11 || i == 14 || i == 15))
+							&& (i == 0 || i == 1 || i == 3 || i == 5 || i == 6 || i == 7 || i == 11 ||i==12 || i == 14 || i == 15))
 						continue;
 					if (user == "pharmacist"
-							&& (i == 0 || i == 1 || i == 3  || i == 5 || i==7
+							&& (i == 0 || i == 1 || i == 3  || i == 5 ||i==6|| i==7
 									|| i == 6 || i == 8 || i == 9 || i == 11 || i == 12 || i == 13 || i==14))
 						continue;
 					if (user == "doctor"
-							&& (i == 0 || i == 1 || i == 2 || i == 3
+							&& (i == 0 || i == 1 || i == 2 || i == 3||i==6
 									|| i == 8 || i == 9 || i == 10 || i == 11 || i == 12 || i == 13 ||i==14||i==15))
 						continue;
 					if (user == "customer"

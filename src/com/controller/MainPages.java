@@ -239,4 +239,10 @@ public class MainPages {
 		ModelAndView model = new ModelAndView("OrderManagement/CustomerOrderHistory");
 		return model;
 	}
+	
+	@RequestMapping("addStuff")
+	protected ModelAndView addStuff() {
+		ModelAndView model = new ModelAndView("Login_Register/AddStuff");
+		return model;
+	}
 }

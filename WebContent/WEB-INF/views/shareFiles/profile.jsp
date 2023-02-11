@@ -29,6 +29,8 @@
 #profileDetail{
 	display:flex;
 	flex-direction:column;
+	padding: 10px;
+	padding-top: 25px;
 }
 
 table {
@@ -43,7 +45,7 @@ td {
 }
 
 table,td,th{
-	padding:10px;
+	padding-top:5px;
 }
 
 #edit {
@@ -58,43 +60,57 @@ table,td,th{
 		<%@ include file="sideMenu.jsp"%>
 		<div class="col-lg px-5 pt-4 bg-light wow fadeIn rounded"
 			data-wow-delay="0.1s">
-			<h1>Patient</h1>
+			<h1 style="text-transform: capitalize;">${userType}</h1>
 			<div class="profileContainer">
 						<div class="profile">
-							<img id="profilePic" src="../img/user.png" alt="profile picture"
+							<img id="profilePic" src="<c:url value="//resources/img/user.png"/>" alt="profile picture"
 								width="250px" height="250px">
 						</div>
 						<div class="profile" id="profileDetail">
 							<table>
 								<tr>
-									<th></th>
+									
 									<th>Name</th>
-									<td>Admin</td>
+									<td>${prof.name}</td>
 								</tr>
 								<tr>
-									<th></th>
+									
 									<th>Gender</th>
-									<td>Male</td>
+									<td>${prof.gender}</td>
 								</tr>
 								<tr>
-									<th></th>
+									
 									<th>Age</th>
-									<td>25</td>
+									<td>${prof.age}</td>
 								</tr>
 								<tr>
-									<th></th>
+									
 									<th>Phone Number</th>
-									<td>010-1234567</td>
+									<td>${prof.phone}</td>
 								</tr>
 								<tr>
-									<th></th>
+									
+									<th>Occupation</th>
+									<td>${prof.occupation}</td>
+								</tr>
+								<tr>
+									
 									<th>IC Number</th>
-									<td>000111-01-0011</td>
+									<td>${prof.ic}</td>
+								</tr>
+								<tr>
+									
+									<th>Address</th>
+									<td>${prof.address}</td>
+								</tr>
+								<tr>
+									<th>Email</th>
+									<td>${prof.email}</td>
 								</tr>
 							</table>
 							<br> <br> <br>
 							<div class="justify-content-center d-flex">
-								<a href="profileEdit.jsp"><button class="btn btn-primary m-3 mb-5 shadow-lg">Edit Profile</button></a>
+								<a href="../profile/profileEdit"><button class="btn btn-primary m-3 mb-5 shadow-lg">Edit Profile</button></a>
 							</div>
 
 						</div>

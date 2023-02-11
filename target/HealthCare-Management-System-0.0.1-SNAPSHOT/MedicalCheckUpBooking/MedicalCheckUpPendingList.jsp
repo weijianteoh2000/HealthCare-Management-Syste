@@ -38,7 +38,7 @@
 								<td>2. </td>
 								<td class="date">18/11/2022 Morning</td>
 								<td>Pending</td>
-								<td><a href="MedicalCheckUpPendingDetail.jsp"><button class="btn btn-outline-dark rounded pb-0 p-1 border border-2 border-dark">Details</button></a></td>
+								<td><a href="MedicalCheckUpApplicationDetail.jsp"><button class="btn btn-outline-dark rounded pb-0 p-1 border border-2 border-dark">Details</button></a></td>
 							</tr>
 							<tr>
 								<td>3. </td>

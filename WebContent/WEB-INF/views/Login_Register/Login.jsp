@@ -164,11 +164,35 @@
 								<label class="form-label" for="lastName">Last
 									Name</label>
 							</div>
-
-							<!-- Username input -->
+							
 							<div class="form-outline mb-4">
-								<input type="text" name="username" class="form-control" />
-								<label class="form-label" for="username">Username</label>
+								<input type="text" name="age" class="form-control" />
+								<label class="form-label" for="age">Age</label>
+							</div>
+							
+							<div class="form-outline mb-4">
+								<input type="text" name="gender" class="form-control" />
+								<label class="form-label" for="gender">Gender</label>
+							</div>
+							
+							<div class="form-outline mb-4">
+								<input type="text" name="phone" class="form-control" />
+								<label class="form-label" for="phone">Phone Number</label>
+							</div>
+							
+							<div class="form-outline mb-4">
+								<input type="text" name="occupation" class="form-control" />
+								<label class="form-label" for="occupation">Occupation</label>
+							</div>
+							
+							<div class="form-outline mb-4">
+								<input type="text" name="ic" class="form-control" />
+								<label class="form-label" for="ic">IC Number</label>
+							</div>
+							
+							<div class="form-outline mb-4">
+								<input type="text" name="address" class="form-control" />
+								<label class="form-label" for="address">Address</label>
 							</div>
 
 							<!-- Email input -->
@@ -176,7 +200,13 @@
 								<input type="email" name="email" class="form-control" />
 								<label class="form-label" for="email">Email</label>
 							</div>
-
+							
+							<!-- User Name input -->
+							<div class="form-outline mb-4">
+								<input type="text" name="username" class="form-control" />
+								<label class="form-label" for="username">User Name</label>
+							</div>
+							
 							<!-- Password input -->
 							<div class="form-outline mb-4">
 								<input type="password" name="password"

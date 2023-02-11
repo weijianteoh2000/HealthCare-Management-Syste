@@ -67,7 +67,7 @@
 					<a href="#" class="nav-link dropdown-toggle py-1 h1"
 						data-bs-toggle="dropdown"><i class="bi bi-person fa-lg h1"></i></a>
 					<div class="dropdown-menu rounded-0 rounded-bottom m-0">
-						<a href="../shareFiles/profile.jsp" class="dropdown-item">Profile</a> <a
+						<a href="<c:url value="/pages/userProfile"/>" class="dropdown-item">Profile</a> <a
 							href="../index.jsp" class="dropdown-item">Logout</a>
 					</div>
 				</div>

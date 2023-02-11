@@ -30,7 +30,7 @@
 		<div class="col-lg ps-5 pe-3 bg-light wow fadeIn rounded" data-wow-delay="0.1s">
 		<div id="home" class="mt-3 mb-5 rounded text-center align-items-center justify-content-center d-flex">
 		<div>
-		<h1 class="text-white">HEALTHIER YOU. <br>HEALTHIER COMMUNITIES.</h1><br><br>
+		<h1 class="text-white">HEALTHIER YOU.<br>HEALTHIER COMMUNITIES.</h1><br><br>
 					<p class="text-white" style="font-size:25px;'">Be a part of the Afflatus</p><br>
 					<p class="text-white">Everyone deserves access to affordable, quality health care coverage and services. </p><br>
 		</div>

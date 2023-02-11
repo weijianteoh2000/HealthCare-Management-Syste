@@ -53,7 +53,7 @@
 						<i class="fa fa-phone-alt me-3"></i>+6012 345 6789
 					</p>
 					<p class="mb-2">
-						<i class="fa fa-envelope me-3"></i>weijianteoh2000@graduate.utm.my
+						<i class="fa fa-envelope me-3"></i>afflatusquad@gmail.com
 					</p>
 					<div class="d-flex pt-2">
 						<a class="btn btn-outline-light btn-social rounded-circle" href=""><i

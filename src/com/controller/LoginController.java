@@ -23,6 +23,7 @@ public class LoginController {
 		ModelAndView model = new ModelAndView("Login_Register/Login");
 		return model;
 	}
+	
 	@RequestMapping("validate")
 	protected ModelAndView validate(HttpServletRequest req) throws Exception{
 		ModelAndView model;
@@ -34,6 +35,8 @@ public class LoginController {
 		session.setAttribute("password", password);
 		ProfileDAO idao = new ProfileDAO();
 		Profile prof = idao.findByUP(username,password);
+		session.setAttribute("id", prof.getId());
+		session.setAttribute("userType", prof.getUserType());
 		}
 		catch(Exception e) {
 			model = new ModelAndView("Login_Register/Login");

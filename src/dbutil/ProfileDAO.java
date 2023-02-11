@@ -26,6 +26,12 @@ public Profile findByUP(String username, String password) {
 	Profile inst = jdbct.queryForObject(sql, new BeanPropertyRowMapper<Profile>(Profile.class),username,password);
 	return inst;
 }
+public List<Profile> findByUTC(String userType) {
+	String sql = "select * from Profile where userType = ?";
+	List<Profile> inst = jdbct.query(sql, new BeanPropertyRowMapper<Profile>(Profile.class), userType);
+	return inst;
+}
+
 //add
 public int add(Profile inst) {
 	String sql = "insert into Profile (name,username,email,password) values (?,?,?,?)";
@@ -34,10 +40,25 @@ public int add(Profile inst) {
 	return rowAffected;
 }
 
-//update - complete this
+//admin update customer
 public int update(Profile inst, int id) {
-	String sql = "Update Profile SET name=?,username=?,email=?,password=? where id=?";
-	Object args[] = {inst.getName(),inst.getUsername(),inst.getEmail(),inst.getPassword(),id}; 
+	String sql = "Update Profile SET name=?,address=?,phone=?,email=? where id=?";
+	Object args[] = {inst.getName(),inst.getAddress(),inst.getPhone(),inst.getEmail(),id}; 
+	int rowAffected = jdbct.update(sql, args);
+	return rowAffected;
+}
+
+public int updateCust(Profile inst, int id) {
+	String sql = "Update Profile SET name=?,address=?,phone=? where id=?";
+	Object args[] = {inst.getName(),inst.getAddress(),inst.getPhone(),id}; 
+	int rowAffected = jdbct.update(sql, args);
+	return rowAffected;
+}
+
+//update number of order
+public int updateNumOrder(Profile inst, int id) {
+	String sql = "Update Profile SET numOrder=? where id=?";
+	Object args[] = {inst.getNumOrder(),id}; 
 	int rowAffected = jdbct.update(sql, args);
 	return rowAffected;
 }

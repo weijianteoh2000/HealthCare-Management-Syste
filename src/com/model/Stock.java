@@ -1,27 +1,36 @@
 package com.model;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
-@Entity
-@Table(name="stock")
 public class Stock {
-	@Id
-	@Column(name="id")
+	
 	int id;
-	@Column(name="name")
-String name;
-	@Column(name="quantity")
-String quantity;
-	@Column(name="origin")
-String origin;
-	@Column(name="refNo")
-String refNo;
-	@Column(name="arrDate")
+	String name;
+	String description;
+	int quantity;
+	String origin;
+	String refNo;
 	String arrDate;
-	@Column(name="expDate")
 	String expDate;
+	double unitPrice;
+	String image;
+	
+	public String getDescription() {
+		return description;
+	}
+	public void setDescription(String description) {
+		this.description = description;
+	}
+	public String getImage() {
+		return image;
+	}
+	public void setImage(String image) {
+		this.image = image;
+	}
+	public double getUnitPrice() {
+		return unitPrice;
+	}
+	public void setUnitPrice(double unitPrice) {
+		this.unitPrice = unitPrice;
+	}
 	public int getId() {
 		return id;
 	}
@@ -34,10 +43,10 @@ String refNo;
 	public void setName(String name) {
 		this.name = name;
 	}
-	public String getQuantity() {
+	public int getQuantity() {
 		return quantity;
 	}
-	public void setQuantity(String quantity) {
+	public void setQuantity(int quantity) {
 		this.quantity = quantity;
 	}
 	public String getOrigin() {

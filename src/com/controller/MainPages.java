@@ -73,4 +73,9 @@ public class MainPages {
 		ModelAndView model = new ModelAndView("shareFiles/ReportingDashboard");
 		return model;
 	}
+	@RequestMapping("custOrderHistory")
+	protected ModelAndView custOrderHistory() {
+		ModelAndView model = new ModelAndView("OrderManagement/CustomerOrderHistory");
+		return model;
+	}
 }

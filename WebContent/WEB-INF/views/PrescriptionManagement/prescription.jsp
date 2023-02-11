@@ -19,7 +19,7 @@
                    <div class="container mb-5">
   <div class="column">
     <div class="card rounded-3">
-      <h4 class="mt-4 mb-0">HISTORY  <img width=100 height=100 src="../img/prescrip.png"></img></h4><br></br>
+      <h4 class="mt-4 mb-0">HISTORY  <img width=100 height=100 src="<c:url value="//resources/img/prescrip.png"/>"></img></h4><br></br>
       <a href="allHistory.jsp"><p class="mb-0">More Info -> </p></a>
     </div>
   </div>

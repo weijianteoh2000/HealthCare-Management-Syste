@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 	<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+	<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -16,25 +17,24 @@
 					<h1>Check Your Details</h1><br>
 						<table class="table table-borderless">
 							<tr>
-								<th class="text-dark ps-5">Name</th>
+								<th class="w-25 text-dark ps-5">Name</th>
 								<th class="text-dark">:</th>
-								<td class="text-start">Lim Ah Beng</td>
+								<td class="text-start"><c:out value="${custDetails.getName()}" /></td>
 							</tr>
 							<tr>
 								<th class="text-dark ps-5">Address</th>
 								<th class="text-dark">:</th>
-								<td class="text-start">123-B Sec.10
-									Kampung Bunga, Jalan Bunga 45635 Dengkil Selangor.</td>
+								<td class="text-start"><c:out value="${custDetails.getAddress()}" /></td>
 							</tr>
 							<tr>
 								<th class="text-dark ps-5">Phone No.</th>
 								<th class="text-dark">:</th>
-								<td class="text-start">012-3452366</td>
+								<td class="text-start"><c:out value="${custDetails.getPhone()}" /></td>
 							</tr>
 							<tr>
 								<th class="text-dark ps-5">Email</th>
 								<th class="text-dark">:</th>
-								<td class="text-start">ahbeng332@gmail.com</td>
+								<td class="text-start"><c:out value="${custDetails.getEmail()}" /></td>
 							</tr>
 						</table>
 
@@ -51,45 +51,39 @@
 							</tr>
 							</thead>
 							<tbody class="align-middle text-secondary">
+							<c:forEach items="${oList}" var="customerOrder" varStatus="loop">
+							
+							<c:set var="i" value="${i + 1 }"/>
 							<tr>
-								<td>1.</td>
-								<td id="confirmOrder_orderList_item">Panodol Actifast 10s
-									Compack</td>
-								<td id="confirmOrder_orderList_quantity">1</td>
-								<td id="confirmOrder_orderList_price">RM 13.50</td>
+								<td><c:out value="${i}" /></td>
+								<td id="confirmOrder_orderList_item"><c:out value="${customerOrder.getItem()}" /></td>
+								<td id="confirmOrder_orderList_quantity"><c:out value="${customerOrder.getQuantity()}" /></td>
+						
+								<td id="confirmOrder_orderList_price">RM <fmt:formatNumber
+												value="${customerOrder.getUnitPrice()}"
+												minFractionDigits="2" maxFractionDigits="2" /></td>
 							</tr>
-							<tr>
-								<td>2.</td>
-								<td id="confirmOrder_orderList_item">NewGene-Saliva/Nasal
-									2-in-1 Covid-19 Home Self Antigen Test Kit(RTK)</td>
-								<td id="confirmOrder_orderList_quantity">5</td>
-								<td id="confirmOrder_orderList_price">RM 10.70</td>
-							</tr>
-							<tr>
-								<td>3.</td>
-								<td id="confirmOrder_orderList_item">WOODS' Peppermint
-									Cough Syrup for Adult 100ml</td>
-								<td id="confirmOrder_orderList_quantity">1</td>
-								<td id="confirmOrder_orderList_price">RM 9.50</td>
-							</tr>
-							<tr>
-								<td>4.</td>
-								<td id="confirmOrder_orderList_item">Listerine Sakura &
-									Peach Zest 500ml</td>
-								<td id="confirmOrder_orderList_quantity">1</td>
-								<td id="confirmOrder_orderList_price">RM 11.70</td>
-							</tr>
+							<c:set var="total" value="${total + customerOrder.getUnitPrice() * customerOrder.getQuantity()}"/>
+						
+							<c:set var="custID" value="${customerOrder.getId()}" />
+							</c:forEach>
 							<tr id="total_price_table">
 								<th></th>
 								<th></th>
-								<th class="text-dark">Total</th>
-								<td class="text-dark">RM 88.20</td>
+								<th class="text-dark text-end">Total</th>
+								<td class="text-dark">RM <fmt:formatNumber
+												value="${total}"
+												minFractionDigits="2" maxFractionDigits="2" /></td>
 							</tr>
 							</tbody>
 						</table>
 					</div>
 					<div class="justify-content-center d-flex">
+					<form style="float: left; margin-right: 10px" name="modifyForm"
+						action="../order/custCheckOrder" method="POST">
+						<input type="hidden" name="id" value="${custID}">
 						<button class="btn btn-primary m-3 mb-5 shadow-lg " onClick="cfOrder()">Confirm Order</button>
+					</form>
 					</div>
 				</div>
 			</div>

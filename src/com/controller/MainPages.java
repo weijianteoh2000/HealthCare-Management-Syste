@@ -239,7 +239,19 @@ public class MainPages {
 		ModelAndView model = new ModelAndView("OrderManagement/CustomerOrderHistory");
 		return model;
 	}
-	
+	@RequestMapping("userProfile")
+	protected ModelAndView userProfile(HttpServletRequest request) {
+		HttpSession session = request.getSession(false);
+		int id = (int) session.getAttribute("id");
+		ProfileDAO idao = new ProfileDAO();
+		Profile prof = null;
+
+		ModelAndView model = new ModelAndView("shareFiles/profile");
+		prof = idao.findById(id);
+		model.addObject("prof", prof);
+		model.addObject("userType", prof.getUserType());
+		return model;
+	}
 	@RequestMapping("addStuff")
 	protected ModelAndView addStuff() {
 		ModelAndView model = new ModelAndView("Login_Register/AddStuff");

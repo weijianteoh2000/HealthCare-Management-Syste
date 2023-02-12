@@ -59,12 +59,13 @@ public class ApplicationController {
 
 		SimpleDateFormat sdfDate = new SimpleDateFormat("yyyy-MM-dd");
 		String date = sdfDate.format(appl.getApplicationDate());
-		SimpleDateFormat sdfTime = new SimpleDateFormat("HH:mm");
-		String time = sdfTime.format(appl.getAssignTime());
-
 		model.addObject("reqeustDate", date);
-		model.addObject("assignTime", time);
-
+		if(appl.getAssignTime()!=null) {
+			SimpleDateFormat sdfTime = new SimpleDateFormat("HH:mm");
+			String time = sdfTime.format(appl.getAssignTime());
+			model.addObject("assignTime", time);
+		}
+		
 		return model;
 	}
 

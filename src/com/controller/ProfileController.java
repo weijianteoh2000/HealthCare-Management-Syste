@@ -162,4 +162,34 @@ public class ProfileController {
 		model.addObject("customer",p);
 		return model;
 	}
+	
+	@RequestMapping("/addStuff")
+	//@ResponseBody()
+	public ModelAndView addStuff(HttpServletRequest request){
+		String check = (String)request.getAttribute("addStuffStop");
+		if (check==null) {
+			Profile i = new Profile();
+			Date date = new Date();
+			i.setName(request.getParameter("firstName")+request.getParameter("lastName"));
+			i.setGender(request.getParameter("gender"));
+			i.setAge(Integer.parseInt(request.getParameter("age")));
+			i.setPhone(request.getParameter("phone"));
+			i.setOccupation(request.getParameter("occupation"));
+			i.setIc(request.getParameter("ic"));
+			i.setAddress(request.getParameter("address"));
+			i.setUsername(request.getParameter("username"));
+			i.setEmail(request.getParameter("email"));
+			i.setPassword(request.getParameter("password"));
+			i.setUserType(request.getParameter("userType"));
+			i.setNumOrder(0);
+			i.setLastOrderDate(date);
+			i.setRegisteredDate(date);
+			ProfileDAO insdao = new ProfileDAO();
+			int rw = insdao.add(i);
+			request.setAttribute("addStuffStop", "stop");
+		}
+
+		ModelAndView model = new ModelAndView("Login_Register/AddStuff");
+		return model;
+	}
 }

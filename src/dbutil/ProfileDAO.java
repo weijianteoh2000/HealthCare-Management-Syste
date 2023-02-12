@@ -33,7 +33,6 @@ public List<Profile> findByUTC(String userType) {
 	return inst;
 }
 
-
 //add
 	public int add(Profile prof) {
 		String sql = "insert into Profile (name,gender,age,phone,occupation,ic,address,username,email,password,userType,numOrder,lastOrderDate,registeredDate) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?)";

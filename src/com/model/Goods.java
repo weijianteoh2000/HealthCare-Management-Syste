@@ -1,23 +1,17 @@
 package com.model;
 
 import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
-import javax.persistence.Table;
-@Entity
-@Table(name="goods")
+
+
 public class Goods {
 	int goodsID;//primary key
-	@Column(name = "supplierID")
+
 	int supplierID;//same as supplier id
-	@Column(name="name")
+
 	String name;
-	@Column(name="quantity")
+
 	int quantity;
-	@Column(name="status")
+
 	String status;//unorder,order,paid 
 	String description;
 	public String getDescription() {

@@ -3,32 +3,25 @@ package com.model;
 import java.time.LocalDateTime;
 import java.util.List;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
 
-@Entity
-@Table(name="orderStock")
 public class OrderStock {
-	@Id
-	@Column(name="id")
+
 	int id; 
-	@Column(name="supplierName")
+
 	String supplierName;
-	@Column(name="orders")
+
 	List<Goods> orders;
-	@Column(name="time")
+
 	LocalDateTime time;
-	@Column(name="courier")
+
 	String courier;
-	@Column(name="trackingNumber")
+
 	String trackingNumber;
-	@Column(name="status")
+
 	String status;
-	@Column(name="receipt")
+
 	String receipt;
-	@Column(name="invoice")
+
 	String invoice;
 	
 	public String getReceipt() {

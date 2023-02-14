@@ -2,28 +2,20 @@ package com.model;
 
 import java.util.Date;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
-
-@Entity
-@Table(name="order")
 public class Order {
-	@Id
-	@Column(name="id")
+
 	int id;
-	@Column(name="item")
+
 	String item;
-	@Column(name="quantity")
+
 	int quantity;
-	@Column(name="unitPrice")
+
 	double unitPrice;
-	@Column(name="status")
+
 	String status;
-	@Column(name="orderDate")
+
 	Date orderDate;
-	@Column(name="customerID")
+
 	int customerID;
 	
 	

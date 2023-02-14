@@ -1,28 +1,22 @@
 package com.model;
 
-import java.time.LocalTime;
 import java.util.Date;
-
-import javax.persistence.Column;
-import javax.persistence.Id;
-
 public class Application {
-	@Id
-	@Column(name = "applicationId")
+
 	int applicationId;
-	@Column(name = "applicationDate")
+
 	Date applicationDate;
-	@Column(name = "timeRange")
+
 	String timeRange;
-	@Column(name = "assignTime")
+
 	Date assignTime;
-	@Column(name = "assignDoctor")
+
 	int assignDoctor;
-	@Column(name = "rejectReason")
+
 	String rejectReason;
-	@Column(name = "status")
+
 	String status;
-	@Column(name = "patientId")
+
 	int patientId;
 	
 	public int getApplicationId() {

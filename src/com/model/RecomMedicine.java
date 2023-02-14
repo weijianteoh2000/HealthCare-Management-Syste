@@ -1,46 +1,31 @@
 package com.model;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
 
-/**
- *
- * @author
- */
-@Entity
-@Table(name = "recommedicine")
+
+
+
 public class RecomMedicine {
 
-    @Id
-    @Column(name = "id")
     int id;
-    @Column(name = "patientname")
+
     String patientName;
 
-    @Column(name = "illness")
+
     String illness;
 
-    @Column(name = "medicine")
+
     String medicine;
 
-    @Column(name = "referenceno")
     String referenceNo;
 
-    @Column(name = "quantity")
     String quantity;
 
-    @Column(name = "datevisited")
     String dateVisited;
-    
-    @Column(name = "doctor")
+
     String doctor;
-    
-    @Column(name = "status")
+
     boolean status;
-    
-    @Column(name = "price")
+
     double price;
 
     public int getId() {

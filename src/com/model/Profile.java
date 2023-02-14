@@ -2,44 +2,38 @@ package com.model;
 
 import java.util.Date;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
 
-@Entity
-@Table(name = "profile")
+
 public class Profile {
-	@Id
-	@Column(name = "id")
+
 	int id;
-	@Column(name = "name")
+
 	String name;
-	@Column(name = "gender")
+
 	String gender;
-	@Column(name = "age")
+
 	int age;
-	@Column(name = "phone")
+
 	String phone;
-	@Column(name = "occupation")
+
 	String occupation;
-	@Column(name = "ic")
+
 	String ic;
-	@Column(name = "address")
+
 	String address;
-	@Column(name = "username")
+
 	String username;
-	@Column(name = "email")
+
 	String email;
-	@Column(name = "password")
+
 	String password;
-	@Column(name = "userType")
+
 	String userType;
-	@Column(name = "numOrder")
+
 	int numOrder;
-	@Column(name = "lastOrderDate")
+
 	Date lastOrderDate;
-	@Column(name = "registeredDate")
+
 	Date registeredDate;
 	
 	public Profile() {}

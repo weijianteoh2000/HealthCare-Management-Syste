@@ -29,7 +29,13 @@ public class ProfileController {
 	@RequestMapping("/profileEdit")
 	protected ModelAndView profileEdit(HttpServletRequest request) {
 		ModelAndView model = new ModelAndView("shareFiles/profileEdit");
-		HttpSession session =  request.getSession(false);
+		HttpSession session = request.getSession(false);
+
+		if (session.getAttribute("id") == null) {
+			ModelAndView login = new ModelAndView("Login_Register/Login");
+			session.setAttribute("sessionCheck", "invalid");
+			return login;
+		}
 		int id = (int)session.getAttribute("id");
 		ProfileDAO idao= new ProfileDAO();
 		Profile prof= idao.findById(id);
@@ -38,18 +44,16 @@ public class ProfileController {
 		return model;
 	}
 	
-	@RequestMapping("/getAll")
-	@ResponseBody()
-	public String getAll(Model model){
-		ProfileDAO insdao = new ProfileDAO();
-		List<Profile> iList = insdao.getAll();
-		model.addAttribute(iList);
-		return "this is from getAll - Profile"+iList.toString();
-	}
-	
 	@RequestMapping("/getByUTC")
 	@ResponseBody()
-	public ModelAndView getByUTC(){
+	public ModelAndView getByUTC(HttpServletRequest request){
+		HttpSession session = request.getSession(false);
+
+		if (session.getAttribute("id") == null) {
+			ModelAndView login = new ModelAndView("Login_Register/Login");
+			session.setAttribute("sessionCheck", "invalid");
+			return login;
+		}
 		ProfileDAO insdao = new ProfileDAO();
 		List<Profile> pList = insdao.findByUTC("customer");
 		
@@ -73,6 +77,13 @@ public class ProfileController {
 	@RequestMapping("/getById")
 	@ResponseBody()
 	public ModelAndView getById(HttpServletRequest request) {
+		HttpSession session = request.getSession(false);
+
+		if (session.getAttribute("id") == null) {
+			ModelAndView login = new ModelAndView("Login_Register/Login");
+			session.setAttribute("sessionCheck", "invalid");
+			return login;
+		}
 		int id = Integer.parseInt(request.getParameter("id"));
 		ProfileDAO idao= new ProfileDAO();
 		Profile prof= idao.findById(id);
@@ -84,6 +95,13 @@ public class ProfileController {
 	@RequestMapping("/add")
 	//@ResponseBody()
 	public ModelAndView add(HttpServletRequest request){
+		HttpSession session = request.getSession(false);
+
+		if (session.getAttribute("id") == null) {
+			ModelAndView login = new ModelAndView("Login_Register/Login");
+			session.setAttribute("sessionCheck", "invalid");
+			return login;
+		}
 		Profile i = new Profile();
 		Date date = new Date();
 		SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yy");
@@ -111,7 +129,13 @@ public class ProfileController {
 	@ResponseBody()
 	public ModelAndView update(HttpServletRequest request) {
 		
-		HttpSession session =  request.getSession(false);
+		HttpSession session = request.getSession(false);
+
+		if (session.getAttribute("id") == null) {
+			ModelAndView login = new ModelAndView("Login_Register/Login");
+			session.setAttribute("sessionCheck", "invalid");
+			return login;
+		}
 		Profile prof = new Profile();
 		ProfileDAO idao= new ProfileDAO();
 		int id = (int)session.getAttribute("id");
@@ -142,18 +166,18 @@ public class ProfileController {
 		return model;
 	}
 
-	@RequestMapping("/delete")
-	@ResponseBody()
-	public String delete(HttpServletRequest request) {
-		int id = Integer.parseInt(request.getParameter("id"));
-		ProfileDAO insdao = new ProfileDAO();
-		int rw = insdao.delete(id);
-		return "this is from delete - Profile... row affected :"+rw;
-	}
+
 	
 
 	@RequestMapping("/editCustomer")
 	protected ModelAndView editCustomer(HttpServletRequest request) {
+		HttpSession session = request.getSession(false);
+
+		if (session.getAttribute("id") == null) {
+			ModelAndView login = new ModelAndView("Login_Register/Login");
+			session.setAttribute("sessionCheck", "invalid");
+			return login;
+		}
 		Profile p = new Profile();
 		int id = Integer.parseInt(request.getParameter("id"));
 		ModelAndView model = new ModelAndView("OrderManagement/EditCustomer"); //jsp file name
@@ -166,6 +190,13 @@ public class ProfileController {
 	@RequestMapping("/addStuff")
 	//@ResponseBody()
 	public ModelAndView addStuff(HttpServletRequest request){
+		HttpSession session = request.getSession(false);
+
+		if (session.getAttribute("id") == null) {
+			ModelAndView login = new ModelAndView("Login_Register/Login");
+			session.setAttribute("sessionCheck", "invalid");
+			return login;
+		}
 		String check = (String)request.getAttribute("addStuffStop");
 		if (check==null) {
 			Profile i = new Profile();

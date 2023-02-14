@@ -13,7 +13,7 @@
 </head>
 <body>
 	<script>
-		function alertNegativeErrorMessage(value) {
+		function alertPreviousDate(value) {
 			console.log(value);
 			if(value == "1")
 				alert("For FIRST Application, Please choose future date to apply for the medical check up !!");
@@ -25,17 +25,17 @@
 	</script>
 	<c:if test="${previousDate1 != null}">
 		<script>
-			alertNegativeErrorMessage('${previousDate1.toString()}')
+			alertPreviousDate('${previousDate1.toString()}')
 		</script>
 	</c:if>
 	<c:if test="${previousDate2 != null}">
 		<script>
-			alertNegativeErrorMessage('${previousDate2.toString()}')
+			alertPreviousDate('${previousDate2.toString()}')
 		</script>
 	</c:if>
 	<c:if test="${previousDate3 != null}">
 		<script>
-			alertNegativeErrorMessage('${previousDate3.toString()}')
+			alertPreviousDate('${previousDate3.toString()}')
 		</script>
 	</c:if>
 

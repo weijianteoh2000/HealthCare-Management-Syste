@@ -3,6 +3,7 @@ package com.controller;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -22,10 +23,18 @@ import com.model.Stock;
 public class CustomerController {
 	
 	@RequestMapping("/customerPage")
-	protected ModelAndView customerPage() {
+	protected ModelAndView customerPage(HttpServletRequest request) {
 		ProfileDAO insdao = new ProfileDAO();
 		List<Profile> pList = insdao.findByUTC("customer");
 		ModelAndView model = new ModelAndView("OrderManagement/Customer");
+		
+		HttpSession session = request.getSession(false);
+
+		if (session.getAttribute("id") == null) {
+			ModelAndView login = new ModelAndView("Login_Register/Login");
+			session.setAttribute("sessionCheck", "invalid");
+			return login;
+		}
 		model.addObject("pList",pList);
 		return model;
 	}
@@ -63,6 +72,13 @@ public class CustomerController {
 		
 		List<Profile> pList = pdao.findByUTC("customer");
 		ModelAndView model = new ModelAndView("OrderManagement/Customer");
+		HttpSession session = request.getSession(false);
+
+		if (session.getAttribute("id") == null) {
+			ModelAndView login = new ModelAndView("Login_Register/Login");
+			session.setAttribute("sessionCheck", "invalid");
+			return login;
+		}
 		model.addObject("pList",pList);
 		model.addObject("successUpdate", "You have successfully updated!");
 		return model;
@@ -82,6 +98,13 @@ public class CustomerController {
 		
 		List<Profile> pList = pdao.findByUTC("customer");
 		ModelAndView model = new ModelAndView("OrderManagement/Customer");
+		HttpSession session = request.getSession(false);
+
+		if (session.getAttribute("id") == null) {
+			ModelAndView login = new ModelAndView("Login_Register/Login");
+			session.setAttribute("sessionCheck", "invalid");
+			return login;
+		}
 		model.addObject("pList",pList);
 		model.addObject("successUpdate", "You have successfully updated!");
 		return model;
@@ -96,6 +119,13 @@ public class CustomerController {
 		
 		List<Profile> pList = pdao.findByUTC("customer");
 		ModelAndView model = new ModelAndView("OrderManagement/Customer");
+		HttpSession session = request.getSession(false);
+
+		if (session.getAttribute("id") == null) {
+			ModelAndView login = new ModelAndView("Login_Register/Login");
+			session.setAttribute("sessionCheck", "invalid");
+			return login;
+		}
 		model.addObject("pList",pList);
 		model.addObject("successDelete", "You have successfully deleted!");
 		return model;
@@ -106,6 +136,13 @@ public class CustomerController {
 		Profile p = new Profile();
 		int id = Integer.parseInt(request.getParameter("id"));
 		ModelAndView model = new ModelAndView("OrderManagement/EditCustomer"); //jsp file name
+		HttpSession session = request.getSession(false);
+
+		if (session.getAttribute("id") == null) {
+			ModelAndView login = new ModelAndView("Login_Register/Login");
+			session.setAttribute("sessionCheck", "invalid");
+			return login;
+		}
 		ProfileDAO idao= new ProfileDAO();
 		p = idao.findById(id);
 		model.addObject("customer",p);

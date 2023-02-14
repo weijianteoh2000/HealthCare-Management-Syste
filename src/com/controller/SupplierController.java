@@ -4,6 +4,7 @@ import java.util.Arrays;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 import org.springframework.dao.DuplicateKeyException;
 import org.springframework.stereotype.Controller;
@@ -22,7 +23,14 @@ import dbutil.SupplierDAO;
 public class SupplierController {
 	
 	@RequestMapping("details")
-	protected ModelAndView details(String value) {
+	protected ModelAndView details(String value, HttpServletRequest request) {
+		HttpSession session = request.getSession(false);
+
+		if (session.getAttribute("id") == null) {
+			ModelAndView login = new ModelAndView("Login_Register/Login");
+			session.setAttribute("sessionCheck", "invalid");
+			return login;
+		}
 		SupplierDAO Supplierdao = new SupplierDAO();
 		List<Supplier> sList = Supplierdao.getAll();
 		ModelAndView model = new ModelAndView("StockManagement/Supplier");
@@ -32,12 +40,26 @@ public class SupplierController {
 	}
 
 	@RequestMapping("addSupplierForm")
-	protected ModelAndView addSupplierForm() {
+	protected ModelAndView addSupplierForm(HttpServletRequest request) {
 		ModelAndView model = new ModelAndView("StockManagement/AddNewSupplier");
+		HttpSession session = request.getSession(false);
+
+		if (session.getAttribute("id") == null) {
+			ModelAndView login = new ModelAndView("Login_Register/Login");
+			session.setAttribute("sessionCheck", "invalid");
+			return login;
+		}
 		return model;
 	}
 	@RequestMapping("updateSupplierForm")
 	protected ModelAndView updateSupplierForm(HttpServletRequest request) {
+		HttpSession session = request.getSession(false);
+
+		if (session.getAttribute("id") == null) {
+			ModelAndView login = new ModelAndView("Login_Register/Login");
+			session.setAttribute("sessionCheck", "invalid");
+			return login;
+		}
 		SupplierDAO Supplierdao = new SupplierDAO();
 		int id = Integer.parseInt(request.getParameter("updateindex"));
 		Supplier SupplierDetails = Supplierdao.findById(id);
@@ -57,6 +79,13 @@ public class SupplierController {
 	 * 2. quantity must > 0 */
 	@RequestMapping("addSupplier")
 	protected ModelAndView addSupplier(HttpServletRequest request) throws Exception{
+		HttpSession session = request.getSession(false);
+
+		if (session.getAttribute("id") == null) {
+			ModelAndView login = new ModelAndView("Login_Register/Login");
+			session.setAttribute("sessionCheck", "invalid");
+			return login;
+		}
 		SupplierDAO Supplierdao = new SupplierDAO();
 		Boolean error=false;
 		Supplier i = new Supplier(); 
@@ -105,11 +134,18 @@ public class SupplierController {
 		  model.addObject("duplicateError",e); 
 		  model.addObject("sDetails",i);
 		  return model; }
-		return details("New Supplier was successfully added !!");
+		return details("New Supplier was successfully added !!", request);
 	}
 	//can add throw exception where the ref no should be unique
 	@RequestMapping("updateSupplier")
 	protected ModelAndView updateSupplier(HttpServletRequest request) {
+		HttpSession session = request.getSession(false);
+
+		if (session.getAttribute("id") == null) {
+			ModelAndView login = new ModelAndView("Login_Register/Login");
+			session.setAttribute("sessionCheck", "invalid");
+			return login;
+		}
 		Supplier i = new Supplier();
 		int id = Integer.parseInt(request.getParameter("id"));
 		i.setCompanyName(request.getParameter("companyName"));
@@ -131,15 +167,22 @@ public class SupplierController {
         i.setGoods(goodsList);
 		SupplierDAO insdao = new SupplierDAO();
 		int rw = insdao.update(i,id);
-		return details("Successfully updates the supplier");
+		return details("Successfully updates the supplier", request);
 	}
 	
 	@RequestMapping("deleteSupplier")
 	@ResponseBody()
 	public ModelAndView delete(HttpServletRequest request) {
+		HttpSession session = request.getSession(false);
+
+		if (session.getAttribute("id") == null) {
+			ModelAndView login = new ModelAndView("Login_Register/Login");
+			session.setAttribute("sessionCheck", "invalid");
+			return login;
+		}
 		int id = Integer.parseInt(request.getParameter("delindex"));
 		SupplierDAO insdao = new SupplierDAO();
 		int rw = insdao.delete(id);
-		return details("Successfully delete a supplier");
+		return details("Successfully delete a supplier", request);
 	}	
 }

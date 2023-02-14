@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,9 +8,20 @@
 <title>HealthCare | Login</title>
 </head>
 <body>
-		
+	<script>
+		function alertLoginSession(value) {
+			console.log(value);
+			alert("Please login first before doing any action !!");
+	}
+	</script>
+	<c:if test="${sessionScope.sessionCheck == 'invalid'}">
+		<script>
+			alertLoginSession('${sessionCheck.toString()}')
+		</script>
+		<% session.setAttribute("sessionCheck","repeat");%>
+	</c:if>
 
-<!-- Spinner Start -->
+	<!-- Spinner Start -->
 	<div id="spinner"
 		class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
 		<div class="spinner-grow text-primary"
@@ -19,7 +30,7 @@
 		</div>
 	</div>
 	<!-- Spinner End -->
-	
+
 	<!-- Topbar Start -->
 	<div class="container-fluid bg-light p-0 wow fadeIn"
 		data-wow-delay="0.1s">
@@ -63,7 +74,8 @@
 			class="navbar-brand d-flex align-items-center px-4 px-lg-5">
 			<h1 class="m-0 text-primary">
 				<img style='margin-right: 20px;' width="50px" height="50px"
-					src="<c:url value="//resources/img/logo-black-bigger-removebg-preview.png"/>">Health Era
+					src="<c:url value="//resources/img/logo-black-bigger-removebg-preview.png"/>">Health
+				Era
 			</h1>
 		</a>
 		<button type="button" class="navbar-toggler me-4"
@@ -95,10 +107,11 @@
 		</div>
 	</nav>
 	<!-- Navbar End -->
-	
+
 	<div class="mt-1 wow fadeInUp mx-auto" style="width: 500px;"
 		data-wow-delay="0.5s">
-		<div class="bg-light mt-5 center rounded h-100 align-items-center p-5 mb-5">
+		<div
+			class="bg-light mt-5 center rounded h-100 align-items-center p-5 mb-5">
 			<div class="row">
 				<div class="mb-5 d-flex justify-content-center gap-5">
 					<button type="button" data-bs-target="#carouselExampleDark"
@@ -155,63 +168,61 @@
 						<form action="../profile/add" method="post">
 							<!-- Name input -->
 							<div class="form-outline mb-4">
-								<input type="text" name="firstName" class="form-control" />
-								<label class="form-label" for="firstName">First Name</label>
+								<input type="text" name="firstName" class="form-control" /> <label
+									class="form-label" for="firstName">First Name</label>
 							</div>
 
 							<div class="form-outline mb-4">
-								<input type="text" name="lastName" class="form-control" />
-								<label class="form-label" for="lastName">Last
-									Name</label>
+								<input type="text" name="lastName" class="form-control" /> <label
+									class="form-label" for="lastName">Last Name</label>
 							</div>
-							
+
 							<div class="form-outline mb-4">
-								<input type="text" name="age" class="form-control" />
-								<label class="form-label" for="age">Age</label>
+								<input type="text" name="age" class="form-control" /> <label
+									class="form-label" for="age">Age</label>
 							</div>
-							
+
 							<div class="form-outline mb-4">
-								<input type="text" name="gender" class="form-control" />
-								<label class="form-label" for="gender">Gender</label>
+								<input type="text" name="gender" class="form-control" /> <label
+									class="form-label" for="gender">Gender</label>
 							</div>
-							
+
 							<div class="form-outline mb-4">
-								<input type="text" name="phone" class="form-control" />
-								<label class="form-label" for="phone">Phone Number</label>
+								<input type="text" name="phone" class="form-control" /> <label
+									class="form-label" for="phone">Phone Number</label>
 							</div>
-							
+
 							<div class="form-outline mb-4">
-								<input type="text" name="occupation" class="form-control" />
-								<label class="form-label" for="occupation">Occupation</label>
+								<input type="text" name="occupation" class="form-control" /> <label
+									class="form-label" for="occupation">Occupation</label>
 							</div>
-							
+
 							<div class="form-outline mb-4">
-								<input type="text" name="ic" class="form-control" />
-								<label class="form-label" for="ic">IC Number</label>
+								<input type="text" name="ic" class="form-control" /> <label
+									class="form-label" for="ic">IC Number</label>
 							</div>
-							
+
 							<div class="form-outline mb-4">
-								<input type="text" name="address" class="form-control" />
-								<label class="form-label" for="address">Address</label>
+								<input type="text" name="address" class="form-control" /> <label
+									class="form-label" for="address">Address</label>
 							</div>
 
 							<!-- Email input -->
 							<div class="form-outline mb-4">
-								<input type="email" name="email" class="form-control" />
-								<label class="form-label" for="email">Email</label>
+								<input type="email" name="email" class="form-control" /> <label
+									class="form-label" for="email">Email</label>
 							</div>
-							
+
 							<!-- User Name input -->
 							<div class="form-outline mb-4">
-								<input type="text" name="username" class="form-control" />
-								<label class="form-label" for="username">User Name</label>
+								<input type="text" name="username" class="form-control" /> <label
+									class="form-label" for="username">User Name</label>
 							</div>
-							
+
 							<!-- Password input -->
 							<div class="form-outline mb-4">
-								<input type="password" name="password"
-									class="form-control" /> <label class="form-label"
-									for="registerPassword">Password</label>
+								<input type="password" name="password" class="form-control" />
+								<label class="form-label" for="registerPassword">Password</label>
 							</div>
 
 							<!-- Repeat Password input -->
@@ -249,24 +260,30 @@
 		src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
 	<script src="<c:url value="//resources/lib/wow/wow.min.js"/>"></script>
 	<script src="<c:url value="//resources/lib/easing/easing.min.js"/>"></script>
-	<script src="<c:url value="//resources/lib/waypoints/waypoints.min.js"/>"></script>
-	<script src="<c:url value="//resources/lib/counterup/counterup.min.js"/>"></script>
-	<script src="<c:url value="//resources/lib/owlcarousel/owl.carousel.min.js"/>"></script>
-	<script src="<c:url value="//resources/lib/tempusdominus/js/moment.min.js"/>"></script>
-	<script src="<c:url value="//resources/lib/tempusdominus/js/moment-timezone.min.js"/>"></script>
-	<script src="<c:url value="//resources/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"/>"></script>
+	<script
+		src="<c:url value="//resources/lib/waypoints/waypoints.min.js"/>"></script>
+	<script
+		src="<c:url value="//resources/lib/counterup/counterup.min.js"/>"></script>
+	<script
+		src="<c:url value="//resources/lib/owlcarousel/owl.carousel.min.js"/>"></script>
+	<script
+		src="<c:url value="//resources/lib/tempusdominus/js/moment.min.js"/>"></script>
+	<script
+		src="<c:url value="//resources/lib/tempusdominus/js/moment-timezone.min.js"/>"></script>
+	<script
+		src="<c:url value="//resources/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"/>"></script>
 
 	<!-- Template Javascript -->
 	<script src="<c:url value="//resources/js/main.js"/>"></script>
-<script>
+	<script>
 		function alertErrorMessage(value) {
 			console.log(value);
 			alert("Your username and password are not found !!");
 		}
 	</script>
-<c:set var="EmptyResult" value="${EmptyResult}"/>
-<c:if test="${EmptyResult != null}" >
-	 <script> alertErrorMessage('${EmptyResult.toString()}') </script>
+	<c:set var="EmptyResult" value="${EmptyResult}" />
+	<c:if test="${EmptyResult != null}">
+		<script> alertErrorMessage('${EmptyResult.toString()}') </script>
 	</c:if>
 	<script>
 		function alertMessage() {

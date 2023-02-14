@@ -27,18 +27,31 @@ import dbutil.*;
 public class ApplicationController {
 
 	@RequestMapping("applicationForm")
-	protected ModelAndView applicationForm() {
+	protected ModelAndView applicationForm(HttpServletRequest request) {
 		ModelAndView model = new ModelAndView("MedicalCheckUpBooking/MedicalCheckUpApplicationAdding");
+		HttpSession session = request.getSession(false);
 
+		if (session.getAttribute("id") == null) {
+			ModelAndView login = new ModelAndView("Login_Register/Login");
+			session.setAttribute("sessionCheck", "invalid");
+			return login;
+		}
 		return model;
 	}
 
 	@RequestMapping("applicationDetail")
 	protected ModelAndView applicationDetail(HttpServletRequest request) {
 		ModelAndView model = new ModelAndView("MedicalCheckUpBooking/MedicalCheckUpApplicationDetail");
+
 		ApplicationDAO Applicationdao = new ApplicationDAO();
 		ProfileDAO Profiledao = new ProfileDAO();
 		HttpSession session = request.getSession(false);
+
+		if (session.getAttribute("id") == null) {
+			ModelAndView login = new ModelAndView("Login_Register/Login");
+			session.setAttribute("sessionCheck", "invalid");
+			return login;
+		}
 		int applicationId = Integer.parseInt(request.getParameter("applicationId"));
 		Application appl = Applicationdao.findById(applicationId);
 		Profile prof = Profiledao.findById(appl.getPatientId());
@@ -49,9 +62,9 @@ public class ApplicationController {
 		}
 
 		model.addObject("appl", appl);
-		if(appl.getAssignDoctor() != 0) {
+		if (appl.getAssignDoctor() != 0) {
 			int temp = doctorIdList.indexOf(appl.getAssignDoctor());
-			model.addObject("doctorName",doctorList.get(temp).getName());
+			model.addObject("doctorName", doctorList.get(temp).getName());
 		}
 		model.addObject("prof", prof);
 		model.addObject("doctorList", doctorList);
@@ -60,12 +73,12 @@ public class ApplicationController {
 		SimpleDateFormat sdfDate = new SimpleDateFormat("yyyy-MM-dd");
 		String date = sdfDate.format(appl.getApplicationDate());
 		model.addObject("reqeustDate", date);
-		if(appl.getAssignTime()!=null) {
+		if (appl.getAssignTime() != null) {
 			SimpleDateFormat sdfTime = new SimpleDateFormat("HH:mm");
 			String time = sdfTime.format(appl.getAssignTime());
 			model.addObject("assignTime", time);
 		}
-		
+
 		return model;
 	}
 
@@ -73,6 +86,12 @@ public class ApplicationController {
 	protected ModelAndView appliactionResponse(HttpServletRequest request) throws ParseException {
 		ModelAndView model = new ModelAndView("MedicalCheckUpBooking/MedicalCheckUpApplicationList");
 		HttpSession session = request.getSession(false);
+
+		if (session.getAttribute("id") == null) {
+			ModelAndView login = new ModelAndView("Login_Register/Login");
+			session.setAttribute("sessionCheck", "invalid");
+			return login;
+		}
 		ApplicationDAO adao = new ApplicationDAO();
 		int applicationId = Integer.parseInt(request.getParameter("applicationId"));
 
@@ -113,6 +132,12 @@ public class ApplicationController {
 	protected ModelAndView addApplication(HttpServletRequest request) throws Exception {
 		ApplicationDAO Applicationdao = new ApplicationDAO();
 		HttpSession session = request.getSession(false);
+
+		if (session.getAttribute("id") == null) {
+			ModelAndView login = new ModelAndView("Login_Register/Login");
+			session.setAttribute("sessionCheck", "invalid");
+			return login;
+		}
 		int id = (int) session.getAttribute("id");
 		SimpleDateFormat sdfDate = new SimpleDateFormat("yyyy-MM-dd");
 		SimpleDateFormat sdfTime = new SimpleDateFormat("HH:mm");
@@ -164,17 +189,18 @@ public class ApplicationController {
 				ModelAndView modelerr = new ModelAndView("MedicalCheckUpBooking/MedicalCheckUpApplicationAdding");
 				System.out.println(e.toString());
 				String error = e.str;
-				if(error.equals("previousDate1"))
+				if (error.equals("previousDate1"))
 					modelerr.addObject("previousDate1", "1");
-				else if(error.equals("previousDate2"))
+				else if (error.equals("previousDate2"))
 					modelerr.addObject("previousDate2", "2");
-				else if(error.equals("previousDate3"))
+				else if (error.equals("previousDate3"))
 					modelerr.addObject("previousDate3", "3");
 				return modelerr;
 			}
 		}
-		List<Application> aList = Applicationdao.getAllById(id);;
-		
+		List<Application> aList = Applicationdao.getAllById(id);
+		;
+
 		sdfDate = new SimpleDateFormat("yyyy-MM-dd");
 
 		List<String> dateList = new ArrayList<String>();
